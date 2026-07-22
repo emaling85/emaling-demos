@@ -2,15 +2,18 @@
 
 Портфолио-демо на GitHub Pages (статика HTML/CSS/JS).
 
-## URL после включения Pages
+**Репозиторий:** https://github.com/emaling85/emaling-demos  
+**Сайт:** https://emaling85.github.io/emaling-demos/
 
-Корень репозитория = визитка:
+## Ссылки
 
-- Визитка: `https://<USER>.github.io/emaling-demos/`
-- Линия: `https://<USER>.github.io/emaling-demos/line/`
-- Сажа: `https://<USER>.github.io/emaling-demos/coffee/`
-- Форзац: `https://<USER>.github.io/emaling-demos/books/`
-- Слог: `https://<USER>.github.io/emaling-demos/tutor/`
+| Страница | URL |
+|----------|-----|
+| Визитка | https://emaling85.github.io/emaling-demos/ |
+| Линия (косметология) | https://emaling85.github.io/emaling-demos/line/ |
+| Сажа (кофейня) | https://emaling85.github.io/emaling-demos/coffee/ |
+| Форзац (книжный) | https://emaling85.github.io/emaling-demos/books/ |
+| Слог (репетитор) | https://emaling85.github.io/emaling-demos/tutor/ |
 
 ## Структура
 
@@ -22,15 +25,20 @@
 | `books/` | книжный «Форзац» |
 | `tutor/` | репетитор «Слог» |
 
-## Как включить GitHub Pages
-
-1. Settings → Pages  
-2. Source: **Deploy from a branch**  
-3. Branch: `main` / folder: `/ (root)`  
-4. Save — через 1–2 минуты сайт откроется.
-
 ## Админки (демо)
 
-- Линия: `/line/admin/` — пароль `liniya2026`
-- Слог: `/tutor/admin.html` — пароль `slog`
-- Сажа бариста: `/coffee/admin.html`
+- Линия: [/line/admin/](https://emaling85.github.io/emaling-demos/line/admin/) — пароль `liniya2026`
+- Слог: [/tutor/admin.html](https://emaling85.github.io/emaling-demos/tutor/admin.html) — пароль `slog`
+- Сажа бариста: [/coffee/admin.html](https://emaling85.github.io/emaling-demos/coffee/admin.html)
+
+## Обновление
+
+Из папки `emaling-demos`:
+
+```powershell
+git add -A
+git commit -m "Update demos"
+git push
+```
+
+Pages обновится за 1–2 минуты.
