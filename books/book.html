@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Книга — Форзац</title>
+  <meta name="description" content="Карточка книги в лавке Форзац." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Форзац<span class="logo__stamp">Открытая классика</span></a>
+      <ul class="nav__links">
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+      <a class="nav__cart" href="cart.html">
+        Корзина
+        <span class="cart-badge" data-cart-count hidden>0</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+        <span></span>
+      </button>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap book-page-wrap">
+      <div id="book-page"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">Книжная лавка «Форзац»</span>
+        <span class="site-footer__hours">Часы: <strong>вт–сб 12:00–20:00</strong>, вс–пн — выходной</span>
+      </div>
+      <span class="demo-tag">демо-кейс</span>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

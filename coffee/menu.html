@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Меню — Сажа</title>
+  <meta name="description" content="Меню кофейни Сажа: добавьте в заказ со стола." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-flow">
+  <header class="site-header site-header--flow">
+    <div class="wrap nav">
+      <a class="logo" href="qr.html" data-table-link="qr.html">Сажа<span class="logo__mark">кофейня</span></a>
+      <div class="table-controls">
+        <label class="table-pill table-pill--control" for="table-select">Стол <span data-table-num>1</span></label>
+        <select id="table-select" class="table-select-mini" name="table" aria-label="Номер стола"></select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap page-hero page-hero--flow">
+      <nav class="step-bar" aria-label="Шаги заказа">
+        <ol>
+          <li class="is-done"><span class="step-bar__n">1</span><span class="step-bar__label">Стол</span></li>
+          <li class="is-current" aria-current="step"><span class="step-bar__n">2</span><span class="step-bar__label">Меню</span></li>
+          <li><span class="step-bar__n">3</span><span class="step-bar__label">Корзина</span></li>
+          <li><span class="step-bar__n">4</span><span class="step-bar__label">Оплата</span></li>
+        </ol>
+      </nav>
+      <p class="eyebrow">Стол <span data-table-num>1</span> · digital menu</p>
+      <h1>Меню</h1>
+      <p class="page-hero__lead">Своя обжарка, единый бар. Выберите напиток и объём — заказ открывается внизу.</p>
+    </div>
+
+    <section class="section section--tight section--bean-menu">
+      <div class="wrap">
+        <div class="bean-block bean-block--compact reveal" id="today-bean"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight section--toolbar">
+      <div class="wrap">
+        <div class="menu-toolbar reveal">
+          <div class="menu-search">
+            <input type="search" id="menu-search" placeholder="Искать в меню…" aria-label="Поиск по меню" />
+          </div>
+          <button type="button" class="chip chip--fav" id="menu-fav-toggle" aria-pressed="false">★ Избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="chips-sticky" id="chips-sticky">
+      <div class="wrap">
+        <div class="chips chips--scroll" id="menu-chips" role="group" aria-label="Категории меню"></div>
+      </div>
+    </div>
+
+    <section class="section section--tight section--menu">
+      <div class="wrap">
+        <p class="menu-count" id="menu-count"></p>
+        <div class="menu-preview menu-preview--digital" id="menu-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-bar" id="cart-bar" hidden>
+    <a class="wrap cart-bar__inner" data-cart-link href="order.html" aria-label="Перейти к заказу">
+      <div class="cart-bar__meta">
+        <span class="cart-bar__label">Стол <span data-cart-table>1</span> · <span data-cart-count>0</span> поз.</span>
+        <strong data-cart-total>0&nbsp;₽</strong>
+      </div>
+      <span class="btn btn--moss btn--small cart-bar__cta" aria-hidden="true">К заказу</span>
+    </a>
+  </div>
+
+  <footer class="footer footer--compact">
+    <div class="wrap">
+      <span class="footer__demo">демо-кейс</span>
+      <a class="footer__secondary" href="about.html">О кофейне</a>
+    </div>
+  </footer>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

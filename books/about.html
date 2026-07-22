@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>О лавке — Форзац</title>
+  <meta name="description" content="О книжной лавке Форзац: доставка, самовывоз, атмосфера." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Форзац<span class="logo__stamp">Открытая классика</span></a>
+      <ul class="nav__links">
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html" aria-current="page">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+      <a class="nav__cart" href="cart.html">
+        Корзина
+        <span class="cart-badge" data-cart-count hidden>0</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+        <span></span>
+      </button>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html" aria-current="page">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <div class="about-hero">
+        <div class="reveal">
+          <p class="eyebrow">Лавка</p>
+          <h1 class="about-hero__title">О «Форзаце»</h1>
+          <p class="about-hero__lead">
+            Небольшой магазинчик книг: чернильно-синие полки, тёплый свет и корешки,
+            которые хочется трогать. Одна серия, живые обложки, заказ — в один чат.
+          </p>
+        </div>
+        <div class="about-hero__visual reveal" aria-hidden="true">
+          <div class="about-shelf" id="about-shelf"></div>
+          <p class="about-hero__caption">«Открытая классика» — 30 томов в едином переплёте</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap prose">
+        <div class="about-story reveal">
+          <p>
+            Название взято из переплётного дела: <em>форзац</em> — лист, который соединяет
+            обложку с блоком страниц. Так и мы: соединяем полку с читателем — без лишнего
+            шума, кассы и корпоративной вежливости. Просто хорошие книги, разложенные по цвету
+            корешка, и человек на другом конце Telegram-чата.
+          </p>
+        </div>
+
+        <figure class="quote-block reveal">
+          <blockquote>
+            Книга начинается с форзаца — тихий жест переплёта перед первой строкой.
+          </blockquote>
+          <figcaption class="quote-block__attr">Из записной лавки</figcaption>
+        </figure>
+
+        <div class="section-label reveal">
+          <span class="section-label__num">01</span>
+          <h2>Как забрать книгу</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <span class="about-card__num">У полки</span>
+            <h3>Самовывоз</h3>
+            <p>Заберите заказ после короткого сообщения в Telegram. Удобно, если вы рядом с лавкой.</p>
+          </div>
+          <div class="about-card reveal">
+            <span class="about-card__num">В путь</span>
+            <h3>Доставка</h3>
+            <p>По городу — курьер, дальше — почта или СДЭК. Срок и стоимость уточняем в переписке.</p>
+          </div>
+          <div class="about-card reveal">
+            <span class="about-card__num">Без кассы</span>
+            <h3>Оплата</h3>
+            <p>После подтверждения — перевод или наличные при встрече. Это демо: настоящих платежей нет.</p>
+          </div>
+        </div>
+
+        <div class="section-label reveal">
+          <span class="section-label__num">02</span>
+          <h2>Заказ за минуту</h2>
+        </div>
+        <ol class="timeline reveal">
+          <li>
+            <span class="timeline__num">1</span>
+            <span class="timeline__text"><strong>Выберите книги</strong>в каталоге — фильтры по жанру и меткам помогают быстро найти нужный том.</span>
+          </li>
+          <li>
+            <span class="timeline__num">2</span>
+            <span class="timeline__text"><strong>Проверьте корзину</strong>оставьте имя и телефон — это займёт меньше минуты.</span>
+          </li>
+          <li>
+            <span class="timeline__num">3</span>
+            <span class="timeline__text"><strong>Нажмите «Оформить в Telegram»</strong>откроется чат с уже готовым текстом заказа.</span>
+          </li>
+        </ol>
+
+        <div class="section-label reveal">
+          <span class="section-label__num">03</span>
+          <h2>Лавка на карте дня</h2>
+        </div>
+        <div class="facts-panel reveal">
+          <div class="facts-panel__item">
+            <p class="facts-panel__label">Часы работы</p>
+            <p class="facts-panel__value">Вт–сб, 12:00–20:00</p>
+            <p class="facts-panel__hint">Вс–пн — лавка отдыхает</p>
+          </div>
+          <div class="facts-panel__item">
+            <p class="facts-panel__label">Связь и заказ</p>
+            <p class="facts-panel__value"><a href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a></p>
+            <p class="facts-panel__hint">Отвечаем в течение дня</p>
+          </div>
+          <div class="facts-panel__item">
+            <p class="facts-panel__label">Серия</p>
+            <p class="facts-panel__value">«Открытая классика»</p>
+            <p class="facts-panel__hint">30 томов, единый переплёт</p>
+          </div>
+          <div class="facts-panel__item">
+            <p class="facts-panel__label">Формат</p>
+            <p class="facts-panel__value">Самовывоз и доставка</p>
+            <p class="facts-panel__hint">Курьер, почта, СДЭК</p>
+          </div>
+        </div>
+
+        <p class="about-credit reveal">
+          Все книги на витрине — серия «Открытая классика». Обложки собраны в единую рамку
+          издания на основе открытого каталога
+          <a href="https://openlibrary.org/dev/docs/api/covers" target="_blank" rel="noopener">Open Library Covers</a>
+          (см. также <code>covers/CREDITS.md</code>). Тексты произведений — общественное достояние.
+        </p>
+
+        <p class="reveal" style="margin-top: 2.5rem">
+          <a class="btn btn--brass" href="catalog.html">К каталогу</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">Книжная лавка «Форзац»</span>
+        <span class="site-footer__hours">Часы: <strong>вт–сб 12:00–20:00</strong>, вс–пн — выходной</span>
+      </div>
+      <span class="demo-tag">демо-кейс</span>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

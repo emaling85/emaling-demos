@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сажа — кофейня на Мельничной, Калуга</title>
+  <meta name="description" content="Сажа — specialty-кофейня в Калуге: своя обжарка, зал у окна и бар, где варят вручную. Заказ со стола по QR — на месте, если удобнее." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header site-header--over">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Сажа<span class="logo__mark">кофейня</span></a>
+      <ul class="nav__links">
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="#bean">Зерно</a></li>
+        <li><a href="#interior">Зал</a></li>
+        <li><a href="about.html">О месте</a></li>
+      </ul>
+      <a class="btn btn--ghost btn--small nav__cta" data-home-order href="qr.html?table=3">Заказ со стола</a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+        <span></span>
+      </button>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul>
+        <li><a href="menu.html">Меню</a></li>
+        <li><a href="#bean">Зерно</a></li>
+        <li><a href="#interior">Зал</a></li>
+        <li><a href="about.html">О месте</a></li>
+        <li><a href="qr.html?table=3">Заказ со стола</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--photo">
+      <div class="hero__media" aria-hidden="true">
+        <img src="images/hero.jpg" alt="" width="1800" height="1200" fetchpriority="high" />
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="wrap hero__content">
+        <p class="hero__brand">Сажа</p>
+        <h1 class="hero__title">Кофе, зерно и зал, где хочется задержаться</h1>
+        <p class="hero__lead">Обжариваем сами, варим на баре вручную и меняем лот на витрине каждую неделю. Столик у окна, книга, разговор — здесь никто не торопит.</p>
+        <div class="hero__cta">
+          <a class="btn btn--moss" href="menu.html">Смотреть меню</a>
+          <a class="btn btn--ghost" href="about.html">О кофейне</a>
+        </div>
+        <a class="hero__order-link" data-home-order href="qr.html?table=3">Уже за столом? Заказ со стола →</a>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="about-strip">
+      <div class="wrap about-home reveal">
+        <div class="about-home__photo">
+          <img src="images/about.jpg" alt="Барная стойка и зал кофейни Сажа" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="about-home__copy">
+          <p class="eyebrow">Место</p>
+          <h2>Один бар, живое зерно, свой обжарочный лист</h2>
+          <p>Небольшая кофейня на Мельничной: варим на одном баре, обжариваем зерно партиями сами и держим лот на витрине неделю-две — дальше меняем на новый урожай. В зале — восемь столов, ламповый свет и негромкая музыка; для тех, кто спешит, на каждом столе QR — заказ уходит на бар с телефона, не отвлекая от разговора.</p>
+          <a class="text-link" href="about.html">История места и команда →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="bean">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Зерно</p>
+          <h2>Сегодня в зёрнах</h2>
+          <p>Обжариваем сами небольшими партиями и держим на витрине один лот за раз — так проще следить за свежестью и рассказать, что в чашке.</p>
+        </div>
+        <div class="bean-block reveal" id="today-bean"></div>
+      </div>
+    </section>
+
+    <section class="section" id="lanes">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Витрина</p>
+          <h2>Что берёте</h2>
+          <p>Три направления меню — нажмите на карточку, чтобы открыть список целиком.</p>
+        </div>
+        <div class="lane-grid">
+          <a class="lane reveal" href="menu.html?cat=drinks">
+            <img src="images/drinks.jpg" alt="" width="900" height="675" loading="lazy" />
+            <span>Напитки</span>
+          </a>
+          <a class="lane reveal" href="menu.html?cat=food">
+            <img src="images/food.jpg" alt="" width="900" height="675" loading="lazy" />
+            <span>Завтраки</span>
+          </a>
+          <a class="lane reveal" href="menu.html?cat=desserts">
+            <img src="images/pastry.jpg" alt="" width="900" height="675" loading="lazy" />
+            <span>Десерты и выпечка</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu-preview">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Сейчас на баре</p>
+          <h2>Что берут чаще</h2>
+          <p>Небольшая подборка из меню — весь список и объёмы смотрите на странице меню.</p>
+        </div>
+        <div class="menu-preview menu-preview--grid menu-preview--hits" id="home-hits"></div>
+        <a class="text-link menu-preview__more" href="menu.html">Открыть меню целиком →</a>
+      </div>
+    </section>
+
+    <section class="section" id="interior">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Зал</p>
+          <h2>Интерьер</h2>
+          <p>Тёмное дерево, латунь и много света от окна на Мельничную — рассчитан и на быстрый кофе с собой, и на пару часов за столом.</p>
+        </div>
+        <div class="gallery reveal">
+          <img src="images/gallery-1.jpg" alt="Зал кофейни Сажа, посадка у окна" width="1000" height="780" loading="lazy" />
+          <img src="images/gallery-2.jpg" alt="Стойка бариста" width="1000" height="780" loading="lazy" />
+          <img src="images/gallery-3.jpg" alt="Столики и растения в зале" width="1000" height="780" loading="lazy" />
+          <img src="images/gallery-4.jpg" alt="Чашка эспрессо на блюдце" width="1000" height="780" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <ul class="info-strip reveal" aria-label="Адрес и часы">
+          <li>
+            <span class="info-strip__label">Адрес</span>
+            <span class="info-strip__text">ул. Мельничная, 14<br />Калуга, вход со двора</span>
+          </li>
+          <li>
+            <span class="info-strip__label">Часы</span>
+            <span class="info-strip__text">Пн–Пт 8:00–21:00<br />Сб–Вс 9:00–22:00</span>
+          </li>
+          <li>
+            <span class="info-strip__label">Связь</span>
+            <span class="info-strip__text">Вопросы, бронь стола<br /><a href="https://t.me/emaling_dev" target="_blank" rel="noopener">Telegram</a></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap reveal">
+        <h2>Загляните на чашку</h2>
+        <p>Столик у окна почти всегда свободен утром. Уже сидите за столом — откройте меню с телефона.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--moss" href="menu.html">Смотреть меню</a>
+          <a class="btn btn--ghost" href="qr.html?table=4">Заказ со стола</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Сажа · Калуга</span>
+      <span class="footer__demo">демо-кейс</span>
+      <a class="footer__staff" href="admin.html">Вход для бариста</a>
+    </div>
+  </footer>
+
+  <div class="sticky-order" id="sticky-order" hidden>
+    <a class="sticky-order__btn" href="qr.html?table=3">Заказ со стола</a>
+  </div>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

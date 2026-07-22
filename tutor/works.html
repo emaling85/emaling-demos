@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Подход и результаты — Слог</title>
+  <meta name="description" content="Как устроена подготовка в «Слог»: диагностика, план на месяц, разбор ошибок. Демо-кейсы учеников." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="nav" data-nav>
+      <a class="logo" href="index.html">Слог</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" data-nav-toggle>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О занятиях</a></li>
+        <li><a class="is-active" href="works.html">Подход</a></li>
+        <li><a href="book.html">Запись</a></li>
+      </ul>
+      <a class="btn nav-cta" href="book.html">Записаться</a>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="photo-bleed reveal" style="padding-left:0;padding-right:0;margin-bottom:2rem">
+          <img src="images/study.jpg" alt="Подготовка к экзаменам" width="1000" height="700" loading="lazy" />
+        </div>
+
+        <p class="eyebrow">Подход</p>
+        <h1>Сначала карта, потом маршрут</h1>
+        <p class="lead">Не «пройдём весь учебник», а закрываем то, что реально мешает набрать нужный балл.</p>
+
+        <ul class="approach-list">
+          <li class="reveal">
+            <strong>1. Диагностика</strong>
+            <span>Короткий срез: что уже хорошо, где провалы, какой темп комфортен. Без лишних тестов «на всё».</span>
+          </li>
+          <li class="reveal">
+            <strong>2. План на месяц</strong>
+            <span>Фиксируем дни и время пакета. На каждую неделю — 1–2 фокуса, а не десять тем сразу.</span>
+          </li>
+          <li class="reveal">
+            <strong>3. Разбор ошибок</strong>
+            <span>Ошибка — материал урока. Смотрим, почему сбило, и закрепляем похожим заданием.</span>
+          </li>
+          <li class="reveal">
+            <strong>4. Лёгкий контроль</strong>
+            <span>Раз в 2–3 недели — мини-проверка, чтобы видеть прогресс, а не гадать.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <p class="eyebrow">Демо-кейсы</p>
+        <h2>Как может выглядеть результат</h2>
+        <p class="lead">Примеры для портфолио сайта. В живой работе цифры и имена согласуются с учеником.</p>
+
+        <ul class="result-list">
+          <li class="reveal">
+            <strong>Математика · профиль</strong>
+            <span>За 3 месяца пакета: с «плавающего» 50–55 до стабильных 70+ на пробниках. Фокус — параметры и стереометрия.</span>
+          </li>
+          <li class="reveal">
+            <strong>Русский · сочинение</strong>
+            <span>Структура и аргументы без шаблонного «воды». На ОГЭ — спокойный проход по критериям.</span>
+          </li>
+          <li class="reveal">
+            <strong>Английский · speaking</strong>
+            <span>От «отвечаю одной фразой» до связного монолога на 1,5–2 минуты за два месяца занятий 2× в неделю.</span>
+          </li>
+        </ul>
+
+        <p style="margin-top: 2rem">
+          <a class="btn" href="book.html">Записаться на пакет</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>«Слог» · демо-кейс · <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a></span>
+        <span>
+          <a href="../">К визитке</a>
+          ·
+          <a class="footer-admin" href="admin.html">Вход для репетитора</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админка заявок — Линия</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,560;0,6..72,650;1,6..72,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="gate" id="gate">
+    <form class="gate-card" id="gate-form" novalidate>
+      <p class="gate-brand">Линия · Админка</p>
+      <h1>Вход для администратора</h1>
+      <p class="gate-lead">
+        Демо-защита от случайных посетителей. Заявки хранятся локально в этом браузере —
+        пароль ниже нужен только для теста кейса.
+      </p>
+      <label class="field" for="gate-password">
+        Пароль
+        <input
+          type="password"
+          id="gate-password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="liniya2026"
+        />
+      </label>
+      <p class="gate-error" id="gate-error" role="alert" hidden></p>
+      <button class="btn btn-primary" type="submit">Войти</button>
+      <a class="gate-back" href="../index.html">← Вернуться на сайт</a>
+    </form>
+  </div>
+
+  <div class="app" id="app" hidden>
+    <header class="topbar">
+      <div class="topbar-left">
+        <a class="brand" href="../index.html">Линия</a>
+        <span class="topbar-sep" aria-hidden="true"></span>
+        <h1 class="topbar-title">Заявки на приём</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="link-quiet" href="../book.html">+ Новая запись</a>
+        <button class="btn btn-ghost" id="logout-btn" type="button">Выйти</button>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Статистика заявок">
+      <div class="stat">
+        <span class="stat-label">Всего</span>
+        <span class="stat-value" id="stat-all">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Новые</span>
+        <span class="stat-value" id="stat-new">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Подтверждено</span>
+        <span class="stat-value" id="stat-confirmed">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Выполнено</span>
+        <span class="stat-value" id="stat-done">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Отменено</span>
+        <span class="stat-value" id="stat-cancelled">0</span>
+      </div>
+      <div class="stats-actions">
+        <button class="btn btn-secondary" id="refresh-btn" type="button" title="Перечитать заявки из localStorage">
+          ⟲ Обновить
+        </button>
+        <label class="btn btn-secondary file-btn" title="Импорт заявок из старого формата бота (data/applications.json)">
+          ⇪ Импорт JSON
+          <input type="file" id="import-file" accept=".json,application/json" />
+        </label>
+        <button class="btn btn-secondary" id="demo-btn" type="button" title="Заполнить демо-заявками для теста">
+          Демо-данные
+        </button>
+        <button class="btn btn-secondary" id="clear-btn" type="button" title="Удалить все заявки без возможности отмены">
+          Очистить всё
+        </button>
+      </div>
+    </section>
+
+    <nav class="filters" id="filters" aria-label="Фильтр по статусу">
+      <button class="filter is-active" data-filter="all" type="button">
+        Все <span class="count" id="count-all">0</span>
+      </button>
+      <button class="filter" data-filter="new" type="button">
+        Новые <span class="count" id="count-new">0</span>
+      </button>
+      <button class="filter" data-filter="confirmed" type="button">
+        Подтверждённые <span class="count" id="count-confirmed">0</span>
+      </button>
+      <button class="filter" data-filter="done" type="button">
+        Выполненные <span class="count" id="count-done">0</span>
+      </button>
+      <button class="filter" data-filter="cancelled" type="button">
+        Отменённые <span class="count" id="count-cancelled">0</span>
+      </button>
+    </nav>
+
+    <main class="main" id="main">
+      <div class="booking-list" id="booking-list"></div>
+    </main>
+
+    <footer class="foot">
+      <span>Клиника «Линия» · демо-админка · данные хранятся локально в этом браузере</span>
+      <span>Ключ хранения: <code>linia_bookings</code> · без сервера и Telegram-бота</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/bookings.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

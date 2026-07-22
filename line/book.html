@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запись на приём — Линия</title>
+  <meta name="description" content="Запись на приём в клинику косметологии «Линия»: выберите услугу, дату и время — заявка сохранится на сайте и появится у администратора." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,560;0,6..72,650;1,6..72,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a class="logo" href="index.html">Линия</a>
+    <nav class="nav-links" aria-label="Разделы">
+      <a href="index.html#services">Направления</a>
+      <a href="index.html#process">Приём</a>
+      <a href="index.html#prices">Цены</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn" href="book.html">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <ul>
+      <li><a href="index.html#services">Направления</a></li>
+      <li><a href="index.html#process">Как проходит приём</a></li>
+      <li><a href="index.html#prices">Цены</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contacts">Контакты</a></li>
+    </ul>
+    <a class="btn btn-block" href="book.html">Записаться на приём</a>
+  </div>
+
+  <main>
+    <section class="section book-shell" id="book-shell">
+      <p class="eyebrow">Запись на приём</p>
+      <h1 id="book-title">Выберите услугу и удобное время</h1>
+      <p class="lead">Заявка сохраняется на сайте и сразу видна администратору — без Telegram-бота и звонков. Мы подтвердим время сами.</p>
+
+      <div class="success" id="book-success" hidden>
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h2>Заявка отправлена</h2>
+        <p>Мы свяжемся по указанному контакту, чтобы подтвердить время — обычно в день обращения.</p>
+        <div class="success-summary" id="success-summary"></div>
+        <div class="success-actions">
+          <button type="button" class="btn" id="book-again">Новая запись</button>
+          <a class="btn btn-ghost" href="index.html">На главную</a>
+        </div>
+      </div>
+
+      <div class="book-layout" id="book-layout">
+        <form class="book-form" id="book-form" autocomplete="on" novalidate>
+          <div class="book-panel">
+            <h3>Услуга</h3>
+            <p class="hint">Точную цену и длительность назовём после осмотра — здесь ориентир.</p>
+            <div class="chip-grid" role="radiogroup" aria-label="Услуга" id="service-group">
+              <label class="chip svc-chip">
+                <input type="radio" name="service" value="consult" />
+                <span><strong>Консультация</strong><small>1&nbsp;500&nbsp;₽ · 15–20 мин</small></span>
+              </label>
+              <label class="chip svc-chip">
+                <input type="radio" name="service" value="care" checked />
+                <span><strong>Уход за лицом</strong><small>от 2&nbsp;800&nbsp;₽ · 40–60 мин</small></span>
+              </label>
+              <label class="chip svc-chip">
+                <input type="radio" name="service" value="hardware" />
+                <span><strong>Аппаратная</strong><small>от 4&nbsp;500&nbsp;₽ · 45–70 мин</small></span>
+              </label>
+              <label class="chip svc-chip">
+                <input type="radio" name="service" value="inject" />
+                <span><strong>Инъекции</strong><small>от 6&nbsp;900&nbsp;₽ · 30–50 мин</small></span>
+              </label>
+              <label class="chip svc-chip">
+                <input type="radio" name="service" value="epil" />
+                <span><strong>Эпиляция</strong><small>от 1&nbsp;200&nbsp;₽ · 15–45 мин</small></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="book-panel">
+            <h3>Дата и время</h3>
+            <p class="hint">Если выбранное время занято — предложим соседний слот при подтверждении.</p>
+            <div class="field-row field-row-2" style="margin-bottom: 1.1rem;">
+              <div class="field">
+                <label class="field-label" for="date">Дата</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="field">
+                <label class="field-label" for="time-custom">Или своё время <em>(необязательно)</em></label>
+                <input type="text" id="time-custom" name="timeCustom" placeholder="например, после 18:00" />
+              </div>
+            </div>
+            <div class="chip-grid" role="radiogroup" aria-label="Время" id="time-group">
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="10:00" />
+                <span>10:00</span>
+              </label>
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="12:00" />
+                <span>12:00</span>
+              </label>
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="14:00" checked />
+                <span>14:00</span>
+              </label>
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="16:00" />
+                <span>16:00</span>
+              </label>
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="18:00" />
+                <span>18:00</span>
+              </label>
+              <label class="chip time-chip">
+                <input type="radio" name="time" value="20:00" />
+                <span>20:00</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="book-panel">
+            <h3>Контакты</h3>
+            <div class="field-row field-row-2">
+              <div class="field">
+                <label class="field-label" for="name">Имя</label>
+                <input type="text" id="name" name="name" required placeholder="Как к вам обращаться" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label class="field-label" for="phone">Телефон или Telegram</label>
+                <input type="text" id="phone" name="phone" required placeholder="+7… или @username" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="field" style="margin-top: 1rem;">
+              <label class="field-label" for="comment">Комментарий <em>(необязательно)</em></label>
+              <textarea id="comment" name="comment" rows="3" placeholder="Например: были на чистке в июне, интересует продолжение курса"></textarea>
+            </div>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert"></p>
+
+          <button class="btn btn-block btn-lg" type="submit">Отправить заявку</button>
+        </form>
+
+        <aside class="summary" aria-live="polite">
+          <h3>Ваша заявка</h3>
+          <ul class="summary-lines">
+            <li><span>Услуга</span><strong id="sum-service">Уход за лицом</strong></li>
+            <li><span>Дата</span><strong id="sum-date">—</strong></li>
+            <li><span>Время</span><strong id="sum-time">14:00</strong></li>
+            <li><span>Контакт</span><strong id="sum-contact">—</strong></li>
+          </ul>
+          <div class="summary-price">
+            <p class="label">Ориентир стоимости</p>
+            <p class="value" id="sum-price">от 2&nbsp;800&nbsp;₽</p>
+          </div>
+          <p class="summary-note">После отправки заявка попадёт в админку со статусом «новая». Точную цену назовём после осмотра.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <span>Клиника «Линия» · демо-кейс сайта · Москва</span>
+      <span><a href="admin/index.html">Вход для администратора</a></span>
+    </div>
+  </footer>
+
+  <script src="js/bookings.js"></script>
+  <script>
+    (function () {
+      var SERVICE_LABEL = {
+        consult: "Консультация",
+        care: "Уход за лицом",
+        hardware: "Аппаратная косметология",
+        inject: "Инъекционные методики",
+        epil: "Эпиляция",
+      };
+      var SERVICE_PRICE = {
+        consult: "1\u00a0500\u00a0₽",
+        care: "от 2\u00a0800\u00a0₽",
+        hardware: "от 4\u00a0500\u00a0₽",
+        inject: "от 6\u00a0900\u00a0₽",
+        epil: "от 1\u00a0200\u00a0₽",
+      };
+
+      var form = document.getElementById("book-form");
+      var layout = document.getElementById("book-layout");
+      var successEl = document.getElementById("book-success");
+      var errorEl = document.getElementById("form-error");
+
+      var dateInput = document.getElementById("date");
+      var timeCustomInput = document.getElementById("time-custom");
+      var nameInput = document.getElementById("name");
+      var phoneInput = document.getElementById("phone");
+      var commentInput = document.getElementById("comment");
+
+      var sumService = document.getElementById("sum-service");
+      var sumDate = document.getElementById("sum-date");
+      var sumTime = document.getElementById("sum-time");
+      var sumContact = document.getElementById("sum-contact");
+      var sumPrice = document.getElementById("sum-price");
+
+      function todayStr() {
+        var d = new Date();
+        var yyyy = d.getFullYear();
+        var mm = String(d.getMonth() + 1).padStart(2, "0");
+        var dd = String(d.getDate()).padStart(2, "0");
+        return yyyy + "-" + mm + "-" + dd;
+      }
+
+      dateInput.min = todayStr();
+      dateInput.value = todayStr();
+
+      function selectedService() {
+        var el = form.querySelector('input[name="service"]:checked');
+        return el ? el.value : "care";
+      }
+
+      function selectedTime() {
+        var custom = timeCustomInput.value.trim();
+        if (custom) return custom;
+        var el = form.querySelector('input[name="time"]:checked');
+        return el ? el.value : "";
+      }
+
+      function formatDateForSummary(value) {
+        if (!value) return "—";
+        var parts = value.split("-");
+        if (parts.length !== 3) return value;
+        return parts[2] + "." + parts[1] + "." + parts[0];
+      }
+
+      function updateSummary() {
+        var svc = selectedService();
+        sumService.textContent = SERVICE_LABEL[svc] || svc;
+        sumPrice.textContent = SERVICE_PRICE[svc] || "—";
+        sumDate.textContent = formatDateForSummary(dateInput.value);
+        sumTime.textContent = selectedTime() || "—";
+        var contact = phoneInput.value.trim();
+        var name = nameInput.value.trim();
+        sumContact.textContent = contact ? (name ? name + " · " + contact : contact) : (name || "—");
+      }
+
+      form.addEventListener("change", updateSummary);
+      form.addEventListener("input", updateSummary);
+
+      // Pre-select service from ?service= query param (used by CTA links on index.html)
+      var params = new URLSearchParams(window.location.search);
+      var presetService = params.get("service");
+      if (presetService && SERVICE_LABEL[presetService]) {
+        var target = form.querySelector('input[name="service"][value="' + presetService + '"]');
+        if (target) target.checked = true;
+      }
+
+      updateSummary();
+
+      function showError(message) {
+        errorEl.textContent = message;
+        errorEl.classList.add("is-visible");
+      }
+
+      function clearError() {
+        errorEl.classList.remove("is-visible");
+        errorEl.textContent = "";
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearError();
+
+        var name = nameInput.value.trim();
+        var phone = phoneInput.value.trim();
+        var date = dateInput.value;
+        var time = selectedTime();
+        var service = selectedService();
+
+        if (!name) {
+          showError("Укажите имя, чтобы мы знали, как к вам обращаться.");
+          nameInput.focus();
+          return;
+        }
+        if (!phone) {
+          showError("Укажите телефон или Telegram для связи.");
+          phoneInput.focus();
+          return;
+        }
+        if (!date) {
+          showError("Выберите дату визита.");
+          dateInput.focus();
+          return;
+        }
+        if (!time) {
+          showError("Выберите время или укажите своё в поле рядом с датой.");
+          return;
+        }
+
+        var booking = window.LiniaBookings.create({
+          service: service,
+          name: name,
+          phone: phone,
+          date: date,
+          time: time,
+          comment: commentInput.value.trim(),
+        });
+
+        var summaryEl = document.getElementById("success-summary");
+        summaryEl.innerHTML =
+          "<strong>" + (SERVICE_LABEL[service] || service) + "</strong><span>" +
+          formatDateForSummary(date) + " в " + time + " · " + phone + "</span>";
+        summaryEl.style.display = "grid";
+        summaryEl.querySelector("strong").style.fontFamily = "var(--display)";
+        summaryEl.querySelector("strong").style.fontSize = "1.1rem";
+        summaryEl.querySelector("span").style.color = "var(--muted)";
+
+        layout.hidden = true;
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      document.getElementById("book-again").addEventListener("click", function () {
+        form.reset();
+        dateInput.value = todayStr();
+        form.querySelector('input[name="service"][value="care"]').checked = true;
+        form.querySelector('input[name="time"][value="14:00"]').checked = true;
+        updateSummary();
+        successEl.hidden = true;
+        layout.hidden = false;
+      });
+
+      // Nav drawer (shared behaviour with index.html)
+      var toggle = document.getElementById("nav-toggle");
+      var drawer = document.getElementById("nav-drawer");
+      if (toggle && drawer) {
+        toggle.addEventListener("click", function () {
+          var open = drawer.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+      var navEl = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        function () {
+          if (navEl) navEl.classList.toggle("is-scrolled", window.scrollY > 4);
+        },
+        { passive: true }
+      );
+    })();
+  </script>
+</body>
+</html>

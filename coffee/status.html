@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Заказ принят — Сажа</title>
+  <meta name="description" content="Статус заказа в кофейне Сажа." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-flow" data-page="status">
+  <header class="site-header site-header--flow">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Сажа<span class="logo__mark">кофейня</span></a>
+      <span class="table-pill">Стол <span id="status-table">—</span></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap" id="status-missing" hidden>
+      <div class="empty empty--status" style="padding-top: 3rem">
+        <h2>Заказ не найден</h2>
+        <p>Сессия пуста или заказ уже закрыт. Отсканируйте QR на столе и оформите снова.</p>
+        <a class="btn btn--moss" href="qr.html" data-table-link="qr.html">К QR · выбрать стол</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+    <div class="status-card" id="status-card">
+      <p class="eyebrow status-paid-badge">Оплачено · демо</p>
+      <h1 class="status-card__num" id="status-number">#—</h1>
+      <p class="status-card__lead" id="status-lead">Заказ принят. Скоро поставим на бар.</p>
+
+      <div class="status-meta">
+        <div>
+          <span class="info-strip__label">Статус</span>
+          <span class="status-badge" id="status-badge">Новый</span>
+        </div>
+        <div>
+          <span class="info-strip__label">Стол</span>
+          <span class="status-timer" id="status-table-lead">—</span>
+        </div>
+        <div>
+          <span class="info-strip__label">Время</span>
+          <span class="status-timer" id="status-timer">00:00</span>
+        </div>
+      </div>
+
+      <ul class="pay-summary" id="status-items"></ul>
+      <p class="status-comment" id="status-comment" hidden></p>
+
+      <div class="cart-total-row">
+        <span>Итого</span>
+        <strong id="status-total">0&nbsp;₽</strong>
+      </div>
+
+      <div class="status-actions">
+        <a class="btn btn--ghost btn--block" id="status-tg" href="https://t.me/emaling_dev" target="_blank" rel="noopener">Дублировать в Telegram</a>
+        <a class="btn btn--ghost btn--block" href="qr.html" data-table-link="qr.html">Новый заказ</a>
+      </div>
+      <p class="pay-note" id="status-label-hint">Статус обновляется автоматически, когда бариста меняет заказ на баре.</p>
+    </div>
+    </div>
+  </main>
+
+  <footer class="footer footer--compact">
+    <div class="wrap">
+      <span class="footer__demo">демо-кейс</span>
+    </div>
+  </footer>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

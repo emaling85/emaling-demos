@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Форзац — книжная лавка</title>
+  <meta name="description" content="Форзац — небольшая книжная лавка: классика и редкие издания. Демо-кейс интернет-магазина." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header site-header--over">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Форзац<span class="logo__stamp">Открытая классика</span></a>
+      <ul class="nav__links">
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+      <a class="nav__cart" href="cart.html">
+        Корзина
+        <span class="cart-badge" data-cart-count hidden>0</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+        <span></span>
+      </button>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--photo">
+      <div class="hero__media" aria-hidden="true">
+        <img src="images/hero.jpg" alt="" width="1600" height="1067" fetchpriority="high" onerror="this.remove()" />
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="wrap hero__content">
+        <p class="hero__brand">Форзац</p>
+        <h1 class="hero__title">Классика на одной полке</h1>
+        <p class="hero__lead">Небольшая лавка: единая серия, живые обложки. Заказ уходит в Telegram — без корзины-кассы.</p>
+        <div class="hero__cta">
+          <a class="btn btn--brass" href="catalog.html">Открыть каталог</a>
+          <a class="btn btn--ghost-light" href="#hits-section">Что советуем</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--shelf">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Корешки</p>
+          <h2>Полка как у прилавка</h2>
+          <p>Пролистайте — нажмите том, чтобы открыть карточку.</p>
+        </div>
+      </div>
+      <div id="shelf-rail" class="shelf-rail reveal"></div>
+    </section>
+
+    <section class="section" id="hits-section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Новинки и хиты</p>
+          <h2>Что советуем сейчас</h2>
+          <p>Обложка — главное. Меньше текста, больше воздуха на полке.</p>
+        </div>
+        <div class="book-grid book-grid--cover-first" id="hits"></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <ul class="trust-strip reveal" aria-label="Как забрать заказ">
+        <li>
+          <span class="trust-strip__label">Самовывоз</span>
+          <span class="trust-strip__text">У полки после Telegram</span>
+        </li>
+        <li>
+          <span class="trust-strip__label">Доставка</span>
+          <span class="trust-strip__text">Курьер, почта, СДЭК</span>
+        </li>
+        <li>
+          <span class="trust-strip__label">Заказ</span>
+          <span class="trust-strip__text">Без корзины-кассы — в чат</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>30 томов «Открытой классики»</h2>
+        <p>Цены от 500 до 1&nbsp;480&nbsp;₽. Одна серия, реальные обложки, заказ в Telegram.</p>
+        <a class="btn" href="catalog.html">Смотреть все</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">Книжная лавка «Форзац»</span>
+        <span class="site-footer__hours">Часы: <strong>вт–сб 12:00–20:00</strong>, вс–пн — выходной</span>
+      </div>
+      <span class="demo-tag">демо-кейс</span>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

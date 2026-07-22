@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Запись — Слог</title>
+  <meta name="description" content="Запись на пакет занятий «Слог»: выберите предмет, дни и время — стоимость месяца считается сразу." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="nav" data-nav>
+      <a class="logo" href="index.html">Слог</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" data-nav-toggle>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О занятиях</a></li>
+        <li><a href="works.html">Подход</a></li>
+        <li><a class="is-active" href="book.html">Запись</a></li>
+      </ul>
+      <a class="btn nav-cta" href="book.html">Записаться</a>
+    </header>
+
+    <main>
+      <section class="section book-shell" id="book-shell">
+        <p class="eyebrow">Запись</p>
+        <h1 id="book-title">Пакет на месяц</h1>
+        <p class="lead" id="book-lead">Выберите предмет, дни и слот — стоимость обновится сразу. После отправки заявку проверит репетитор.</p>
+
+        <div class="success" id="book-success" hidden>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h2>Заявка отправлена — подтверждение придёт после проверки</h2>
+          <p>Можете продублировать заявку в Telegram — на всякий случай, с готовым текстом.</p>
+          <div class="success-actions">
+            <a class="btn" id="tg-backup" href="https://t.me/emaling_dev" target="_blank" rel="noopener">Написать @emaling_dev</a>
+            <button type="button" class="btn btn-ghost" id="book-again">Новая заявка</button>
+            <a class="btn btn-ghost" href="index.html">На главную</a>
+          </div>
+        </div>
+
+        <div class="book-layout" id="book-layout">
+          <form class="book-form" id="book-form" autocomplete="on" novalidate>
+            <div class="book-panel">
+              <h3>Формат пакета</h3>
+              <p class="hint">Основной вариант — месяц. Разовое пробное — если хотите сначала познакомиться.</p>
+              <div class="pkg-grid" role="radiogroup" aria-label="Пакет">
+                <label class="pkg">
+                  <input type="radio" name="package" value="month" checked />
+                  <span class="pkg-card">
+                    <span class="pkg-badge">Рекомендуем</span>
+                    <strong>Пакет на месяц</strong>
+                    <span>Занятия в выбранные дни · 4 недели · цена считается ниже</span>
+                  </span>
+                </label>
+                <label class="pkg">
+                  <input type="radio" name="package" value="trial" />
+                  <span class="pkg-card">
+                    <strong>Пробное занятие</strong>
+                    <span>Один урок 60 мин — чтобы понять формат</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="book-panel">
+              <h3>Предмет и формат</h3>
+              <p class="hint">Онлайн чуть дешевле (−10%). ЕГЭ/ОГЭ — коэффициент ×1,25.</p>
+
+              <div class="field" style="margin-bottom: 1rem">
+                <span class="field-label">Предмет</span>
+                <div class="chip-grid" role="radiogroup" aria-label="Предмет">
+                  <label class="chip chip-primary">
+                    <input type="radio" name="subject" value="math" checked />
+                    <span>Математика</span>
+                  </label>
+                  <label class="chip chip-primary">
+                    <input type="radio" name="subject" value="russian" />
+                    <span>Русский</span>
+                  </label>
+                  <label class="chip chip-primary">
+                    <input type="radio" name="subject" value="english" />
+                    <span>Английский</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field" style="margin-bottom: 1rem">
+                <span class="field-label">Формат</span>
+                <div class="chip-grid" role="radiogroup" aria-label="Формат">
+                  <label class="chip">
+                    <input type="radio" name="format" value="online" checked />
+                    <span>Онлайн</span>
+                  </label>
+                  <label class="chip">
+                    <input type="radio" name="format" value="offline" />
+                    <span>Очно</span>
+                  </label>
+                </div>
+              </div>
+
+              <label class="toggle-row">
+                <input type="checkbox" name="exam" id="exam" />
+                <span>Подготовка к ЕГЭ / ОГЭ</span>
+              </label>
+            </div>
+
+            <div class="book-panel">
+              <h3>Дни недели</h3>
+              <p class="hint" id="day-hint">Нажмите нужные дни — можно несколько. Для пакета это и есть интенсивность.</p>
+              <div class="day-grid" id="day-grid">
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="mon" />
+                  <span>Пн</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="tue" />
+                  <span>Вт</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="wed" />
+                  <span>Ср</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="thu" />
+                  <span>Чт</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="fri" />
+                  <span>Пт</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="sat" />
+                  <span>Сб</span>
+                </label>
+                <label class="chip day-chip">
+                  <input type="checkbox" name="days" value="sun" />
+                  <span>Вс</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="book-panel">
+              <h3>Время</h3>
+              <p class="hint">Один слот на все выбранные дни. Длительность — 60 минут.</p>
+              <div class="time-grid" role="radiogroup" aria-label="Время" id="time-grid">
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="10:00" />
+                  <span>10:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="12:00" />
+                  <span>12:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="14:00" />
+                  <span>14:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="16:00" />
+                  <span>16:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="17:00" checked />
+                  <span>17:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="18:00" />
+                  <span>18:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="19:00" />
+                  <span>19:00</span>
+                </label>
+                <label class="chip time-chip">
+                  <input type="radio" name="time" value="20:00" />
+                  <span>20:00</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="book-panel">
+              <h3>Контакты</h3>
+              <div class="field" style="margin-bottom: 0.85rem">
+                <label class="field-label" for="name">Имя</label>
+                <input type="text" id="name" name="name" required placeholder="Как к вам обращаться" autocomplete="name" />
+              </div>
+              <div class="field" style="margin-bottom: 0.85rem">
+                <label class="field-label" for="contact">Telegram или телефон</label>
+                <input type="text" id="contact" name="contact" required placeholder="@username или +7…" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label class="field-label" for="comment">Комментарий <em>(необязательно)</em></label>
+                <textarea id="comment" name="comment" rows="3" placeholder="Класс, цель, особенности"></textarea>
+              </div>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert"></p>
+
+            <button class="btn btn-block btn-lg" type="submit">Отправить заявку</button>
+          </form>
+
+          <aside class="summary" aria-live="polite">
+            <h3>Ваша заявка</h3>
+            <ul class="summary-lines">
+              <li><span>Пакет</span><strong id="sum-package">На месяц</strong></li>
+              <li><span>Предмет</span><strong id="sum-subject">Математика</strong></li>
+              <li><span>Формат</span><strong id="sum-format">Онлайн</strong></li>
+              <li><span>Дни</span><strong id="sum-days">—</strong></li>
+              <li><span>Время</span><strong id="sum-time">17:00</strong></li>
+              <li><span id="sum-hours-label">В неделю</span><strong id="sum-hours">0 ч</strong></li>
+            </ul>
+            <div class="summary-price">
+              <p class="label" id="sum-price-label">Пакет на месяц</p>
+              <p class="value" id="sum-price">0&nbsp;₽</p>
+              <p class="sub" id="sum-lesson">За занятие: 0&nbsp;₽</p>
+            </div>
+            <p class="summary-note">После отправки заявка попадёт в админку со статусом «новая». Подтверждение — после проверки слотов.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>«Слог» · демо-кейс · <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a></span>
+        <span>
+          <a href="../">К визитке</a>
+          ·
+          <a class="footer-admin" href="admin.html">Вход для репетитора</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/bookings.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

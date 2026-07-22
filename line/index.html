@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Линия — клиника косметологии в Москве</title>
+  <meta
+    name="description"
+    content="Клиника косметологии «Линия»: уход за лицом, аппаратные процедуры, инъекционные методики и эпиляция. Консультация перед любой процедурой, стерильные расходники, запись на сайте без бота."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,560;0,6..72,650;1,6..72,500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a class="logo" href="#">Линия</a>
+    <nav class="nav-links" aria-label="Разделы">
+      <a href="#services">Направления</a>
+      <a href="#process">Приём</a>
+      <a href="#doctor">Врач</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn" href="book.html">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <ul>
+      <li><a href="#services">Направления</a></li>
+      <li><a href="#process">Как проходит приём</a></li>
+      <li><a href="#doctor">Врач</a></li>
+      <li><a href="#prices">Цены</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a class="btn btn-block" href="book.html">Записаться на приём</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img class="ph" src="images/hero.jpg" alt="" width="1800" height="1150" fetchpriority="high" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Клиника косметологии «Линия»</p>
+        <h1>Косметология <em>без спешки</em> и без навязанных пакетов</h1>
+        <p class="lead">
+          Уход за лицом, аппаратные процедуры, инъекционные методики и эпиляция —
+          всегда после осмотра врача. Записаться можно прямо на сайте: без
+          бота и без звонков, ответим и подтвердим сами.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-lg btn-on-dark" href="book.html">Записаться на сайте</a>
+          <a class="btn btn-lg btn-ghost-on-dark" href="#services">Смотреть направления</a>
+        </div>
+        <div class="hero-facts">
+          <div class="hero-fact">
+            <strong>9 лет</strong>
+            <span>клинического стажа врача</span>
+          </div>
+          <div class="hero-fact">
+            <strong>100%</strong>
+            <span>одноразовых расходников на приёме</span>
+          </div>
+          <div class="hero-fact">
+            <strong>4</strong>
+            <span>направления в одном кабинете</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Почему «Линия»">
+      <div class="trust-item reveal">
+        <span class="trust-num">01</span>
+        <p><strong>Осмотр перед процедурой</strong> Назначаем только то, что подходит вашей коже — без обязательных «комплексов»</p>
+      </div>
+      <div class="trust-item reveal">
+        <span class="trust-num">02</span>
+        <p><strong>Стерильность</strong> Одноразовые расходники, автоклавирование инструментов, сертифицированные препараты</p>
+      </div>
+      <div class="trust-item reveal">
+        <span class="trust-num">03</span>
+        <p><strong>Запись на сайте</strong> Форма записи здесь же, без Telegram-бота — подтверждаем звонком или сообщением</p>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <p class="eyebrow">Направления</p>
+        <h2>Чем занимаемся в кабинете</h2>
+        <p class="section-lead">
+          Четыре направления под разные задачи кожи. На каждом приёме — сначала
+          осмотр, потом процедура: составы и мощность аппаратов подбираются
+          под тип кожи и цель, а не «по умолчанию».
+        </p>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <article class="svc">
+          <div class="svc-media">
+            <img class="ph" src="images/care.jpg" alt="Уход за лицом в клинике Линия" width="900" height="1125" loading="lazy" />
+            <span class="svc-tag">Уход</span>
+          </div>
+          <div class="svc-body">
+            <h3>Уход за лицом</h3>
+            <p>Чистки, пилинги, увлажнение и восстановление — база для регулярного ухода и подготовки кожи к более активным процедурам.</p>
+            <ul class="svc-list">
+              <li>Механическая и ультразвуковая чистка</li>
+              <li>Химические пилинги по показаниям кожи</li>
+              <li>Маски и сыворотки с активными компонентами</li>
+            </ul>
+            <p class="svc-note"><strong>Не подходит:</strong> при обострении герпеса, свежем загаре и открытых воспалениях — уточним на осмотре.</p>
+            <div class="svc-meta">
+              <p class="svc-price">от 2&nbsp;800&nbsp;₽<span>40–60 минут</span></p>
+              <a class="svc-link" href="book.html?service=care">Записаться</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc-media">
+            <img class="ph" src="images/hardware.jpg" alt="Аппаратная процедура в клинике Линия" width="900" height="1125" loading="lazy" />
+            <span class="svc-tag">Аппаратная</span>
+          </div>
+          <div class="svc-body">
+            <h3>Аппаратная косметология</h3>
+            <p>RF-лифтинг, ультразвуковая терапия и фотопроцедуры — курсом или разово, по плотности и тонусу кожи.</p>
+            <ul class="svc-list">
+              <li>RF-лифтинг лица и шеи</li>
+              <li>Ультразвуковая терапия, лимфодренаж</li>
+              <li>Фотопроцедуры при пигментации</li>
+            </ul>
+            <p class="svc-note"><strong>Не подходит:</strong> при беременности, кардиостимуляторе и онкозаболеваниях в анамнезе.</p>
+            <div class="svc-meta">
+              <p class="svc-price">от 4&nbsp;500&nbsp;₽<span>45–70 минут</span></p>
+              <a class="svc-link" href="book.html?service=hardware">Записаться</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc-media">
+            <img class="ph" src="images/inject.jpg" alt="Инъекционная методика в клинике Линия" width="900" height="1125" loading="lazy" />
+            <span class="svc-tag">Инъекции</span>
+          </div>
+          <div class="svc-body">
+            <h3>Инъекционные методики</h3>
+            <p>Биоревитализация, мезотерапия и контурная коррекция — только после консультации и подбора протокола под кожу.</p>
+            <ul class="svc-list">
+              <li>Биоревитализация и биорепарация</li>
+              <li>Мезотерапия по показаниям</li>
+              <li>Контурная коррекция объёмов</li>
+            </ul>
+            <p class="svc-note"><strong>Не подходит:</strong> при беременности, лактации, нарушении свёртываемости крови и острых инфекциях.</p>
+            <div class="svc-meta">
+              <p class="svc-price">от 6&nbsp;900&nbsp;₽<span>30–50 минут</span></p>
+              <a class="svc-link" href="book.html?service=inject">Записаться</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc">
+          <div class="svc-media">
+            <img class="ph" src="images/epil.jpg" alt="Лазерная эпиляция в клинике Линия" width="900" height="1125" loading="lazy" />
+            <span class="svc-tag">Эпиляция</span>
+          </div>
+          <div class="svc-body">
+            <h3>Эпиляция</h3>
+            <p>Лазерная и сахарная эпиляция зон лица и тела — курсом с интервалом 4–6 недель или разово перед событием.</p>
+            <ul class="svc-list">
+              <li>Диодный лазер — все типы кожи</li>
+              <li>Сахарная эпиляция для чувствительных зон</li>
+              <li>Расчёт курса на первой консультации</li>
+            </ul>
+            <p class="svc-note"><strong>Не подходит:</strong> при свежем загаре, беременности и обострении кожных заболеваний в зоне.</p>
+            <div class="svc-meta">
+              <p class="svc-price">от 1&nbsp;200&nbsp;₽<span>15–45 минут</span></p>
+              <a class="svc-link" href="book.html?service=epil">Записаться</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-tinted" id="process">
+      <div class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Как проходит приём</p>
+          <h2>От записи до рекомендаций после процедуры</h2>
+          <p class="section-lead">
+            Один и тот же порядок для любого направления — так вы всегда знаете,
+            что будет происходить и сколько это займёт времени.
+          </p>
+        </div>
+
+        <div class="timeline reveal-stagger">
+          <div class="timeline-item">
+            <span class="timeline-num"></span>
+            <div class="timeline-body">
+              <h3>Запись на сайте</h3>
+              <p>Выбираете услугу, удобную дату и время в форме записи — без звонков и без Telegram-бота. Заявка сразу видна администратору.</p>
+              <span class="tag">2–3 минуты</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-num"></span>
+            <div class="timeline-body">
+              <h3>Подтверждение</h3>
+              <p>Мы подтверждаем время сообщением или звонком по контакту из заявки — обычно в день обращения, до 21:00.</p>
+              <span class="tag">В день обращения</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-num"></span>
+            <div class="timeline-body">
+              <h3>Осмотр и анкета</h3>
+              <p>На приёме — короткая анкета по здоровью и противопоказаниям, осмотр кожи, обсуждение цели. Только после этого решаем, какая процедура подойдёт.</p>
+              <span class="tag">10–15 минут</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-num"></span>
+            <div class="timeline-body">
+              <h3>Процедура</h3>
+              <p>Врач озвучивает план и точную цену до начала — без сюрпризов после. Все расходники одноразовые, инструменты — из стерильной упаковки.</p>
+              <span class="tag">15–70 минут в зависимости от процедуры</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-num"></span>
+            <div class="timeline-body">
+              <h3>Рекомендации после</h3>
+              <p>Врач фиксирует уход на ближайшие дни и, если нужно, предлагает дату следующего визита — без давления записаться «прямо сейчас».</p>
+              <span class="tag">Письменно — на почту или в сообщении</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prep">
+      <div class="section-head reveal">
+        <p class="eyebrow">Перед визитом</p>
+        <h2>Подготовка и противопоказания</h2>
+        <p class="section-lead">
+          Общие ориентиры — точный список для вашей процедуры уточнит врач на
+          консультации, он зависит от кожи и выбранного метода.
+        </p>
+      </div>
+
+      <div class="split split-2">
+        <div class="info-card reveal">
+          <h3>Как подготовиться</h3>
+          <p class="info-sub">Общие рекомендации для большинства процедур клиники</p>
+          <ul class="check-list">
+            <li>Избегайте активного загара и солярия 10–14 дней до процедуры</li>
+            <li>Не используйте ретиноиды и кислотные средства 3–5 дней до пилинга или лазера</li>
+            <li>Приходите без декоративной косметики на зону процедуры</li>
+            <li>Сообщите о приёме антибиотиков, антикоагулянтов и о беременности</li>
+            <li>Для инъекционных методик — не планируйте важные события на ближайшие 2–3 дня</li>
+          </ul>
+        </div>
+        <div class="info-card reveal">
+          <h3>Общие противопоказания</h3>
+          <p class="info-sub">Полный список для конкретной процедуры — на консультации</p>
+          <ul class="warn-list">
+            <li>Острые воспалительные и инфекционные заболевания кожи</li>
+            <li>Беременность и период лактации — для части инъекционных и аппаратных методик</li>
+            <li>Онкологические заболевания в активной стадии</li>
+            <li>Свежий загар — для лазерной эпиляции, пилингов и фотопроцедур</li>
+            <li>Нарушения свёртываемости крови — для инъекционных методик</li>
+          </ul>
+          <p class="fine">Это ориентир, а не диагноз: финальное решение — на очном осмотре врача.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doctor section" id="doctor">
+      <div class="doctor-grid reveal">
+        <div class="doctor-photo">
+          <img class="ph" src="images/doctor.jpg" alt="Анна Соколова, врач-косметолог клиники Линия" width="900" height="1150" loading="lazy" />
+        </div>
+        <div class="doctor-copy">
+          <p class="eyebrow">Специалист</p>
+          <h2>Анна Соколова</h2>
+          <p class="doctor-role">Врач-косметолог · стаж 9 лет · сертифицирована по инъекционным методикам</p>
+          <p class="doctor-lead">
+            На приёме сначала разбираем задачу и состояние кожи — процедуры
+            назначаем только после осмотра, без навязанных «пакетов» и продаж
+            курсов, которые вам не нужны.
+          </p>
+          <div class="doctor-badges">
+            <span>Аппаратная косметология</span>
+            <span>Инъекционные методики</span>
+            <span>Проблемная кожа</span>
+          </div>
+          <a class="btn" href="book.html?service=consult">Записаться на консультацию</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sterility">
+      <div class="sterility">
+        <div class="sterility-media reveal">
+          <img class="ph" src="images/interior.jpg" alt="Ресепшн клиники Линия" width="1600" height="1000" loading="lazy" />
+        </div>
+        <div class="sterility-copy reveal">
+          <p class="eyebrow">Стерильность и сервис</p>
+          <h2>Как устроена безопасность на приёме</h2>
+          <p class="section-lead" style="margin-bottom: 1.5rem;">
+            Требования к стерильности в косметологии такие же, как в
+            медицинском кабинете — мы придерживаемся их на каждом приёме,
+            а не только «для показа».
+          </p>
+          <ul class="check-list">
+            <li>Одноразовые расходники: иглы, шпатели, салфетки, простыни</li>
+            <li>Инструменты многоразового использования — из автоклава, в стерильной упаковке при вас</li>
+            <li>Препараты — только сертифицированные, с проверкой партии и срока годности</li>
+            <li>Кабинет обрабатывается между каждым клиентом</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tinted" id="prices">
+      <div class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Цены</p>
+          <h2>Ориентир стоимости</h2>
+          <p class="section-lead">
+            Точную цену и длительность называем на консультации — она зависит
+            от площади зоны, состава и числа процедур в курсе.
+          </p>
+        </div>
+
+        <div class="price-groups reveal">
+          <div class="price-group">
+            <h3>Консультация <span>обязательный первый шаг перед процедурой</span></h3>
+            <ul class="price-list">
+              <li>
+                <span class="p-name">Консультация косметолога<span class="p-note">Осмотр, анкета, план процедур</span></span>
+                <span class="p-value">1&nbsp;500&nbsp;₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-group">
+            <h3>Уход за лицом <span>от 40 минут</span></h3>
+            <ul class="price-list">
+              <li>
+                <span class="p-name">Механическая чистка<span class="p-note">Зависит от состояния кожи</span></span>
+                <span class="p-value">от 2&nbsp;800&nbsp;₽</span>
+              </li>
+              <li>
+                <span class="p-name">Химический пилинг<span class="p-note">Тип пилинга подбирает врач</span></span>
+                <span class="p-value">от 3&nbsp;200&nbsp;₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-group">
+            <h3>Аппаратная косметология <span>от 45 минут</span></h3>
+            <ul class="price-list">
+              <li>
+                <span class="p-name">RF-лифтинг лица<span class="p-note">Курс — от 4 процедур</span></span>
+                <span class="p-value">от 4&nbsp;500&nbsp;₽</span>
+              </li>
+              <li>
+                <span class="p-name">Ультразвуковая терапия<span class="p-note">Разово или в составе курса</span></span>
+                <span class="p-value">от 4&nbsp;900&nbsp;₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-group">
+            <h3>Инъекционные методики <span>от 30 минут</span></h3>
+            <ul class="price-list">
+              <li>
+                <span class="p-name">Биоревитализация<span class="p-note">Цена зависит от препарата</span></span>
+                <span class="p-value">от 6&nbsp;900&nbsp;₽</span>
+              </li>
+              <li>
+                <span class="p-name">Контурная коррекция<span class="p-note">За 1&nbsp;мл препарата</span></span>
+                <span class="p-value">от 12&nbsp;000&nbsp;₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-group">
+            <h3>Эпиляция <span>зона, от 15 минут</span></h3>
+            <ul class="price-list">
+              <li>
+                <span class="p-name">Лазерная эпиляция, малая зона<span class="p-note">Например, верхняя губа</span></span>
+                <span class="p-value">от 1&nbsp;200&nbsp;₽</span>
+              </li>
+              <li>
+                <span class="p-name">Лазерная эпиляция, голени<span class="p-note">Курс дешевле разовых визитов</span></span>
+                <span class="p-value">от 3&nbsp;800&nbsp;₽</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="price-explainer reveal">
+          <h3>Что влияет на итоговую цену</h3>
+          <ul>
+            <li>Площадь зоны и состояние кожи — определяются на осмотре, не «на глаз» по фото</li>
+            <li>Бренд и объём препарата — для инъекционных и аппаратных методик</li>
+            <li>Курс дешевле в пересчёте на процедуру, чем разовые визиты</li>
+            <li>Финальная цена всегда называется до начала процедуры</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-narrow" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Частые вопросы о приёме</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>Больно ли делать процедуры?</summary>
+          <p class="faq-a">Зависит от метода: чистки и уход — комфортны, для лазерной эпиляции и части инъекций используем охлаждение и анестезирующий крем по желанию. Врач всегда предупреждает заранее, что вы почувствуете.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Через сколько виден результат?</summary>
+          <p class="faq-a">После ухода за лицом — сразу. После аппаратных и инъекционных методик — обычно на 3–7 день, финальный эффект часто нарастает 2–4 недели. Точные сроки называет врач под вашу процедуру.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Нужно ли время на восстановление?</summary>
+          <p class="faq-a">Для ухода и большинства аппаратных процедур — нет, можно сразу возвращаться к обычным делам. После глубоких пилингов и части инъекций может быть покраснение 1–2 дня — обсудим это на консультации.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли совмещать процедуры в одном курсе?</summary>
+          <p class="faq-a">Да, но порядок и интервалы между процедурами определяет врач — например, между пилингом и лазерной эпиляцией нужен перерыв. Совмещение без консультации не предлагаем.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Что взять с собой на первый приём?</summary>
+          <p class="faq-a">Ничего специального — приходите без декоративной косметики на зону процедуры. Если есть хронические заболевания или вы принимаете лекарства, полезно вспомнить список для анкеты.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Как перенести или отменить запись?</summary>
+          <p class="faq-a">Напишите или позвоните по контакту, который был в подтверждении заявки — просим предупреждать минимум за 4 часа, чтобы освободить время для другого клиента.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Работаете с чувствительной и проблемной кожей?</summary>
+          <p class="faq-a">Да, это одна из специализаций врача. На консультации подбираем щадящий протокол и, если нужно, тестируем реакцию перед основной процедурой.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="section-head reveal">
+        <p class="eyebrow">Контакты</p>
+        <h2>Адрес и часы работы</h2>
+        <p class="section-lead">Записываемся на сайте — приходить нужно только на сам приём.</p>
+      </div>
+
+      <div class="contacts-grid reveal">
+        <div class="contact-card">
+          <h3>Клиника «Линия»</h3>
+          <div class="contact-row">
+            <span class="ico" aria-hidden="true">✆</span>
+            <div>
+              <strong>+7 (999) 000-00-00</strong>
+              <span>Звонок и сообщения — с 10:00 до 21:00</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ico" aria-hidden="true">@</span>
+            <div>
+              <strong>hello@liniya-clinic.ru</strong>
+              <span>Для вопросов по процедурам и документам</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ico" aria-hidden="true">▤</span>
+            <div>
+              <strong>Ежедневно, 10:00–21:00</strong>
+              <span>Последняя запись — за час до закрытия</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ico" aria-hidden="true">◷</span>
+            <div>
+              <strong>Подтверждение в день обращения</strong>
+              <span>Отвечаем на заявки с сайта в рабочие часы</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map-pin" aria-hidden="true"></div>
+          <div class="map-card-body">
+            <p class="eyebrow">Как добраться</p>
+            <h3>Москва, ул. Демонстрационная, 12</h3>
+            <p>5 минут пешком от метро · вход со двора · парковка у входа</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final section reveal">
+      <div class="final-card">
+        <p class="eyebrow" style="color: rgba(246,242,232,0.75)">Готовы прийти?</p>
+        <h2>Запишитесь на приём прямо сейчас</h2>
+        <p>Форма записи на сайте — без Telegram и звонков. Подтвердим удобное время сами.</p>
+        <div class="cta-row">
+          <a class="btn btn-lg btn-on-dark" href="book.html">Открыть форму записи</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#">Линия</a>
+        <p>Клиника косметологии. Уход, аппаратные и инъекционные методики, эпиляция. Демо-кейс сайта.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Клиника</h4>
+          <ul>
+            <li><a href="#services">Направления</a></li>
+            <li><a href="#process">Как проходит приём</a></li>
+            <li><a href="#doctor">Врач</a></li>
+            <li><a href="#prices">Цены</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#prep">Подготовка и противопоказания</a></li>
+            <li><a href="#faq">Вопросы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Запись</h4>
+          <ul>
+            <li><a href="book.html">Форма записи</a></li>
+            <li><a href="admin/index.html">Вход для администратора</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Клиника «Линия» · демо-кейс сайта · Москва</span>
+      <span><a href="https://t.me/Keis_My_different_bot" target="_blank" rel="noopener">Написать в Telegram (резервный способ)</a></span>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta" hidden>
+    <a class="btn sticky-cta__btn" href="book.html">Записаться на сайте</a>
+  </div>
+
+  <script>
+    (function () {
+      var nodes = document.querySelectorAll(".reveal, .reveal-stagger");
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach(function (n) { n.classList.add("is-in"); });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("is-in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+        nodes.forEach(function (n) { io.observe(n); });
+      }
+
+      var nav = document.getElementById("nav");
+      var toggle = document.getElementById("nav-toggle");
+      var drawer = document.getElementById("nav-drawer");
+
+      function closeDrawer() {
+        drawer.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      if (toggle && drawer) {
+        toggle.addEventListener("click", function () {
+          var open = drawer.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        drawer.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", closeDrawer);
+        });
+      }
+
+      var bar = document.getElementById("sticky-cta");
+      var hero = document.querySelector(".hero");
+      var final = document.querySelector(".final");
+
+      function update() {
+        if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 4);
+        if (!bar) return;
+        var past = !hero || window.scrollY > hero.offsetHeight * 0.55;
+        var nearEnd = false;
+        if (final) {
+          nearEnd = final.getBoundingClientRect().top < window.innerHeight * 0.9;
+        }
+        var show = past && !nearEnd;
+        bar.classList.toggle("is-visible", show);
+        document.body.classList.toggle("has-sticky-cta", show);
+      }
+
+      if (bar) bar.hidden = false;
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    })();
+  </script>
+</body>
+</html>

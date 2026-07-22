@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Корзина — Форзац</title>
+  <meta name="description" content="Корзина и оформление заказа в Telegram. Книжная лавка Форзац." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Форзац<span class="logo__stamp">Открытая классика</span></a>
+      <ul class="nav__links">
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html" aria-current="page">Корзина</a></li>
+      </ul>
+      <a class="nav__cart" href="cart.html">
+        Корзина
+        <span class="cart-badge" data-cart-count hidden>0</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+        <span></span>
+      </button>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="about.html">О лавке</a></li>
+        <li><a href="cart.html" aria-current="page">Корзина</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap page-hero">
+      <p class="eyebrow">Заказ</p>
+      <h1>Корзина</h1>
+      <p>Состав хранится в браузере. Оформление открывает Telegram с готовым текстом заказа.</p>
+    </div>
+
+    <div class="wrap">
+      <div id="cart-empty" class="empty empty--cart">
+        <p class="empty__mark" aria-hidden="true">∅</p>
+        <h2>Полка ещё свободна</h2>
+        <p>Корзина ждёт первую книгу — как пустой стол у окна перед открытием лавки. Загляните в каталог: там классика и новинки.</p>
+        <div class="empty__actions">
+          <a class="btn btn--brass" href="catalog.html">Выбрать книгу</a>
+          <a class="btn btn--ghost" href="index.html">На витрину</a>
+        </div>
+      </div>
+
+      <div id="cart-filled" class="cart-layout" hidden>
+        <div>
+          <ul class="cart-list" id="cart-list"></ul>
+        </div>
+
+        <aside class="cart-panel">
+          <div class="cart-summary" id="cart-summary"></div>
+
+          <form id="order-form" novalidate>
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться" />
+              <span class="error" data-error="name"></span>
+            </div>
+            <div class="form-field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+7 900 123-45-67" />
+              <span class="error" data-error="phone"></span>
+            </div>
+            <div class="form-field">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" rows="3" placeholder="Самовывоз или адрес доставки…"></textarea>
+            </div>
+            <button class="btn btn--brass" type="submit" style="width: 100%">Оформить в Telegram</button>
+          </form>
+
+          <div class="order-preview" id="order-preview" hidden>
+            <h3>Текст заказа</h3>
+            <pre></pre>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">Книжная лавка «Форзац»</span>
+        <span class="site-footer__hours">Часы: <strong>вт–сб 12:00–20:00</strong>, вс–пн — выходной</span>
+      </div>
+      <span class="demo-tag">демо-кейс</span>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

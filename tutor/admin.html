@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Слог — заявки (админ)</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <!-- Soft gate (demo only) -->
+  <section class="gate" id="gate" hidden>
+    <form class="gate-card" id="gate-form" autocomplete="off">
+      <p class="gate-brand">Слог · админ</p>
+      <h1>Вход в панель заявок</h1>
+      <p class="gate-lead">Демо-доступ. Пароль по умолчанию — <code>slog</code>.</p>
+      <label class="field">
+        <span>Пароль</span>
+        <input type="password" id="gate-pass" name="password" required autofocus />
+      </label>
+      <p class="gate-error" id="gate-error" hidden>Неверный пароль</p>
+      <button type="submit" class="btn btn-primary">Войти</button>
+      <a class="gate-back" href="index.html">← На сайт</a>
+    </form>
+  </section>
+
+  <div class="app" id="app" hidden>
+    <header class="topbar">
+      <div class="topbar-left">
+        <a class="brand" href="index.html">Слог</a>
+        <span class="topbar-sep" aria-hidden="true"></span>
+        <h1 class="topbar-title">Заявки</h1>
+      </div>
+      <div class="topbar-right">
+        <a class="link-quiet" href="index.html">На сайт</a>
+        <button type="button" class="btn btn-ghost" id="logout-btn">Выйти</button>
+      </div>
+    </header>
+
+    <div class="stats" aria-label="Сводка">
+      <div class="stat">
+        <span class="stat-label">Новые</span>
+        <strong class="stat-value" id="stat-new">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Подтверждено на этой неделе</span>
+        <strong class="stat-value" id="stat-confirmed-week">0</strong>
+      </div>
+      <div class="stats-actions">
+        <button type="button" class="btn btn-secondary" id="seed-btn">Добавить демо-заявки</button>
+      </div>
+    </div>
+
+    <nav class="filters" id="filters" aria-label="Фильтр заявок">
+      <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Все</button>
+      <button type="button" class="filter" data-filter="new" aria-pressed="false">Новые</button>
+      <button type="button" class="filter" data-filter="confirmed" aria-pressed="false">Подтверждённые</button>
+      <button type="button" class="filter" data-filter="rejected" aria-pressed="false">Отклонённые</button>
+      <button type="button" class="filter" data-filter="done" aria-pressed="false">Архив</button>
+    </nav>
+
+    <main class="main">
+      <div class="empty" id="empty" hidden>
+        <h2 class="empty-title">Заявок пока нет</h2>
+        <p class="empty-text">
+          Отправки с <code>book.html</code> появятся здесь. Можно добавить демо-заявки, чтобы посмотреть панель.
+        </p>
+        <button type="button" class="btn btn-primary" id="seed-empty-btn">Добавить демо-заявки</button>
+      </div>
+
+      <div class="booking-list" id="booking-list" hidden></div>
+    </main>
+
+    <footer class="foot">
+      <span>Демо mini-CRM · данные в localStorage (<code>slog_bookings</code>)</span>
+    </footer>
+  </div>
+
+  <script src="js/bookings.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

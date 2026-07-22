@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR · стол — Сажа</title>
+  <meta name="description" content="Вы за столом в кофейне Сажа. Отсканировали QR — откройте меню." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-flow" data-page="qr">
+  <header class="site-header site-header--flow">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Сажа<span class="logo__mark">кофейня</span></a>
+      <label class="table-pill table-pill--control" for="table-select">Стол <span data-table-num>1</span></label>
+    </div>
+  </header>
+
+  <main class="flow-main">
+    <div class="wrap">
+      <nav class="step-bar" aria-label="Шаги заказа">
+        <ol>
+          <li class="is-current" aria-current="step"><span class="step-bar__n">1</span><span class="step-bar__label">Стол</span></li>
+          <li><span class="step-bar__n">2</span><span class="step-bar__label">Меню</span></li>
+          <li><span class="step-bar__n">3</span><span class="step-bar__label">Корзина</span></li>
+          <li><span class="step-bar__n">4</span><span class="step-bar__label">Оплата</span></li>
+        </ol>
+      </nav>
+
+      <div class="flow-entry">
+        <div class="flow-entry__brand" aria-hidden="true">
+          <span class="flow-entry__dot"></span>
+          <span class="flow-entry__brand-text">Сажа</span>
+        </div>
+        <p class="eyebrow">Отсканировали QR</p>
+        <h1 class="flow-entry__title">Вы за столом <span data-table-num>1</span></h1>
+        <p class="flow-entry__lead">Заказ привязан к этому столу — напитки принесут сюда.</p>
+
+        <div class="form-field flow-entry__table">
+          <label for="table-select">Не тот номер? Смените стол</label>
+          <select id="table-select" name="table"></select>
+        </div>
+
+        <a class="btn btn--moss btn--block" id="qr-menu-link" href="menu.html">Открыть меню</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer footer--compact">
+    <div class="wrap">
+      <span class="footer__demo">демо-кейс</span>
+      <a class="footer__secondary" href="about.html">О кофейне</a>
+    </div>
+  </footer>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

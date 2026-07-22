@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оплата — Сажа</title>
+  <meta name="description" content="Демо-оплата заказа в кофейне Сажа. Без реального эквайринга." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-flow" data-page="pay">
+  <header class="site-header site-header--flow">
+    <div class="wrap nav">
+      <a class="logo" href="order.html" data-table-link="order.html">Сажа<span class="logo__mark">кофейня</span></a>
+      <span class="table-pill">Стол <span data-table-num>1</span></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap page-hero page-hero--flow">
+      <nav class="step-bar" aria-label="Шаги заказа">
+        <ol>
+          <li class="is-done"><span class="step-bar__n">1</span><span class="step-bar__label">Стол</span></li>
+          <li class="is-done"><span class="step-bar__n">2</span><span class="step-bar__label">Меню</span></li>
+          <li class="is-done"><span class="step-bar__n">3</span><span class="step-bar__label">Корзина</span></li>
+          <li class="is-current" aria-current="step"><span class="step-bar__n">4</span><span class="step-bar__label">Оплата</span></li>
+        </ol>
+      </nav>
+      <p class="eyebrow">Демо-оплата</p>
+      <h1>Подтвердите оплату</h1>
+      <p>Стол <span data-table-num>1</span> · эквайринг имитируется, деньги не списываются.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="pay-panel">
+        <div class="pay-confirm" role="status">
+          <div class="pay-confirm__row">
+            <span class="pay-confirm__label">Куда принести</span>
+            <strong>Стол <span data-table-num>1</span></strong>
+          </div>
+          <div class="pay-confirm__row">
+            <span class="pay-confirm__label">После оплаты</span>
+            <span>Заказ уйдёт на бар</span>
+          </div>
+        </div>
+
+        <ul class="pay-summary" id="pay-summary"></ul>
+        <div class="cart-total-row">
+          <span>К оплате</span>
+          <strong id="pay-total">0&nbsp;₽</strong>
+        </div>
+
+        <div class="pay-actions">
+          <button type="button" class="btn btn--moss btn--block" data-pay="card">Оплатить (демо)</button>
+          <button type="button" class="btn btn--ghost btn--block" data-pay="sbp">СБП (демо)</button>
+        </div>
+        <a class="text-back" href="order.html" data-table-link="order.html">← Назад к заказу</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="pay-loader" id="pay-loader" hidden>
+    <div class="pay-loader__box">
+      <div class="pay-spinner" aria-hidden="true"></div>
+      <p class="pay-loader__title">Подтверждаем оплату</p>
+      <p class="pay-loader__sub">Стол <span data-table-num>1</span> · заказ уходит на бар…</p>
+    </div>
+  </div>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

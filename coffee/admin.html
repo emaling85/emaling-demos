@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админка бариста — Сажа</title>
+  <meta name="description" content="Панель бариста: активные заказы, статусы, выдача." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-flow page-admin" data-page="admin">
+  <header class="site-header site-header--flow admin-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Сажа<span class="logo__mark">бар</span></a>
+      <div class="admin-header__actions">
+        <span class="admin-count" id="admin-count" aria-live="polite">0 активных</span>
+        <button type="button" class="btn btn--ghost btn--small" id="admin-clear-all">Очистить</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap admin-top">
+      <div class="admin-top__text">
+        <p class="eyebrow">Панель бариста</p>
+        <h1>Заказы</h1>
+      </div>
+      <div class="admin-filters" role="tablist" aria-label="Фильтр заказов">
+        <button type="button" class="admin-filter is-active" role="tab" aria-selected="true" data-filter="active">
+          Активные
+        </button>
+        <button type="button" class="admin-filter" role="tab" aria-selected="false" data-filter="all">
+          Все
+        </button>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="empty empty--admin" id="admin-empty" hidden>
+        <div class="empty__mark" aria-hidden="true">
+          <svg class="empty__cup" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="empty__steam" d="M18 8c0 2 1.5 3 1.5 5M24 6c0 2.5 2 4 2 6.5M30 8c0 2 1.5 3 1.5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M12 18h24l-1.5 16.5A4 4 0 0 1 30.5 38h-13a4 4 0 0 1-4-3.5L12 18Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M36 20h3.5a3.5 3.5 0 0 1 0 7H35.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="empty__eyebrow">Бар</p>
+        <h2>Пока тихо</h2>
+        <p>Оформите заказ с телефона гостя — он появится здесь.</p>
+        <a class="btn btn--moss" href="qr.html?table=2">Демо: стол 2</a>
+      </div>
+      <div class="admin-list" id="admin-list"></div>
+    </div>
+  </main>
+
+  <footer class="footer footer--compact">
+    <div class="wrap">
+      <span class="footer__demo">демо-кейс · админка</span>
+      <a href="qr.html">Гостевой вход</a>
+    </div>
+  </footer>
+
+  <script src="data/menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
