@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Белизна — клининг квартир</title>
+  <meta name="description" content="Клининг квартир и домов «Белизна»: регулярная уборка, после ремонта, окна. Заявка за 1 минуту." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#">Белизна</a>
+    <nav class="nav-links" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#order">Заявка</a>
+    </nav>
+    <a class="nav-cta" href="#order">Оставить заявку</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="images/hero.jpg" alt="" width="1600" height="1000" fetchpriority="high" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="brand">Белизна</p>
+        <h1>Клининг, после которого хочется домой</h1>
+        <p class="lead">Уборка квартир и домов в городе. Приедем в удобный день — вы занимаетесь своим, мы — порядком.</p>
+        <div class="cta-row">
+          <a class="btn" href="#order">Оставить заявку</a>
+          <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Преимущества">
+      <div class="trust-item reveal">
+        <strong>Свои средства</strong>
+        <span>Привозим всё нужное — вам ничего готовить</span>
+      </div>
+      <div class="trust-item reveal">
+        <strong>Фикс в смете</strong>
+        <span>Цена до выезда, без «доплат на месте»</span>
+      </div>
+      <div class="trust-item reveal">
+        <strong>В день обращения</strong>
+        <span>Часто находим окно уже сегодня–завтра</span>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2 class="reveal">Услуги</h2>
+      <p class="section-lead reveal">Три понятных формата — без длинного прайса на 40 строк.</p>
+      <div class="services">
+        <article class="svc reveal">
+          <img src="images/service-1.jpg" alt="" width="600" height="400" loading="lazy" />
+          <h3>Поддерживающая</h3>
+          <p>Регулярная уборка: кухня, санузел, пыль, полы. Идеально раз в 1–2 недели.</p>
+        </article>
+        <article class="svc reveal">
+          <img src="images/service-2.jpg" alt="" width="600" height="400" loading="lazy" />
+          <h3>Генеральная</h3>
+          <p>Глубокая уборка всей квартиры: техника снаружи, плинтусы, труднодоступные места.</p>
+        </article>
+        <article class="svc reveal">
+          <img src="images/service-3.jpg" alt="" width="600" height="400" loading="lazy" />
+          <h3>После ремонта</h3>
+          <p>Пыль, следы стройки, отмывка поверхностей перед заездом.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="why section">
+      <div class="why-grid reveal">
+        <div class="why-photo">
+          <img src="images/team.jpg" alt="Команда клининга Белизна" width="700" height="500" loading="lazy" />
+        </div>
+        <div class="why-copy">
+          <p class="eyebrow">Почему мы</p>
+          <h2>Порядок без головной боли</h2>
+          <ul class="checks">
+            <li>Договорённость по времени — не опаздываем без предупреждения</li>
+            <li>Работаем в перчатках, аккуратно с мебелью и техникой</li>
+            <li>Если что-то не так — переделаем зону бесплатно</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <h2 class="reveal">Ориентир цен</h2>
+      <p class="section-lead reveal">Точную сумму скажем после площади и типа уборки.</p>
+      <ul class="price-list reveal">
+        <li><span>Поддерживающая · до 40 м²</span><span>от 2&nbsp;800&nbsp;₽</span></li>
+        <li><span>Генеральная · до 40 м²</span><span>от 4&nbsp;500&nbsp;₽</span></li>
+        <li><span>После ремонта · до 40 м²</span><span>от 6&nbsp;200&nbsp;₽</span></li>
+        <li><span>Окна (квартира)</span><span>от 1&nbsp;500&nbsp;₽</span></li>
+      </ul>
+    </section>
+
+    <section class="section order" id="order">
+      <h2 class="reveal">Оставить заявку</h2>
+      <p class="section-lead reveal">Напишите площадь и тип уборки — ответим с окном и ценой.</p>
+      <form class="order-form reveal" id="order-form">
+        <label>
+          <span>Имя</span>
+          <input name="name" type="text" required placeholder="Как к вам обращаться" autocomplete="name" />
+        </label>
+        <label>
+          <span>Телефон или Telegram</span>
+          <input name="contact" type="text" required placeholder="+7… или @username" autocomplete="tel" />
+        </label>
+        <label>
+          <span>Тип уборки</span>
+          <select name="service" required>
+            <option value="">Выберите</option>
+            <option>Поддерживающая</option>
+            <option>Генеральная</option>
+            <option>После ремонта</option>
+            <option>Окна</option>
+          </select>
+        </label>
+        <label>
+          <span>Площадь / комментарий</span>
+          <textarea name="note" rows="3" placeholder="Например: 52 м², завтра после 14:00"></textarea>
+        </label>
+        <button class="btn" type="submit">Отправить заявку</button>
+        <p class="form-ok" id="form-ok" hidden>Заявка принята (демо). В живом проекте уходит вам на почту или в Telegram.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>«Белизна» · демо-лендинг для портфолио</span>
+    <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a>
+    <span>Ежедневно 9:00–21:00</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
