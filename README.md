@@ -10,24 +10,22 @@
 | Страница | URL |
 |----------|-----|
 | Визитка | https://emaling85.github.io/emaling-demos/ |
-| Линия (космеология) | https://emaling85.github.io/emaling-demos/line/ |
+| Линия (косметология) | https://emaling85.github.io/emaling-demos/line/ |
 | Белизна (клининг) | https://emaling85.github.io/emaling-demos/clean/ |
 | Сажа (кофейня) | https://emaling85.github.io/emaling-demos/coffee/ |
 | Форзац (книжный) | https://emaling85.github.io/emaling-demos/books/ |
 | Слог (репетитор) | https://emaling85.github.io/emaling-demos/tutor/ |
-| Mini App меню (проба) | https://emaling85.github.io/emaling-demos/miniapp/ |
 
 ## Структура
 
 | Путь | Кейс |
 |------|------|
 | `/` (index.html) | bio / визитка |
-| `line/` | космеология «Линия» |
+| `line/` | косметология «Линия» |
 | `clean/` | клининг «Белизна» |
 | `coffee/` | кофейня «Сажа» |
 | `books/` | книжный «Форзац» |
 | `tutor/` | репетитор «Слог» |
-| `miniapp/` | проба Telegram Mini App (меню) |
 
 ## Админки (демо)
 
