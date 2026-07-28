@@ -294,11 +294,12 @@ main {
   background:
     linear-gradient(
       180deg,
-      rgba(28, 25, 22, 0.3) 0%,
-      rgba(28, 25, 22, 0.5) 40%,
-      rgba(28, 25, 22, 0.85) 100%
+      rgba(28, 25, 22, 0.18) 0%,
+      rgba(28, 25, 22, 0.32) 42%,
+      rgba(28, 25, 22, 0.72) 100%
     ),
-    url("images/hero.jpg") center / cover no-repeat;
+    linear-gradient(105deg, rgba(28, 25, 22, 0.45) 0%, transparent 55%),
+    url("images/hero.jpg") center 40% / cover no-repeat;
   transform: scale(1.03);
   animation: hero-in 1.5s var(--ease) both;
 }
