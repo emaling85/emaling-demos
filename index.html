@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>emaling — сайты и Telegram-боты</title>
-  <meta name="description" content="emaling: сайты и Telegram-боты для малого бизнеса. Примеры, цены, связь в Telegram." />
+  <title>emaling — простой сайт или бот для бизнеса</title>
+  <meta name="description" content="emaling: простой сайт с заявкой или Telegram-бот для малого бизнеса. Цены от 2 500 ₽, примеры и связь в Telegram." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script>document.documentElement.classList.add("js")</script>
+  <!-- Critical dark shell: page stays designed even if styles.css fails to load -->
+  <style>
+    html, body { margin: 0; background: #0a0b0d; color: #f4f1ea; }
+    a { color: #f4f1ea; text-decoration: none; }
+    a:visited { color: #f4f1ea; }
+    img { max-width: 100%; display: block; border: 0; }
+    .page-bg { position: fixed; inset: 0; z-index: 0; background: #07080a; pointer-events: none; }
+    .hero, .sheet, .footer { position: relative; z-index: 1; }
+    .nav { position: relative; z-index: 30; background: #121418; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .sheet { background: #121418; color: #f4f1ea; }
+    .btn { display: inline-block; background: #e4573d; color: #fff !important; padding: .75rem 1.25rem; }
+  </style>
+  <link rel="stylesheet" href="./styles.css?v=4" />
 </head>
 <body>
   <div class="page-bg" aria-hidden="true">
-    <img src="images/wood.jpg" alt="" />
+    <img src="./images/wood.jpg" alt="" onerror="this.classList.add('is-broken'); this.removeAttribute('src');" />
     <div class="page-veil"></div>
   </div>
 
@@ -22,7 +33,7 @@
       <div class="nav-links">
         <a class="is-active" href="#top">Главная</a>
         <a href="#offer">Услуги</a>
-        <a href="#works">Работы</a>
+        <a href="#works">Примеры</a>
         <a href="#how">Как работаем</a>
       </div>
       <a class="nav-logo" href="#top">emaling</a>
@@ -32,20 +43,20 @@
 
   <header class="hero" id="top">
     <div class="hero-inner">
-      <p class="hero-script">сайты &amp; боты</p>
-      <h1>Я делаю лендинги<br />для малого бизнеса</h1>
+      <p class="hero-script">emaling</p>
+      <h1>Простой сайт или бот,<br />чтобы клиенты оставляли заявки</h1>
       <p class="hero-lead">
-        Одна страница услуг или Telegram-бот заявок.
-        Срок 2–5 дней, цена фиксируется до старта.
+        Страница услуг с кнопкой «написать» или бот в Telegram.
+        Цена и срок — до начала работы.
       </p>
       <div class="hero-actions">
         <a class="btn" href="https://t.me/emaling_dev" target="_blank" rel="noopener">Написать в Telegram</a>
-        <a class="btn btn-ghost" href="#works">Смотреть работы</a>
+        <a class="btn btn-ghost" href="#works">Смотреть примеры</a>
       </div>
       <ul class="hero-chips">
         <li>от 2&nbsp;500&nbsp;₽</li>
         <li>2–5 дней</li>
-        <li>живые демо</li>
+        <li>примеры ниже</li>
       </ul>
     </div>
   </header>
@@ -53,47 +64,47 @@
   <main class="sheet">
     <section class="block about reveal" id="about">
       <div class="about-copy">
-        <h2>Понятно и по делу</h2>
+        <h2>Кто я</h2>
         <p>
           Я — <strong>emaling</strong>, в Telegram
           <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a>.
-          Делаю сайты и ботов для салонов, мастеров, репетиторов, клининга и услуг.
-          Не агентство: один человек — сам собираю, сам отвечаю.
+          Делаю простые сайты и ботов для салонов, мастеров, репетиторов, клининга и других услуг.
+          Работаю один: сам делаю, сам отвечаю.
         </p>
         <p>
-          Схема простая: пишете задачу → фиксируем цену и срок →
-          отдаю готовую ссылку. Правки по договорённости входят в цену.
+          Пишете, что нужно → договариваемся о цене и сроке →
+          получаете готовую ссылку. Небольшие правки по условиям входят в цену.
         </p>
       </div>
       <ul class="about-facts">
         <li><span>01</span>Примеры ниже можно открыть прямо сейчас</li>
-        <li><span>02</span>Цена и срок — до старта, без сюрпризов</li>
-        <li><span>03</span>Ответ в Telegram в течение дня</li>
+        <li><span>02</span>Цена и срок известны до начала</li>
+        <li><span>03</span>Отвечаю в Telegram в течение дня</li>
       </ul>
     </section>
 
     <section class="block offer reveal" id="offer">
       <div class="block-head">
         <h2>Услуги</h2>
-        <p>Три варианта. Выбираете нужный — остальное обсудим в чате.</p>
+        <p>Три варианта. Выберите нужный — детали обсудим в чате.</p>
       </div>
       <div class="offer-grid">
         <article class="offer-card">
           <span class="offer-kicker">Сайт</span>
           <strong>от 2&nbsp;500&nbsp;₽</strong>
-          <p>Одна страница: услуги, цены, контакты, кнопка или форма заявки.</p>
+          <p>Одна страница: услуги, цены, контакты и кнопка заявки.</p>
           <em>2–3 дня</em>
         </article>
         <article class="offer-card">
           <span class="offer-kicker">Telegram-бот</span>
           <strong>от 4&nbsp;000&nbsp;₽</strong>
-          <p>Запись или заявки: клиент пишет боту — вам приходит сообщение.</p>
+          <p>Клиент пишет боту — вам приходит заявка или запись.</p>
           <em>3–5 дней</em>
         </article>
         <article class="offer-card offer-card-hot">
           <span class="offer-kicker">Сайт + бот</span>
           <strong>от 5&nbsp;500&nbsp;₽</strong>
-          <p>Витрина на сайте и заявки в Telegram — одна задача, два канала.</p>
+          <p>Сайт для клиентов и бот, куда приходят заявки.</p>
           <em>4–7 дней</em>
         </article>
       </div>
@@ -101,49 +112,49 @@
 
     <section class="block works reveal" id="works">
       <div class="block-head">
-        <h2>Выбранные работы</h2>
-        <p>Живые демо — откройте и полистайте.</p>
+        <h2>Примеры</h2>
+        <p>Можно открыть и посмотреть — как обычный сайт.</p>
       </div>
       <div class="case-grid">
-        <a class="case" href="https://emaling85.github.io/emaling-demos/clean/" target="_blank" rel="noopener">
-          <img src="previews/clean.jpg" alt="" width="800" height="600" loading="lazy" />
+        <a class="case" href="https://emaling85.github.io/emaling-demos/clean/" target="_blank" rel="noopener" title="Сайт клининга с заявкой">
+          <img src="./previews/clean.jpg" alt="Сайт клининга «Белизна»" width="800" height="600" loading="lazy" />
           <div class="case-meta">
-            <span>Клининг</span>
+            <span>сайт с заявкой</span>
             <strong>«Белизна»</strong>
           </div>
         </a>
-        <a class="case" href="https://emaling85.github.io/emaling-demos/line/" target="_blank" rel="noopener">
-          <img src="previews/line.jpg" alt="" width="800" height="600" loading="lazy" />
+        <a class="case" href="https://emaling85.github.io/emaling-demos/line/" target="_blank" rel="noopener" title="Сайт салона с заявкой">
+          <img src="./previews/line.jpg" alt="Сайт салона «Линия»" width="800" height="600" loading="lazy" />
           <div class="case-meta">
-            <span>Косметология</span>
+            <span>сайт с заявкой</span>
             <strong>«Линия»</strong>
           </div>
         </a>
-        <a class="case" href="https://emaling85.github.io/emaling-demos/tutor/" target="_blank" rel="noopener">
-          <img src="previews/tutor.jpg" alt="" width="800" height="600" loading="lazy" />
+        <a class="case" href="https://emaling85.github.io/emaling-demos/tutor/" target="_blank" rel="noopener" title="Сайт репетитора с заявкой">
+          <img src="./previews/tutor.jpg" alt="Сайт репетитора «Слог»" width="800" height="600" loading="lazy" />
           <div class="case-meta">
-            <span>Репетитор</span>
+            <span>сайт с заявкой</span>
             <strong>«Слог»</strong>
           </div>
         </a>
-        <a class="case case--bot" href="https://t.me/Keis_My_different_bot" target="_blank" rel="noopener">
+        <a class="case case--bot" href="https://t.me/Keis_My_different_bot" target="_blank" rel="noopener" title="Telegram-бот для записи">
           <div class="case-bot">
             <span class="case-bot-badge">TG</span>
-            <strong>Бот записи</strong>
-            <p>Услуга → дата → заявка вам</p>
+            <strong>Бот для записи</strong>
+            <p>Услуга и дата → заявка вам</p>
           </div>
         </a>
-        <a class="case" href="https://emaling85.github.io/emaling-demos/coffee/" target="_blank" rel="noopener">
-          <img src="previews/coffee.jpg" alt="" width="800" height="600" loading="lazy" />
+        <a class="case" href="https://emaling85.github.io/emaling-demos/coffee/" target="_blank" rel="noopener" title="Сайт кофейни">
+          <img src="./previews/coffee.jpg" alt="Сайт кофейни «Сажа»" width="800" height="600" loading="lazy" />
           <div class="case-meta">
-            <span>Кофейня</span>
+            <span>сайт кофейни</span>
             <strong>«Сажа»</strong>
           </div>
         </a>
-        <a class="case" href="https://emaling85.github.io/emaling-demos/books/" target="_blank" rel="noopener">
-          <img src="previews/books.jpg" alt="" width="800" height="600" loading="lazy" />
+        <a class="case" href="https://emaling85.github.io/emaling-demos/books/" target="_blank" rel="noopener" title="Сайт книжного">
+          <img src="./previews/books.jpg" alt="Сайт книжного «Форзац»" width="800" height="600" loading="lazy" />
           <div class="case-meta">
-            <span>Книги</span>
+            <span>сайт книжного</span>
             <strong>«Форзац»</strong>
           </div>
         </a>
@@ -158,34 +169,34 @@
         <li>
           <span>01</span>
           <strong>Пишете в Telegram</strong>
-          <p>Какой бизнес и что нужно — сайт или бот.</p>
+          <p>Какой у вас бизнес и что нужно: сайт или бот.</p>
         </li>
         <li>
           <span>02</span>
-          <strong>Фиксируем цену и срок</strong>
-          <p>Одним сообщением. Без «потом посчитаем».</p>
+          <strong>Договариваемся о цене и сроке</strong>
+          <p>Сразу, до начала. Без «потом посчитаем».</p>
         </li>
         <li>
           <span>03</span>
           <strong>Делаю и отдаю ссылку</strong>
-          <p>Готовая версия + правки по договорённости.</p>
+          <p>Готовый результат и правки по условиям.</p>
         </li>
       </ol>
     </section>
 
     <section class="contact reveal" id="contact">
       <h2>Связаться</h2>
-      <p>Напишите задачу — отвечу со сроком и ценой в течение дня.</p>
+      <p>Напишите, что нужно — отвечу со сроком и ценой в течение дня.</p>
       <a class="btn" href="https://t.me/emaling_dev" target="_blank" rel="noopener">@emaling_dev</a>
     </section>
   </main>
 
   <footer class="footer">
     <span class="footer-logo">emaling</span>
-    <span>сайты и Telegram-боты</span>
+    <span>простые сайты и боты</span>
     <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">Написать</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

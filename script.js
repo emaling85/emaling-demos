@@ -1,7 +1,20 @@
-// Плавное появление секций при скролле. Без JS всё остаётся видимым (см. styles.css).
+// Reveal on scroll. Sections stay visible unless observer is armed (see .js-ready in CSS).
 (function () {
   var items = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window) || !items.length) return;
+  if (!items.length) return;
+
+  function showAll() {
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.add("is-visible");
+    }
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    showAll();
+    return;
+  }
+
+  document.documentElement.classList.add("js-ready");
 
   var observer = new IntersectionObserver(
     function (entries) {
@@ -12,10 +25,13 @@
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
   );
 
   items.forEach(function (item) {
     observer.observe(item);
   });
+
+  // Safety: never leave sections stuck invisible
+  window.setTimeout(showAll, 2500);
 })();
