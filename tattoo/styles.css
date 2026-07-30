@@ -1131,8 +1131,7 @@ button {
 
 .map-wrap {
   margin-top: 2.5rem;
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
+  width: 100%;
   background: #0a0a0a;
   border: 0;
   border-top: 1px solid var(--line);
@@ -1504,14 +1503,22 @@ button {
   filter: brightness(0.85) saturate(0.85);
 }
 
-/* —— Reveal —— */
+/* —— Reveal (контент виден всегда; анимация — бонус при JS) —— */
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+  opacity: 1;
+  transform: none;
 }
 
-.reveal.is-in {
+html.js-anim .reveal:not(.is-in) {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+html.js-anim .reveal {
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+}
+
+html.js-anim .reveal.is-in {
   opacity: 1;
   transform: none;
 }
