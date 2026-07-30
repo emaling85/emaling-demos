@@ -36,6 +36,7 @@ body {
   background: var(--bg);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 4.5rem;
 }
 
 img {
@@ -646,18 +647,25 @@ button {
 }
 
 .messenger-icon {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 1px solid var(--copper);
+  color: var(--copper);
+  transition: background 0.2s var(--ease), color 0.2s;
+}
+
+.messenger:hover .messenger-icon {
+  background: var(--copper);
+  color: #0a0a0a;
 }
 
 .messenger-icon svg {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.15rem;
+  height: 1.15rem;
   fill: currentColor;
 }
 
@@ -693,12 +701,14 @@ button {
   border-radius: 50%;
   overflow: hidden;
   background: var(--bg-raised);
+  border: 1px solid var(--line);
 }
 
 .master-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(0.35) contrast(1.05);
 }
 
 .master h3 {
@@ -713,12 +723,31 @@ button {
   margin: 0;
   color: var(--ink-mute);
   font-size: 0.85rem;
+  line-height: 1.45;
+  max-width: 16rem;
+  margin-inline: auto;
+}
+
+.master .styles {
+  color: var(--ink);
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
 }
 
 .master .place {
   color: var(--copper);
-  margin-top: 0.25rem;
+  margin-top: 0.45rem;
   font-size: 0.82rem;
+}
+
+.masters-row {
+  align-items: start;
+}
+
+@media (min-width: 1000px) {
+  .masters-row--six {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* —— Process —— */
@@ -941,17 +970,24 @@ button {
 .who-grid {
   display: grid;
   gap: 1.5rem;
+  align-items: start;
 }
 
 @media (min-width: 800px) {
   .who-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
 }
 
 .who-grid p {
-  margin: 0;
+  margin: 0 0 1rem;
   color: var(--ink-mute);
+  line-height: 1.65;
+}
+
+.who-grid p:last-child {
+  margin-bottom: 0;
 }
 
 .founder {
@@ -1186,10 +1222,72 @@ button {
 
 .modal-dialog {
   position: relative;
-  width: min(100%, 26rem);
+  width: min(100%, 28rem);
+  max-height: min(92vh, 40rem);
+  overflow-y: auto;
   background: var(--bg-soft);
   border: 1px solid var(--line-strong);
   padding: 1.75rem 1.5rem;
+}
+
+.option-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.option-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem 0.75rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  transition: border-color 0.2s var(--ease), background 0.2s;
+}
+
+.option-card:hover {
+  border-color: var(--copper);
+}
+
+.option-card.is-selected {
+  border-color: var(--copper);
+  background: var(--copper-soft);
+}
+
+.option-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.option-card strong {
+  grid-column: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.option-card .opt-desc {
+  grid-column: 1;
+  color: var(--ink-mute);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.option-card .opt-price {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: var(--copper);
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  align-self: center;
 }
 
 .modal-dialog h2 {
@@ -1228,11 +1326,17 @@ button {
   margin-bottom: 0.9rem;
 }
 
-.form-row label {
+.form-row label,
+.field-label {
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-mute);
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.45rem;
 }
 
 .form-row input,
@@ -1288,6 +1392,22 @@ button {
 .float-cta:hover {
   background: var(--copper-deep);
   color: #0a0a0a;
+}
+
+.footer-bottom {
+  padding-right: 7.5rem;
+}
+
+.reviews-grid {
+  align-items: start;
+}
+
+.review {
+  padding-bottom: 0.25rem;
+}
+
+.gift-media img {
+  filter: brightness(0.85) saturate(0.85);
 }
 
 /* —— Reveal —— */

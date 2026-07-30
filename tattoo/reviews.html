@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <header class="site-header">
@@ -45,7 +45,7 @@
   <main>
     <div class="page-hero wrap">
       <h1>Отзывы о студии «Чернила»</h1>
-      <p>Тексты ниже — демо-контент для кейса. В живом проекте подключают Яндекс / Google.</p>
+      <p>Ниже — демо-тексты для кейса. В живом проекте подключают виджеты Яндекс / Google. Можно оставить отзыв после сеанса или записаться.</p>
       <div class="section-cta" style="margin-top:1.5rem">
         <a class="btn" href="#" data-book-open>Оставить отзыв / записаться</a>
       </div>
@@ -113,30 +113,6 @@
 
   <a class="float-cta" href="#" data-book-open>Записаться</a>
 
-  <div class="modal" id="book-modal" hidden>
-    <div class="modal-backdrop" data-book-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="book-title">
-      <button type="button" class="modal-close" data-book-close aria-label="Закрыть">×</button>
-      <h2 id="book-title">Запись</h2>
-      <p>Оставьте контакты — перезвоним.</p>
-      <form id="book-form">
-        <div class="form-row"><label for="name">Имя</label><input id="name" name="name" type="text" required /></div>
-        <div class="form-row"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" required /></div>
-        <div class="form-row">
-          <label for="service">Услуга</label>
-          <select id="service" name="service">
-            <option>Татуировка</option>
-            <option>Перекрытие</option>
-            <option>Пирсинг</option>
-            <option>Консультация</option>
-          </select>
-        </div>
-        <div class="form-row"><label for="comment">Комментарий</label><textarea id="comment" name="comment" rows="3"></textarea></div>
-        <button class="btn" type="submit">Отправить</button>
-        <p class="form-ok" id="book-ok" hidden>Заявка сохранена (демо, localStorage).</p>
-      </form>
-    </div>
-  </div>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
