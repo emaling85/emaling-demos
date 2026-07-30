@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио — Чернила</title>
+  <meta name="description" content="Работы тату-студии «Чернила»: реализм, графика, орнамент, мини." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Чернила</a>
+      <ul class="nav-links" data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <div class="nav-aside">
+        <a class="nav-phone" href="tel:+78123004567">+7 (812) 300-45-67</a>
+        <a class="btn" href="#" data-book-open>Записаться</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero wrap">
+      <h1>Портфолио</h1>
+      <p>Фильтр по стилю — кликните категорию.</p>
+    </div>
+
+    <section class="section section-dark" style="padding-top:0.5rem">
+      <div class="wrap">
+        <div class="filters" data-filters>
+          <button type="button" class="filter-btn is-active" data-filter="all">Все</button>
+          <button type="button" class="filter-btn" data-filter="realism">Реализм</button>
+          <button type="button" class="filter-btn" data-filter="graphic">Графика</button>
+          <button type="button" class="filter-btn" data-filter="ornament">Орнамент</button>
+          <button type="button" class="filter-btn" data-filter="mini">Мини</button>
+        </div>
+        <div class="portfolio-grid">
+          <article class="work reveal" data-work="realism"><img src="images/work-1.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="graphic"><img src="images/work-2.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="ornament"><img src="images/work-3.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="mini"><img src="images/work-4.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="realism"><img src="images/work-5.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="graphic"><img src="images/work-6.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="ornament"><img src="images/work-7.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="mini"><img src="images/work-8.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="realism"><img src="images/work-9.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="graphic"><img src="images/work-10.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="ornament"><img src="images/work-11.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="mini"><img src="images/work-12.jpg" alt="" width="700" height="700" loading="lazy" /></article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn" href="#" data-book-open>Хочу похожее — записаться</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© Тату-студия «Чернила» · демо</span>
+        <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">emaling</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="#" data-book-open>Записаться</a>
+
+  <div class="modal" id="book-modal" hidden>
+    <div class="modal-backdrop" data-book-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="book-title">
+      <button type="button" class="modal-close" data-book-close aria-label="Закрыть">×</button>
+      <h2 id="book-title">Запись</h2>
+      <p>Оставьте контакты — перезвоним.</p>
+      <form id="book-form">
+        <div class="form-row"><label for="name">Имя</label><input id="name" name="name" type="text" required /></div>
+        <div class="form-row"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" required /></div>
+        <div class="form-row">
+          <label for="service">Услуга</label>
+          <select id="service" name="service">
+            <option>Татуировка</option>
+            <option>Перекрытие</option>
+            <option>Пирсинг</option>
+          </select>
+        </div>
+        <div class="form-row"><label for="comment">Комментарий</label><textarea id="comment" name="comment" rows="3"></textarea></div>
+        <button class="btn" type="submit">Отправить</button>
+        <p class="form-ok" id="book-ok" hidden>Заявка сохранена (демо, localStorage).</p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

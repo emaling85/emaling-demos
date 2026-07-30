@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Чернила — тату-студия в Санкт-Петербурге</title>
+  <meta name="description" content="Тату-студия «Чернила»: индивидуальные эскизы, стерильность, мастера в разных стилях. Запись онлайн." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Чернила</a>
+      <ul class="nav-links" data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <div class="nav-aside">
+        <a class="nav-phone" href="tel:+78123004567">+7 (812) 300-45-67</a>
+        <a class="btn" href="#" data-book-open>Записаться</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="tel:+78123004567">+7 (812) 300-45-67</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="images/hero.jpg" alt="" width="1600" height="1000" fetchpriority="high" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="hero-brand">Чернила</p>
+        <h1>Тату-студия, где работают художники</h1>
+        <p class="hero-lead">Индивидуальные эскизы, чистый зал и мастера в реализме, графике и орнаменте. Санкт-Петербург.</p>
+        <div class="hero-cta">
+          <a class="btn btn-lg" href="#" data-book-open>Записаться</a>
+          <a class="btn btn-ghost btn-lg" href="portfolio.html">Смотреть работы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="about-teaser">
+      <div class="wrap about-grid">
+        <div class="about-copy reveal">
+          <h2>Тату-салон в СПб</h2>
+          <p>«Чернила» — студия с фокусом на авторские эскизы и спокойный процесс. От консультации до ухода после сеанса — всё прозрачно и по делу.</p>
+          <p>Работаем ежедневно. Можно прийти с идеей или выбрать направление у мастера.</p>
+          <a class="btn" href="about.html">Узнать подробнее</a>
+        </div>
+        <div class="feature-grid reveal">
+          <div class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/></svg>
+            <strong>Стерильность</strong>
+            <span>Одноразовые расходники, контроль оборудования</span>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            <strong>Опыт</strong>
+            <span>Мастера с портфолио в разных стилях</span>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18l6-6 4 4 6-8"/></svg>
+            <strong>Качество</strong>
+            <span>Пигменты и техника под задачу</span>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 12h8M12 8v8"/></svg>
+            <strong>Свой эскиз</strong>
+            <span>Рисуем под вас, не копируем шаблоны</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="portfolio">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Портфолио</h2>
+          <p class="section-lead">Часть работ студии — полный каталог на отдельной странице.</p>
+        </div>
+        <div class="filters" data-filters>
+          <button type="button" class="filter-btn is-active" data-filter="all">Все</button>
+          <button type="button" class="filter-btn" data-filter="realism">Реализм</button>
+          <button type="button" class="filter-btn" data-filter="graphic">Графика</button>
+          <button type="button" class="filter-btn" data-filter="ornament">Орнамент</button>
+          <button type="button" class="filter-btn" data-filter="mini">Мини</button>
+        </div>
+        <div class="portfolio-grid">
+          <article class="work reveal" data-work="realism"><img src="images/work-1.jpg" alt="Работа: реализм" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="graphic"><img src="images/work-2.jpg" alt="Работа: графика" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="ornament"><img src="images/work-3.jpg" alt="Работа: орнамент" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="mini"><img src="images/work-4.jpg" alt="Работа: мини" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="realism"><img src="images/work-5.jpg" alt="Работа: реализм" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="graphic"><img src="images/work-6.jpg" alt="Работа: графика" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="ornament"><img src="images/work-7.jpg" alt="Работа: орнамент" width="700" height="700" loading="lazy" /></article>
+          <article class="work reveal" data-work="mini"><img src="images/work-8.jpg" alt="Работа: мини" width="700" height="700" loading="lazy" /></article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="portfolio.html">Смотреть все работы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Услуги и цены</h2>
+          <p class="section-lead">Ориентир по стоимости — точную сумму согласуем после эскиза и зоны.</p>
+        </div>
+        <div class="svc-grid">
+          <article class="svc reveal">
+            <img src="images/service-tattoo.jpg" alt="" width="800" height="1000" loading="lazy" />
+            <div class="svc-body">
+              <h3>Татуировка</h3>
+              <p>Авторский эскиз, сеанс и рекомендации по уходу.</p>
+              <div class="svc-price">от 3 500 ₽</div>
+              <a class="btn" href="#" data-book-open>Записаться</a>
+            </div>
+          </article>
+          <article class="svc reveal">
+            <img src="images/service-cover.jpg" alt="" width="800" height="1000" loading="lazy" />
+            <div class="svc-body">
+              <h3>Перекрытие</h3>
+              <p>Закрываем старую работу новым дизайном.</p>
+              <div class="svc-price">от 5 000 ₽</div>
+              <a class="btn" href="#" data-book-open>Записаться</a>
+            </div>
+          </article>
+          <article class="svc reveal">
+            <img src="images/service-pierce.jpg" alt="" width="800" height="1000" loading="lazy" />
+            <div class="svc-body">
+              <h3>Пирсинг</h3>
+              <p>Проколы и украшения — отдельно обсуждаем зону.</p>
+              <div class="svc-price">от 2 000 ₽</div>
+              <a class="btn" href="#" data-book-open>Записаться</a>
+            </div>
+          </article>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="services.html">Подробный прайс</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="masters">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Команда профессионалов</h2>
+          <p class="section-lead">Выберите мастера по стилю — или напишите нам, подскажем.</p>
+        </div>
+        <div class="masters-row">
+          <a class="master reveal" href="masters.html">
+            <div class="master-photo"><img src="images/master-1.jpg" alt="" width="600" height="600" loading="lazy" /></div>
+            <h3>Артём К.</h3>
+            <p>Реализм, ч/б</p>
+            <p class="place">м. Петроградская</p>
+          </a>
+          <a class="master reveal" href="masters.html">
+            <div class="master-photo"><img src="images/master-2.jpg" alt="" width="600" height="600" loading="lazy" /></div>
+            <h3>Мила С.</h3>
+            <p>Графика, орнамент</p>
+            <p class="place">м. Петроградская</p>
+          </a>
+          <a class="master reveal" href="masters.html">
+            <div class="master-photo"><img src="images/master-3.jpg" alt="" width="600" height="600" loading="lazy" /></div>
+            <h3>Илья Р.</h3>
+            <p>Нео-традишнл</p>
+            <p class="place">м. Петроградская</p>
+          </a>
+          <a class="master reveal" href="masters.html">
+            <div class="master-photo"><img src="images/master-4.jpg" alt="" width="600" height="600" loading="lazy" /></div>
+            <h3>Нина В.</h3>
+            <p>Мини, linework</p>
+            <p class="place">м. Петроградская</p>
+          </a>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="masters.html">Все мастера</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Как мы работаем</h2>
+        </div>
+        <div class="process">
+          <div class="process-item reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M7 16V8m5 8V5m5 11v-6"/></svg>
+            <strong>Консультация</strong>
+            <span>Идея, зона, ориентир по цене</span>
+          </div>
+          <div class="process-item reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l7-14 7 14H5z"/></svg>
+            <strong>Эскиз</strong>
+            <span>Рисуем и согласуем детали</span>
+          </div>
+          <div class="process-item reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 9v3l2 2"/></svg>
+            <strong>Сеанс</strong>
+            <span>Спокойный темп, перерывы</span>
+          </div>
+          <div class="process-item reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M8 8h8M7 20h10"/></svg>
+            <strong>Уход</strong>
+            <span>Памятка и ответы после</span>
+          </div>
+          <div class="process-item reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>
+            <strong>Результат</strong>
+            <span>Готовая работа в портфолио</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <button type="button" class="faq-q">Сколько стоит татуировка?</button>
+            <div class="faq-a">Цена зависит от размера, стиля и сложности. Мини — от 3 500 ₽, крупные проекты обсуждаем индивидуально после эскиза.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q">Нужна ли предоплата?</button>
+            <div class="faq-a">Да, небольшая предоплата бронирует время мастера. Сумма входит в стоимость сеанса.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q">Можно ли прийти со своим эскизом?</button>
+            <div class="faq-a">Можно. Мастер адаптирует рисунок под анатомию и технику, чтобы результат держался красиво.</div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q">Как записаться?</button>
+            <div class="faq-a">Нажмите «Записаться», оставьте телефон — или напишите в Telegram / WhatsApp. Подберём мастера и время.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="wrap gift">
+        <div class="gift-media reveal">
+          <img src="images/gift.jpg" alt="Подарочный сертификат" width="800" height="600" loading="lazy" />
+        </div>
+        <div class="gift-copy reveal">
+          <h2>Подарочный сертификат</h2>
+          <p>На любую сумму или услугу. Удобный вариант, если не знаете, какой эскиз выбрать — решение за получателем.</p>
+          <p>Оформить можно онлайн или в студии.</p>
+          <a class="btn" href="#" data-book-open>Оформить сертификат</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Отзывы о студии</h2>
+          <p class="section-lead">Рейтинги на картах и площадках — живые отзывы на отдельной странице.</p>
+        </div>
+        <div class="ratings">
+          <div class="rating reveal"><strong>4.9</strong><span>Яндекс Карты · 180+</span></div>
+          <div class="rating reveal"><strong>5.0</strong><span>2ГИС · 90+</span></div>
+          <div class="rating reveal"><strong>4.8</strong><span>Google · 120+</span></div>
+          <div class="rating reveal"><strong>4.9</strong><span>VK · 60+</span></div>
+        </div>
+        <div class="section-cta reveal">
+          <a class="btn btn-ghost" href="reviews.html">Читать отзывы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contacts-teaser">
+      <div class="wrap text-center">
+        <div class="section-head reveal">
+          <h2>Контакты</h2>
+          <p class="section-lead">Санкт-Петербург, ул. Рентгена, 7 · м. Петроградская<br />Ежедневно 11:00–21:00 · <a href="tel:+78123004567">+7 (812) 300-45-67</a></p>
+        </div>
+        <div class="messengers reveal">
+          <a class="messenger" href="https://t.me/" target="_blank" rel="noopener">
+            <span class="messenger-icon"><svg viewBox="0 0 24 24"><path d="M9.5 15.5l-.3 4.2c.4 0 .6-.2.8-.4l1.9-1.8 3.9 2.9c.7.4 1.2.2 1.4-.7l2.5-11.8c.2-.9-.3-1.3-1-.1L5.2 11.6c-.9.3-.9.8-.2 1l3.4 1.1 7.9-5c.4-.2.7 0 .4.3l-6.2 6.5z"/></svg></span>
+            Telegram
+          </a>
+          <a class="messenger" href="https://wa.me/78123004567" target="_blank" rel="noopener">
+            <span class="messenger-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3zm5 12.3c-.2.6-1.1 1-1.6 1.1-.4.1-.9.2-2.9-.6-2.5-1-4.1-3.6-4.2-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.6.7 2 .8 2.1.1.2.1.3 0 .5l-.3.5c-.1.2-.3.3-.4.5-.2.1-.3.3-.1.5.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.3 2.5 1.5.3.1.5.1.7-.1l.8-1c.2-.2.4-.2.6-.1l2.1 1c.2.1.4.2.4.4 0 .2 0 .9-.2 1.5z"/></svg></span>
+            WhatsApp
+          </a>
+        </div>
+        <a class="btn reveal" href="contacts.html">Как добраться</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <nav class="footer-nav" aria-label="Подвал">
+          <a href="about.html">Студия</a>
+          <a href="masters.html">Мастера</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="services.html">Услуги</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://vk.com/" target="_blank" rel="noopener" aria-label="VK"><svg viewBox="0 0 24 24"><path d="M12.7 17.5h.9s.3 0 .4-.2.1-.4.1-.4 0-1.2.6-1.4c.5-.2 1.3 1.2 2.1 1.7.6.4 1 .3 1 .3l2.1-.1s1.1-.1.6-1c0 0-.1-.3-.7-.8-.6-.5-.6-.5-.7-.5-.3-.1-.4-.3-.1-.5.5-.6 1.1-1.7 1.2-2.2.1-.5-.2-.7-.2-.7h-2.1s-.3 0-.4.1c-.2.1-.3.4-.3.4s-.5 1.3-1.1 2.1c-.5.7-.8.7-.9.5-.2-.3-.1-1.1-.1-1.7 0-1.8.3-2.5-.5-2.7-.3-.1-.5-.1-1.1-.1-1 0-1.7.1-2.1.4-.3.2-.4.5-.3.5s.2.1.3.2c.2.1.3.3.3.5.1.4.1 1.2.1 1.2s0 .6-.2.9c-.1.2-.3.2-.4 0-.5-.6-1.2-1.9-1.2-1.9s-.1-.3-.3-.4c-.2-.1-.4-.1-.4-.1H6.2s-.5 0-.6.2c-.1.2 0 .5 0 .5s2.2 5.1 4.7 7.6c2.3 2.3 2.4 1.7 2.4 1.7z"/></svg></a>
+          <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.5 15.5l-.3 4.2c.4 0 .6-.2.8-.4l1.9-1.8 3.9 2.9c.7.4 1.2.2 1.4-.7l2.5-11.8c.2-.9-.3-1.3-1-.1L5.2 11.6c-.9.3-.9.8-.2 1l3.4 1.1 7.9-5c.4-.2.7 0 .4.3l-6.2 6.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>Демо-кейс портфолио. Контент вымышленный. Материалы сайта — для показа вёрстки.</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© Тату-студия «Чернила» · демо</span>
+        <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">emaling</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="#" data-book-open>Записаться</a>
+
+  <div class="modal" id="book-modal" hidden>
+    <div class="modal-backdrop" data-book-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="book-title">
+      <button type="button" class="modal-close" data-book-close aria-label="Закрыть">×</button>
+      <h2 id="book-title">Запись</h2>
+      <p>Оставьте контакты — перезвоним и подберём время.</p>
+      <form id="book-form">
+        <div class="form-row">
+          <label for="name">Имя</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+        <div class="form-row">
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+7" />
+        </div>
+        <div class="form-row">
+          <label for="service">Услуга</label>
+          <select id="service" name="service">
+            <option>Татуировка</option>
+            <option>Перекрытие</option>
+            <option>Пирсинг</option>
+            <option>Сертификат</option>
+            <option>Консультация</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment" rows="3" placeholder="Идея, стиль, желаемые даты"></textarea>
+        </div>
+        <button class="btn" type="submit">Отправить</button>
+        <p class="form-ok" id="book-ok" hidden>Заявка сохранена. В демо заявки лежат в localStorage браузера.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

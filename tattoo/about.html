@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Студия — Чернила</title>
+  <meta name="description" content="О тату-студии «Чернила»: зал, команда, основатель." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html">Чернила</a>
+      <ul class="nav-links" data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <div class="nav-aside">
+        <a class="nav-phone" href="tel:+78123004567">+7 (812) 300-45-67</a>
+        <a class="btn" href="#" data-book-open>Записаться</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="wrap nav-panel" data-nav-panel aria-label="Мобильное меню">
+      <ul data-nav>
+        <li><a href="about.html">Студия</a></li>
+        <li><a href="masters.html">Мастера</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="reviews.html">Отзывы</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero wrap">
+      <h1>Студия и клиенты</h1>
+      <p>Пространство, в котором удобно и мастеру, и гостю.</p>
+    </div>
+
+    <section class="section section-dark" style="padding-top:1rem">
+      <div class="wrap">
+        <div class="tabs" data-tabs>
+          <button type="button" class="tab is-active" data-tab="studio">Студия</button>
+          <button type="button" class="tab" data-tab="clients">Клиенты</button>
+        </div>
+        <div class="tab-panel" data-tab-panel="studio">
+          <div class="gallery reveal">
+            <img src="images/studio-1.jpg" alt="Интерьер студии" width="800" height="600" loading="lazy" />
+            <img src="images/studio-2.jpg" alt="Рабочая зона" width="800" height="600" loading="lazy" />
+          </div>
+        </div>
+        <div class="tab-panel" data-tab-panel="clients" hidden>
+          <div class="gallery reveal">
+            <img src="images/client-1.jpg" alt="Клиент студии" width="800" height="600" loading="lazy" />
+            <img src="images/client-2.jpg" alt="Клиент студии" width="800" height="600" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Кто мы?</h2>
+        </div>
+        <div class="who-grid reveal">
+          <p>«Чернила» — тату-студия в Санкт-Петербурге. Мы собираем мастеров с разным почерком: реализм, графика, орнамент, мини. Общее правило — уважение к эскизу и к человеку в кресле.</p>
+          <p>В зале чисто, без лишнего шума. Можно прийти на консультацию без обязательства — обсудим идею, зону и ориентир по времени и цене. Пирсинг и украшения — отдельное направление в той же студии.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="wrap founder">
+        <div class="founder-photo reveal">
+          <img src="images/founder.jpg" alt="Основатель студии" width="600" height="800" loading="lazy" />
+        </div>
+        <div class="reveal">
+          <p class="founder-label">Основатель</p>
+          <h2>Алексей Чернов</h2>
+          <p>Студия выросла из желания дать художникам спокойное место для работы, а клиентам — понятный процесс без давления. Главное — честный эскиз и аккуратный сеанс.</p>
+        </div>
+      </div>
+      <p class="legal-note wrap">Демо-реквизиты: ИП Чернов А. С. · ИНН 7800000000 · ОГРНИП 300000000000000</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <nav class="footer-nav">
+          <a href="about.html">Студия</a>
+          <a href="masters.html">Мастера</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="services.html">Услуги</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© Тату-студия «Чернила» · демо</span>
+        <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">emaling</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-cta" href="#" data-book-open>Записаться</a>
+
+  <div class="modal" id="book-modal" hidden>
+    <div class="modal-backdrop" data-book-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="book-title">
+      <button type="button" class="modal-close" data-book-close aria-label="Закрыть">×</button>
+      <h2 id="book-title">Запись</h2>
+      <p>Оставьте контакты — перезвоним и подберём время.</p>
+      <form id="book-form">
+        <div class="form-row"><label for="name">Имя</label><input id="name" name="name" type="text" required /></div>
+        <div class="form-row"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" required /></div>
+        <div class="form-row">
+          <label for="service">Услуга</label>
+          <select id="service" name="service">
+            <option>Татуировка</option>
+            <option>Перекрытие</option>
+            <option>Пирсинг</option>
+            <option>Консультация</option>
+          </select>
+        </div>
+        <div class="form-row"><label for="comment">Комментарий</label><textarea id="comment" name="comment" rows="3"></textarea></div>
+        <button class="btn" type="submit">Отправить</button>
+        <p class="form-ok" id="book-ok" hidden>Заявка сохранена (демо, localStorage).</p>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
