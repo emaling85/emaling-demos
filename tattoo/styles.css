@@ -344,18 +344,18 @@ button {
 }
 
 .section-paper {
-  background: #f3efe9;
-  color: #151515;
+  background: var(--bg-soft);
+  color: var(--ink);
 }
 
 .section-paper h2,
 .section-paper h3 {
-  color: #111;
+  color: var(--ink);
 }
 
 .section-paper p,
 .section-paper li {
-  color: #3a3835;
+  color: var(--ink-mute);
 }
 
 .section-head {
@@ -439,11 +439,15 @@ button {
 }
 
 .feature svg {
-  width: 1.75rem;
-  height: 1.75rem;
-  stroke: var(--copper);
+  width: 32px;
+  height: 32px;
+  color: var(--copper);
+  stroke: currentColor;
   fill: none;
-  stroke-width: 1.4;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
 
 .feature strong {
@@ -458,11 +462,12 @@ button {
 }
 
 .section-paper .feature span {
-  color: #5c5854;
+  color: var(--ink-mute);
 }
 
 .section-paper .feature svg {
-  stroke: var(--copper-deep);
+  color: var(--copper);
+  stroke: currentColor;
 }
 
 /* —— Portfolio —— */
@@ -652,13 +657,13 @@ button {
 .messenger:visited .messenger-icon,
 .messenger:active .messenger-icon,
 .messenger:focus .messenger-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: transparent !important;
-  border: 1px solid var(--copper);
+  border: 1.5px solid var(--copper);
   color: var(--copper);
   transition: background 0.2s var(--ease), color 0.2s, border-color 0.2s;
 }
@@ -676,10 +681,15 @@ button {
 }
 
 .messenger-icon svg {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 22px;
+  height: 22px;
   display: block;
-  fill: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
 
 /* —— Masters —— */
@@ -781,12 +791,15 @@ button {
 }
 
 .process-item svg {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 32px;
+  height: 32px;
   margin: 0 auto 0.75rem;
   stroke: var(--ink);
   fill: none;
-  stroke-width: 1.3;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
 
 .process-item strong {
@@ -1118,18 +1131,31 @@ button {
 
 .map-wrap {
   margin-top: 2.5rem;
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  min-height: 320px;
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  background: #0a0a0a;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  min-height: 360px;
   overflow: hidden;
+  position: relative;
+}
+
+.map-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.55);
 }
 
 .map-wrap iframe {
   width: 100%;
-  height: 380px;
+  height: 400px;
   border: 0;
   display: block;
-  filter: grayscale(0.35) contrast(1.05);
+  filter: grayscale(0.35) brightness(0.72) contrast(1.05) saturate(0.55);
 }
 
 .map-fallback {
@@ -1514,12 +1540,15 @@ button {
 }
 
 .adv svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 36px;
+  height: 36px;
   margin: 0 auto 0.85rem;
   stroke: var(--ink);
   fill: none;
-  stroke-width: 1.2;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  shape-rendering: geometricPrecision;
 }
 
 .adv p {
