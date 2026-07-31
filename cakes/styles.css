@@ -239,6 +239,10 @@ ul, ol { list-style: none; }
 .page-hero .section__title { margin-bottom: 0.5rem; }
 .page-hero .section__lead { margin-bottom: 0; }
 
+.section--flush { padding-top: 0; }
+
+.section__more { margin-top: 1.75rem; }
+
 /* ── Hero ── */
 .hero {
   position: relative;
@@ -725,6 +729,9 @@ ul, ol { list-style: none; }
 .order-block p,
 .order-block li { color: var(--ink-soft); margin-bottom: 0.55rem; }
 
+.order-block strong,
+.contact-card strong { color: var(--ink); }
+
 .order-block ul { padding-left: 0; }
 
 .order-block li {
@@ -971,6 +978,14 @@ ul, ol { list-style: none; }
   height: 320px;
   border: 0;
   display: block;
+}
+
+.map-section { margin-top: 2rem; }
+
+.map-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
 }
 
 .contact-btns {

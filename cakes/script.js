@@ -48,6 +48,29 @@
         });
       });
     });
+
+    /* Переход по якорю карточки (например, с главной):
+       включаем её фильтр и доскролливаем после перестройки сетки */
+    const applyHashFilter = () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (!target || !target.classList.contains("cake-card")) return;
+
+      /* первая категория карточки — приоритетная */
+      const cats = (target.dataset.cat || "").split(/\s+/);
+      const btn = cats
+        .map((c) => Array.from(filters).find((b) => b.dataset.filter === c))
+        .find(Boolean);
+      if (btn && !btn.classList.contains("is-active")) btn.click();
+
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    };
+
+    applyHashFilter();
+    window.addEventListener("hashchange", applyHashFilter);
   }
 
   /* Reveal on scroll */
