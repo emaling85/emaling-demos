@@ -273,7 +273,9 @@ img { display: block; max-width: 100%; height: auto; }
 /* ── Цены ──────────────────────────── */
 .prices__list {
   list-style: none;
-  max-width: 640px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
 }
 
 .prices__list li {
@@ -281,9 +283,10 @@ img { display: block; max-width: 100%; height: auto; }
   align-items: baseline;
   gap: 0.8rem;
   padding-block: 0.9rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.prices__list li + li { border-top: 1px solid var(--line); }
+.prices__list li:nth-last-child(-n + 2) { border-bottom: 0; }
 
 .prices__list span { font-weight: 500; }
 
@@ -544,6 +547,10 @@ img { display: block; max-width: 100%; height: auto; }
   .nav-toggle { margin-left: 0; }
 
   .works__grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+
+  .prices__list { grid-template-columns: 1fr; }
+
+  .prices__list li:nth-last-child(2) { border-bottom: 1px solid var(--line); }
 
   .about__inner,
   .contacts__inner { grid-template-columns: 1fr; }
