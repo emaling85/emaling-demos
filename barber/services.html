@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Услуги и цены — барбершоп УГОЛ</title>
+  <meta name="description" content="Прайс барбершопа УГОЛ: стрижки от 1500 ₽, борода, комплексы, камуфляж. Цены финальные, без допродаж в кресле." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="services">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">УГ<span>О</span>Л</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" data-nav="home">Главная</a>
+        <a href="services.html" data-nav="services">Услуги и цены</a>
+        <a href="masters.html" data-nav="masters">Мастера</a>
+        <a href="gallery.html" data-nav="gallery">Галерея</a>
+        <a href="contacts.html" data-nav="contacts">Контакты</a>
+      </nav>
+      <a class="btn btn--primary header__cta" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Записаться</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-num">01</p>
+        <h1 class="section-title">Услуги и цены</h1>
+        <p class="section-lead">Цены финальные, без допродаж в кресле. Что видите в прайсе — то и платите. Мытьё и базовая укладка входят в стрижку.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-num reveal">02</p>
+        <h2 class="section-title reveal">Что входит</h2>
+        <p class="section-lead reveal">Кратко по четырём позициям — чтобы понимать, на что уходит время.</p>
+
+        <div class="featured-services">
+          <article class="featured reveal">
+            <div class="featured__img">
+              <img src="images/svc-detail-1.jpg" alt="Модельная мужская стрижка крупным планом" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="featured__body">
+              <h3 class="featured__name">Модельная стрижка</h3>
+              <p class="featured__meta">45–60 мин · 1 800 ₽</p>
+              <p class="featured__text">Консультация, мытьё, стрижка ножницами и машинкой, укладка. Подстраиваем под форму головы и то, как вы носите волосы в быту.</p>
+            </div>
+          </article>
+          <article class="featured reveal reveal-delay-1">
+            <div class="featured__img">
+              <img src="images/svc-detail-2.jpg" alt="Бритьё опасной бритвой" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="featured__body">
+              <h3 class="featured__name">Бритьё опасной</h3>
+              <p class="featured__meta">40–50 мин · 1 500 ₽</p>
+              <p class="featured__text">Горячее полотенце, подготовка кожи, бритьё опасной бритвой, успокаивающий бальзам. Не «для фото» — для чистого результата.</p>
+            </div>
+          </article>
+          <article class="featured reveal">
+            <div class="featured__img">
+              <img src="images/svc-detail-3.jpg" alt="Комплекс стрижка плюс борода" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="featured__body">
+              <h3 class="featured__name">Стрижка + борода</h3>
+              <p class="featured__meta">70–90 мин · 2 400 ₽</p>
+              <p class="featured__text">Полный комплекс со скидкой относительно отдельных услуг. Один мастер — один образ от макушки до линии бороды.</p>
+            </div>
+          </article>
+          <article class="featured reveal reveal-delay-1">
+            <div class="featured__img">
+              <img src="images/svc-detail-4.jpg" alt="Камуфляж седины для мужчин" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="featured__body">
+              <h3 class="featured__name">Камуфляж седины</h3>
+              <p class="featured__meta">30–40 мин · от 1 200 ₽</p>
+              <p class="featured__text">Не краска «в чёрный». Мягкий камуфляж, который смывается за 3–4 недели. Можно совместить со стрижкой.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="price-block" id="haircuts">
+          <div class="price-block__head reveal">
+            <div>
+              <p class="section-num">03</p>
+              <h2 class="price-block__title">Стрижки</h2>
+            </div>
+          </div>
+          <div class="price-table-wrap reveal">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Время</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Машинкой<span class="desc">Один насадочный переход или под ноль</span></td>
+                  <td>30 мин</td>
+                  <td>1 500 ₽</td>
+                </tr>
+                <tr>
+                  <td>Ножницами<span class="desc">Классика без машинки по верху</span></td>
+                  <td>45 мин</td>
+                  <td>1 700 ₽</td>
+                </tr>
+                <tr>
+                  <td>Модельная<span class="desc">Fade, crop, текстура — под ваш стиль</span></td>
+                  <td>45–60 мин</td>
+                  <td>1 800 ₽</td>
+                </tr>
+                <tr>
+                  <td>Под ноль / бритвенный переход<span class="desc">Чистая линия, без «лесенок»</span></td>
+                  <td>35 мин</td>
+                  <td>1 600 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-block" id="beard">
+          <div class="price-block__head reveal">
+            <div>
+              <p class="section-num">04</p>
+              <h2 class="price-block__title">Борода</h2>
+            </div>
+          </div>
+          <div class="price-table-wrap reveal">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Время</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Моделирование<span class="desc">Форма, контур, щёки и шея</span></td>
+                  <td>30 мин</td>
+                  <td>900 ₽</td>
+                </tr>
+                <tr>
+                  <td>Бритьё опасной<span class="desc">Полотенце, бритва, уход</span></td>
+                  <td>40–50 мин</td>
+                  <td>1 500 ₽</td>
+                </tr>
+                <tr>
+                  <td>Королевское бритьё<span class="desc">Длинный ритуал: подготовка, бритьё, маска</span></td>
+                  <td>60 мин</td>
+                  <td>2 200 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-block" id="complex">
+          <div class="price-block__head reveal">
+            <div>
+              <p class="section-num">05</p>
+              <h2 class="price-block__title">Комплексы</h2>
+            </div>
+          </div>
+          <div class="price-table-wrap reveal">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Время</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Стрижка + моделирование бороды<span class="desc">Скидка относительно отдельных услуг</span></td>
+                  <td>70 мин</td>
+                  <td>2 200 ₽</td>
+                </tr>
+                <tr>
+                  <td>Стрижка + бритьё опасной<span class="desc">Полный образ за один визит</span></td>
+                  <td>80–90 мин</td>
+                  <td>2 400 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="price-block" id="extra">
+          <div class="price-block__head reveal">
+            <div>
+              <p class="section-num">06</p>
+              <h2 class="price-block__title">Дополнительно</h2>
+            </div>
+          </div>
+          <div class="price-table-wrap reveal">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Время</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Камуфляж седины<span class="desc">Мягкий тон, смывается за 3–4 недели</span></td>
+                  <td>30–40 мин</td>
+                  <td>от 1 200 ₽</td>
+                </tr>
+                <tr>
+                  <td>Укладка<span class="desc">Без стрижки — если нужно «на выход»</span></td>
+                  <td>20 мин</td>
+                  <td>600 ₽</td>
+                </tr>
+                <tr>
+                  <td>Воск / глина<span class="desc">Подбор и нанесение продукта</span></td>
+                  <td>10 мин</td>
+                  <td>300 ₽</td>
+                </tr>
+                <tr>
+                  <td>Оформление бровей<span class="desc">Аккуратная форма без «ниточек»</span></td>
+                  <td>15 мин</td>
+                  <td>500 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="first-visit">
+      <div class="container">
+        <p class="section-num reveal">07</p>
+        <h2 class="section-title reveal">Первый раз у нас?</h2>
+        <p class="section-lead reveal">Коротко — что будет на визите, без сюрпризов.</p>
+        <div class="first-visit">
+          <div class="first-visit__item reveal">
+            <p class="first-visit__num">01</p>
+            <h3 class="first-visit__title">Разговор у кресла</h3>
+            <p class="first-visit__text">Спрашиваем, как носите волосы, что бесит в прошлой стрижке. Можно с фото — разберём, что реально получится.</p>
+          </div>
+          <div class="first-visit__item reveal reveal-delay-1">
+            <p class="first-visit__num">02</p>
+            <h3 class="first-visit__title">Работа</h3>
+            <p class="first-visit__text">Моем, стрижём, показываем зеркало в процессе. Если что-то не так — правим сразу, не «потом дома». </p>
+          </div>
+          <div class="first-visit__item reveal reveal-delay-2">
+            <p class="first-visit__num">03</p>
+            <h3 class="first-visit__title">Уход на дом</h3>
+            <p class="first-visit__text">Скажем, чем укладывать и как часто возвращаться. Ничего не навязываем с полки — только если сами спросите.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2 class="section-title reveal">Записаться</h2>
+        <p class="section-lead reveal">Напишите мастеру или в общий чат — ответим в течение часа в рабочее время.</p>
+        <div class="btn-row reveal">
+          <a class="btn btn--primary" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--ghost" href="tel:+79210000001">+7 (921) 000-00-01</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo">УГ<span>О</span>Л</a>
+          <p>Барбершоп у Чернышевской.<br />Стрижём с 2022.</p>
+          <div class="footer__social">
+            <a href="https://t.me/ugol_barber" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a href="https://wa.me/79210000001" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Адрес</h4>
+          <p>ул. Кирочная 32</p>
+          <p>м. Чернышевская</p>
+          <p>Пн–Вс 10:00–22:00</p>
+        </div>
+        <div class="footer__col">
+          <h4>Связь</h4>
+          <a href="tel:+79210000001">+7 (921) 000-00-01</a>
+          <a href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer__col">
+          <h4>Меню</h4>
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги и цены</a>
+          <a href="masters.html">Мастера</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="contacts.html">Контакты</a>
+        </div>
+      </div>
+      <p class="footer__copy">демо-сайт · данные вымышленные</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

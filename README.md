@@ -18,6 +18,7 @@
 | Чернила (тату) | https://emaling85.github.io/emaling-demos/tattoo/ |
 | БОКС (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
 | ЛАК (маникюр) | https://emaling85.github.io/emaling-demos/nails/ |
+| УГОЛ (барбершоп) | https://emaling85.github.io/emaling-demos/barber/ |
 
 ## Структура
 
@@ -32,6 +33,7 @@
 | `tattoo/` | тату «Чернила» |
 | `auto/` | автосервис «БОКС» |
 | `nails/` | мастер маникюра «ЛАК» |
+| `barber/` | барбершоп «УГОЛ» |
 
 ## Админки (демо)
 

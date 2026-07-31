@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>УГОЛ — барбершоп у м. Чернышевская, СПб</title>
+  <meta name="description" content="Барбершоп УГОЛ на Кирочной 32: стрижка, борода, комплекс. Запись к мастеру в Telegram и WhatsApp. Демо-сайт для портфолио." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">УГ<span>О</span>Л</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" data-nav="home">Главная</a>
+        <a href="services.html" data-nav="services">Услуги и цены</a>
+        <a href="masters.html" data-nav="masters">Мастера</a>
+        <a href="gallery.html" data-nav="gallery">Галерея</a>
+        <a href="contacts.html" data-nav="contacts">Контакты</a>
+      </nav>
+      <a class="btn btn--primary header__cta" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Записаться</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img
+        class="hero__img"
+        src="images/hero.jpg"
+        alt="Интерьер барбершопа УГОЛ: кресла, зеркала и тёплый свет"
+        width="1800"
+        height="1200"
+      />
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__brand">УГОЛ</p>
+        <p class="hero__place">барбершоп у Чернышевской · с 2022</p>
+        <h1 class="hero__title">Стрижка, после которой не хочется в другой</h1>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Записаться</a>
+          <a class="btn btn--ghost" href="services.html">Цены</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Факты">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <p class="stat__num">4</p>
+          <p class="stat__label">года работы</p>
+        </div>
+        <div class="stat reveal reveal-delay-1">
+          <p class="stat__num">280+</p>
+          <p class="stat__label">стрижек в месяц</p>
+        </div>
+        <div class="stat reveal reveal-delay-2">
+          <p class="stat__num">3</p>
+          <p class="stat__label">мастера</p>
+        </div>
+        <div class="stat reveal reveal-delay-3">
+          <p class="stat__num">4.9</p>
+          <p class="stat__label">средняя оценка</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services-preview">
+      <div class="container">
+        <p class="section-num reveal">01</p>
+        <h2 class="section-title reveal">Услуги</h2>
+        <p class="section-lead reveal">Четыре направления. Цены финальные — без допродаж в кресле.</p>
+        <div class="svc-grid">
+          <a href="services.html" class="svc-card reveal">
+            <div class="svc-card__img">
+              <img src="images/service-haircut.jpg" alt="Мужская стрижка машинкой и ножницами" width="800" height="600" loading="lazy" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__name">Стрижка</h3>
+              <p class="svc-card__price">от 1 500 ₽</p>
+              <span class="svc-card__more">Смотреть прайс</span>
+            </div>
+          </a>
+          <a href="services.html#beard" class="svc-card reveal reveal-delay-1">
+            <div class="svc-card__img">
+              <img src="images/service-beard.jpg" alt="Моделирование бороды опасной бритвой" width="800" height="600" loading="lazy" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__name">Борода</h3>
+              <p class="svc-card__price">от 900 ₽</p>
+              <span class="svc-card__more">Смотреть прайс</span>
+            </div>
+          </a>
+          <a href="services.html#complex" class="svc-card reveal reveal-delay-2">
+            <div class="svc-card__img">
+              <img src="images/service-complex.jpg" alt="Комплекс: стрижка и борода" width="800" height="600" loading="lazy" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__name">Комплекс</h3>
+              <p class="svc-card__price">от 2 200 ₽</p>
+              <span class="svc-card__more">Смотреть прайс</span>
+            </div>
+          </a>
+          <a href="services.html#extra" class="svc-card reveal reveal-delay-3">
+            <div class="svc-card__img">
+              <img src="images/service-camo.jpg" alt="Камуфляж седины" width="800" height="600" loading="lazy" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__name">Камуфляж</h3>
+              <p class="svc-card__price">от 1 200 ₽</p>
+              <span class="svc-card__more">Смотреть прайс</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="masters-preview">
+      <div class="container">
+        <p class="section-num reveal">02</p>
+        <h2 class="section-title reveal">Мастера</h2>
+        <p class="section-lead reveal">Трое. Выбирайте по стилю — или напишите, подскажем.</p>
+        <div class="master-grid">
+          <a href="masters.html#artem" class="master-card reveal">
+            <div class="master-card__img">
+              <img src="images/master-artem.jpg" alt="Артём — основатель барбершопа УГОЛ" width="900" height="1200" loading="lazy" />
+            </div>
+            <div class="master-card__body">
+              <h3 class="master-card__name">Артём</h3>
+              <p class="master-card__role">Основатель · классика и fade</p>
+            </div>
+          </a>
+          <a href="masters.html#kirill" class="master-card reveal reveal-delay-1">
+            <div class="master-card__img">
+              <img src="images/master-kirill.jpg" alt="Кирилл — барбер УГОЛ" width="900" height="1200" loading="lazy" />
+            </div>
+            <div class="master-card__body">
+              <h3 class="master-card__name">Кирилл</h3>
+              <p class="master-card__role">Барбер · текстура и борода</p>
+            </div>
+          </a>
+          <a href="masters.html#david" class="master-card reveal reveal-delay-2">
+            <div class="master-card__img">
+              <img src="images/master-david.jpg" alt="Давид — барбер УГОЛ" width="900" height="1200" loading="lazy" />
+            </div>
+            <div class="master-card__body">
+              <h3 class="master-card__name">Давид</h3>
+              <p class="master-card__role">Барбер · модельные стрижки</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="atmosphere" aria-label="Атмосфера">
+      <div class="atmosphere__track">
+        <figure class="atmosphere__item">
+          <img src="images/atm-1.jpg" alt="Рабочее место барбера с инструментами" width="1000" height="1250" loading="lazy" />
+        </figure>
+        <figure class="atmosphere__item">
+          <img src="images/atm-2.jpg" alt="Интерьер с кирпичной стеной и кожаным креслом" width="1000" height="1250" loading="lazy" />
+        </figure>
+        <figure class="atmosphere__item">
+          <img src="images/atm-3.jpg" alt="Мастер стрижёт клиента в зале УГОЛ" width="1000" height="1250" loading="lazy" />
+        </figure>
+        <figure class="atmosphere__item">
+          <img src="images/atm-4.jpg" alt="Полка с уходовой косметикой в барбершопе" width="1000" height="1250" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <p class="section-num reveal">03</p>
+        <h2 class="section-title reveal">Отзывы</h2>
+        <p class="section-lead reveal">Без «супер, рекомендую». Как пишут нормальные люди.</p>
+        <div class="reviews-grid">
+          <article class="review reveal">
+            <p class="review__text">«Пришёл с фоткой — Артём не стал копировать один в один, объяснил, что на моей голове будет смотреться лучше. Через месяц опять к нему.»</p>
+            <p class="review__author">Максим</p>
+            <p class="review__meta">стрижка · январь 2026</p>
+          </article>
+          <article class="review reveal reveal-delay-1">
+            <p class="review__text">«Наконец место, где не впаривают маску за тысячу. Бороду сделали за 40 минут — ровно, по линии. Тихо, без болтовни, как я люблю.»</p>
+            <p class="review__author">Игорь</p>
+            <p class="review__meta">борода · март 2026</p>
+          </article>
+          <article class="review reveal reveal-delay-2">
+            <p class="review__text">«Жена записала к Кириллу. Думал — очередной «хипстерский» салон. Нет: нормально, по делу, цена как на сайте. Теперь сам хожу.»</p>
+            <p class="review__author">Сергей</p>
+            <p class="review__meta">комплекс · май 2026</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <p class="section-num reveal">04</p>
+        <h2 class="section-title reveal">Как записаться</h2>
+        <p class="section-lead reveal">Без приложения и личного кабинета. Три шага — и вы в кресле.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <p class="step__num">01</p>
+            <h3 class="step__title">Выберите мастера</h3>
+            <p class="step__text">Посмотрите профили или напишите — подскажем, кто ближе по стилю.</p>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <p class="step__num">02</p>
+            <h3 class="step__title">Напишите в мессенджер</h3>
+            <p class="step__text">Telegram или WhatsApp. Укажите услугу и удобное время.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <p class="step__num">03</p>
+            <h3 class="step__title">Приходите</h3>
+            <p class="step__text">Кирочная 32, чёрная дверь с медной вывеской. Предоплата не нужна.</p>
+          </div>
+        </div>
+        <div class="btn-row reveal">
+          <a class="btn btn--primary" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--ghost" href="tel:+79210000001">+7 (921) 000-00-01</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="contacts-mini">
+      <div class="container">
+        <p class="section-num reveal">05</p>
+        <h2 class="section-title reveal">Где мы</h2>
+        <div class="contacts-mini">
+          <div class="contacts-mini__info reveal">
+            <h3>Адрес</h3>
+            <p>Санкт-Петербург, ул. Кирочная 32<br />м. Чернышевская · 7 минут пешком</p>
+            <h3>Часы</h3>
+            <p>Пн–Вс · 10:00–22:00</p>
+            <h3>Связь</h3>
+            <p><a href="tel:+79210000001">+7 (921) 000-00-01</a></p>
+            <p><a href="https://t.me/ugol_barber" target="_blank" rel="noopener">t.me/ugol_barber</a></p>
+          </div>
+          <div class="contacts-mini__map reveal reveal-delay-1">
+            <iframe
+              title="Карта: барбершоп УГОЛ, Кирочная 32"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=30.350%2C59.940%2C30.365%2C59.948&amp;layer=mapnik&amp;marker=59.9440%2C30.3575"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo">УГ<span>О</span>Л</a>
+          <p>Барбершоп у Чернышевской.<br />Стрижём с 2022.</p>
+          <div class="footer__social">
+            <a href="https://t.me/ugol_barber" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a href="https://wa.me/79210000001" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Адрес</h4>
+          <p>ул. Кирочная 32</p>
+          <p>м. Чернышевская</p>
+          <p>Пн–Вс 10:00–22:00</p>
+        </div>
+        <div class="footer__col">
+          <h4>Связь</h4>
+          <a href="tel:+79210000001">+7 (921) 000-00-01</a>
+          <a href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer__col">
+          <h4>Меню</h4>
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги и цены</a>
+          <a href="masters.html">Мастера</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="contacts.html">Контакты</a>
+        </div>
+      </div>
+      <p class="footer__copy">демо-сайт · данные вымышленные</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея — барбершоп УГОЛ</title>
+  <meta name="description" content="Галерея барбершопа УГОЛ: стрижки, бороды и интерьер. Фильтр по категориям. Кирочная 32, м. Чернышевская." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="gallery">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">УГ<span>О</span>Л</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" data-nav="home">Главная</a>
+        <a href="services.html" data-nav="services">Услуги и цены</a>
+        <a href="masters.html" data-nav="masters">Мастера</a>
+        <a href="gallery.html" data-nav="gallery">Галерея</a>
+        <a href="contacts.html" data-nav="contacts">Контакты</a>
+      </nav>
+      <a class="btn btn--primary header__cta" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Записаться</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-num">01</p>
+        <h1 class="section-title">Галерея</h1>
+        <p class="section-lead">Работы и зал вперемешку. Без ретуши «до неузнаваемости» — как выглядит после кресла.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters reveal" role="group" aria-label="Фильтр галереи">
+          <button type="button" class="filter-btn is-active" data-filter="all">Все</button>
+          <button type="button" class="filter-btn" data-filter="haircuts">Стрижки</button>
+          <button type="button" class="filter-btn" data-filter="beards">Бороды</button>
+          <button type="button" class="filter-btn" data-filter="interior">Интерьер</button>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal" data-category="haircuts">
+            <img src="images/gal-01.jpg" alt="Короткая мужская стрижка с чётким контуром" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-1" data-category="interior">
+            <img src="images/gal-02.jpg" alt="Кресло барбера и зеркало в зале УГОЛ" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-2" data-category="beards">
+            <img src="images/gal-03.jpg" alt="Ухоженная борода средней длины" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal" data-category="haircuts">
+            <img src="images/gal-04.jpg" alt="Fade и текстурный верх" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-1" data-category="haircuts">
+            <img src="images/gal-05.jpg" alt="Модельная стрижка крупным планом" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-2" data-category="interior">
+            <img src="images/gal-06.jpg" alt="Детали интерьера: металл и кирпич" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal" data-category="beards">
+            <img src="images/gal-07.jpg" alt="Контур бороды после бритья" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-1" data-category="haircuts">
+            <img src="images/gal-08.jpg" alt="Стрижка ножницами в процессе" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-2" data-category="interior">
+            <img src="images/gal-09.jpg" alt="Рабочая зона барбершопа" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal" data-category="beards">
+            <img src="images/gal-10.jpg" alt="Бритьё опасной бритвой" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-1" data-category="haircuts">
+            <img src="images/gal-11.jpg" alt="Классическая короткая стрижка" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-2" data-category="interior">
+            <img src="images/gal-12.jpg" alt="Полка с инструментами и косметикой" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal" data-category="haircuts">
+            <img src="images/gal-13.jpg" alt="Текстурная укладка после стрижки" width="800" height="800" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal reveal-delay-1" data-category="beards">
+            <img src="images/gal-14.jpg" alt="Моделирование бороды машинкой" width="800" height="800" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2 class="section-title reveal">Понравилось — записывайтесь</h2>
+        <p class="section-lead reveal">Напишите, какую стрижку хотите — или пришлите референс.</p>
+        <div class="btn-row reveal">
+          <a class="btn btn--primary" href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--ghost" href="tel:+79210000001">+7 (921) 000-00-01</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo">УГ<span>О</span>Л</a>
+          <p>Барбершоп у Чернышевской.<br />Стрижём с 2022.</p>
+          <div class="footer__social">
+            <a href="https://t.me/ugol_barber" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a href="https://wa.me/79210000001" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Адрес</h4>
+          <p>ул. Кирочная 32</p>
+          <p>м. Чернышевская</p>
+          <p>Пн–Вс 10:00–22:00</p>
+        </div>
+        <div class="footer__col">
+          <h4>Связь</h4>
+          <a href="tel:+79210000001">+7 (921) 000-00-01</a>
+          <a href="https://t.me/ugol_barber" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/79210000001" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer__col">
+          <h4>Меню</h4>
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги и цены</a>
+          <a href="masters.html">Мастера</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="contacts.html">Контакты</a>
+        </div>
+      </div>
+      <p class="footer__copy">демо-сайт · данные вымышленные</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
