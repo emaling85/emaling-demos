@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>КОЛЕСО — Автосервис в Санкт-Петербурге</title>
-  <meta name="description" content="Техническое обслуживание и ремонт автомобилей. Сеть сервисных центров с 1998 года. Гарантия на все виды работ." />
+  <title>БОКС — автосервис у м. Лесная, СПб</title>
+  <meta name="description" content="ТО и ремонт без очереди. Кантемировская 37, м. Лесная. Честная смета, гарантия на работы. Запись в WhatsApp и по телефону." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">КОЛЕСО</a>
+      <a href="#" class="logo">БОКС</a>
       <nav class="nav" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
         <a href="#prices">Цены</a>
-        <a href="#about">О нас</a>
+        <a href="#shop">Цех</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <a href="tel:+78124497729" class="header__phone">8 (812) 449-77-29</a>
+      <div class="header__right">
+        <a href="tel:+78123094122" class="header__phone">8 (812) 309-41-22</a>
+        <a class="header__msg" href="https://wa.me/78123094122" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        <a class="header__msg" href="https://t.me/emaling_dev" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+      </div>
       <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -31,122 +33,140 @@
 
   <main>
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__track" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <p class="hero__city">Санкт-Петербург · с 1998</p>
-        <p class="hero__brand">КОЛЕСО</p>
-        <h1 class="hero__title">
-          Автосервис<br />
-          <span class="hero__accent">и ремонт</span>
-        </h1>
-        <p class="hero__lead">Техническое обслуживание автомобилей. Квалифицированные слесари, подбор запчастей, гарантия на все виды работ.</p>
+      <img
+        class="hero__img"
+        src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=2000&q=80"
+        alt="Машина на подъёмнике в боксе автосервиса"
+        width="2000"
+        height="1333"
+      />
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__place">м. Лесная · Кантемировская 37</p>
+        <p class="hero__brand">БОКС</p>
+        <h1 class="hero__title">ТО и ремонт · <span>честная смета</span></h1>
+        <p class="hero__lead">Один цех, три подъёмника. Заезжаешь — смотрим, называем цену до начала работ.</p>
         <div class="hero__actions">
-          <a href="tel:+78124497729" class="btn btn--primary">Позвонить</a>
-          <a href="#prices" class="btn btn--ghost">Смотреть цены</a>
+          <a href="https://wa.me/78123094122" class="btn btn--primary" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          <a href="tel:+78123094122" class="btn btn--ghost">Позвонить</a>
         </div>
-      </div>
-      <div class="hero__divider" aria-hidden="true">
-        <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="tread-hero" width="48" height="48" patternUnits="userSpaceOnUse">
-              <rect x="2" y="4" width="10" height="40" rx="2" fill="currentColor"/>
-              <rect x="18" y="8" width="8" height="32" rx="2" fill="currentColor"/>
-              <rect x="32" y="4" width="10" height="40" rx="2" fill="currentColor"/>
-            </pattern>
-          </defs>
-          <rect width="1200" height="48" fill="url(#tread-hero)"/>
-        </svg>
       </div>
     </section>
 
-    <section class="advantages" id="advantages">
-      <div class="container">
-        <h2 class="section-label">Наши преимущества</h2>
-        <div class="advantages__grid">
-          <article class="advantage">
-            <p><strong>Постгарантийное</strong> обслуживание и регламентное ТО всех марок</p>
-          </article>
-          <article class="advantage">
-            <p><strong>Квалифицированные</strong> слесари и консультация сервисного инженера</p>
-          </article>
-          <article class="advantage">
-            <p>Ассортимент запчастей — более <strong>25 000</strong> наименований</p>
-          </article>
-          <article class="advantage">
-            <p><strong>Гарантия</strong> на все виды работ и видео-мониторинг зоны</p>
-          </article>
-        </div>
+    <section class="place" aria-label="Наш цех">
+      <figure class="place__shot">
+        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80" alt="Бокс автосервиса с подъёмником" width="1200" height="800" loading="lazy" />
+        <figcaption>Бокс</figcaption>
+      </figure>
+      <figure class="place__shot">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80" alt="Работа руками: шиномонтаж и инструмент" width="1200" height="800" loading="lazy" />
+        <figcaption>Работа руками</figcaption>
+      </figure>
+      <figure class="place__shot">
+        <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6d7b5?auto=format&fit=crop&w=1200&q=80" alt="Зона ожидания и сервисный зал" width="1200" height="800" loading="lazy" />
+        <figcaption>Зал</figcaption>
+      </figure>
+    </section>
+
+    <section class="promises">
+      <div class="container promises__grid">
+        <p><strong>Без очереди</strong> — запись по времени, не «приходите с утра и ждите»</p>
+        <p><strong>Смета до работ</strong> — согласовываем лишнее, не после факта</p>
+        <p><strong>Гарантия</strong> на работу и поставленные запчасти</p>
+        <p><strong>Можно ждать</strong> в зоне ожидания с кофе</p>
       </div>
-      <div class="track-strip track-strip--sm" aria-hidden="true"></div>
     </section>
 
     <section class="services" id="services">
-      <div class="services__tracks" aria-hidden="true"></div>
       <div class="container">
-        <h2 class="section-title">Услуги автосервиса</h2>
-        <p class="section-sub">Центры КОЛЕСО.ру оказывают полный спектр технического обслуживания и ремонта</p>
+        <h2 class="section-title">Что делаем</h2>
+        <p class="section-sub">Не всё подряд — то, чем занимаемся каждый день.</p>
 
         <div class="services__grid">
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">01</span>
-            <span class="service-item__name">Регламентное ТО</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">02</span>
-            <span class="service-item__name">Жидкости и фильтры</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">03</span>
-            <span class="service-item__name">Диагностика двигателя</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">04</span>
-            <span class="service-item__name">Тормозная система</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">05</span>
-            <span class="service-item__name">Ходовая часть</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">06</span>
-            <span class="service-item__name">Рулевое управление</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">07</span>
-            <span class="service-item__name">Развал-схождение</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">08</span>
-            <span class="service-item__name">Трансмиссия</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">09</span>
-            <span class="service-item__name">Электрооборудование</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">10</span>
-            <span class="service-item__name">Система охлаждения</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">11</span>
-            <span class="service-item__name">Кондиционер / климат</span>
-          </a>
-          <a href="#prices" class="service-item" data-reveal>
-            <span class="service-item__num">12</span>
-            <span class="service-item__name">Выхлопная система</span>
-          </a>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=70" alt="" width="800" height="500" loading="lazy" />
+            <h3>Регламентное ТО</h3>
+            <p>Масло, фильтры, ремни, жидкости по пробегу — чтобы не ловить сюрпризы на трассе.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=70" alt="" width="800" height="500" loading="lazy" />
+            <h3>Диагностика</h3>
+            <p>Компьютер + осмотр ходовой. Говорим, что ехать можно, а что лучше закрыть сейчас.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=70&sat=-40" alt="" width="800" height="500" loading="lazy" />
+            <h3>Тормоза</h3>
+            <p>Колодки, диски, суппорта, жидкость. Без скрипа и «ещё поездит».</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=70" alt="" width="800" height="500" loading="lazy" />
+            <h3>Ходовая</h3>
+            <p>Стойки, рычаги, сайлентблоки. После — развал-схождение на стенде.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=70" alt="" width="800" height="500" loading="lazy" />
+            <h3>Двигатель</h3>
+            <p>ГРМ, свечи, впуск, течи. Не «перебираем всё» — чиним то, что нашли.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6d7b5?auto=format&fit=crop&w=800&q=70" alt="" width="800" height="500" loading="lazy" />
+            <h3>Трансмиссия</h3>
+            <p>Масло МКПП/АКПП, сцепление. Полная замена АКПП — аппаратом.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=70&sat=-50" alt="" width="800" height="500" loading="lazy" />
+            <h3>Электрика</h3>
+            <p>Генератор, стартер, АКБ, свет. Диагностика и замена без лишней разборки.</p>
+          </article>
+          <article class="svc" data-reveal>
+            <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6d7b5?auto=format&fit=crop&w=800&q=70&sat=-30" alt="" width="800" height="500" loading="lazy" />
+            <h3>Климат</h3>
+            <p>Заправка, поиск утечек, антибактериальная обработка кондиционера.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="how">
+      <div class="container">
+        <h2 class="section-title">Как записаться</h2>
+        <ol class="steps__list">
+          <li>
+            <span class="steps__num">01</span>
+            <div>
+              <h3>Напишите или позвоните</h3>
+              <p>WhatsApp, Telegram или звонок. Марка, пробег, что беспокоит.</p>
+            </div>
+          </li>
+          <li>
+            <span class="steps__num">02</span>
+            <div>
+              <h3>Согласуем время</h3>
+              <p>Подберём слот под вас. Обычно есть окно на ближайшие 1–2 дня.</p>
+            </div>
+          </li>
+          <li>
+            <span class="steps__num">03</span>
+            <div>
+              <h3>Приезжайте в бокс</h3>
+              <p>Осмотр, смета — и только потом работа. Можете ждать на месте.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="steps__actions">
+          <a href="https://wa.me/78123094122" class="btn btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/emaling_dev" class="btn btn--ghost" target="_blank" rel="noopener">Telegram</a>
+          <a href="tel:+78123094122" class="btn btn--ghost">8 (812) 309-41-22</a>
         </div>
       </div>
     </section>
 
     <section class="prices" id="prices">
       <div class="container">
-        <h2 class="section-title">Стоимость услуг</h2>
-        <p class="section-sub">Цены зависят от марки и модификации автомобиля. Точную стоимость уточнят специалисты.</p>
+        <h2 class="section-title">Цены на работы</h2>
+        <p class="section-sub">Базовые расценки. Итоговая сумма зависит от марки и объёма — скажем до начала.</p>
 
         <div class="accordion" data-accordion>
-
           <div class="accordion__item">
             <button class="accordion__btn" type="button" aria-expanded="false">
               <span>Силовой агрегат</span>
@@ -163,7 +183,6 @@
                   <tr><td>Замена цепи ГРМ (с успокоителями, натяжителем и помпой)</td><td>11 000 ₽</td></tr>
                   <tr><td>Снятие/установка турбокомпрессора</td><td>3 900 ₽</td></tr>
                   <tr><td>Поддон двигателя снятие/установка</td><td>3 000 ₽</td></tr>
-                  <tr><td>Клапанная крышка (рядный ДВС)</td><td>1 500 ₽</td></tr>
                 </tbody>
               </table>
             </div>
@@ -182,7 +201,6 @@
                   <tr><td>Замена задних дисковых тормозных колодок</td><td>1 000 ₽</td></tr>
                   <tr><td>Замена передних тормозных дисков и колодок</td><td>3 000 ₽</td></tr>
                   <tr><td>Замена задних тормозных дисков и колодок</td><td>3 000 ₽</td></tr>
-                  <tr><td>Замена тормозных барабанов и колодок</td><td>3 500 ₽</td></tr>
                   <tr><td>Ремонт/переборка тормозного суппорта</td><td>1 500 ₽</td></tr>
                   <tr><td>Замена троса стояночного тормоза</td><td>1 900 ₽</td></tr>
                 </tbody>
@@ -205,7 +223,6 @@
                   <tr><td>Рейка рулевая снятие/установка</td><td>2 700 ₽</td></tr>
                   <tr><td>Замена наконечника рулевого управления</td><td>700 ₽</td></tr>
                   <tr><td>Замена стойки стабилизатора</td><td>600 ₽</td></tr>
-                  <tr><td>Снятие/установка рычага переднего</td><td>1 500 ₽</td></tr>
                   <tr><td>Замена верхней опоры амортизатора</td><td>2 800 ₽</td></tr>
                 </tbody>
               </table>
@@ -225,7 +242,6 @@
                   <tr><td>Замена масла полная в АКПП с аппаратом</td><td>5 000 ₽</td></tr>
                   <tr><td>Замена масляного фильтра АКПП в поддоне</td><td>2 400 ₽</td></tr>
                   <tr><td>Замена масла в раздаточной КПП</td><td>800 ₽</td></tr>
-                  <tr><td>Замена масла в переднем / заднем редукторе</td><td>800 ₽</td></tr>
                 </tbody>
               </table>
             </div>
@@ -244,7 +260,6 @@
                   <tr><td>Замена АКБ под капотом или в багажнике</td><td>600 ₽</td></tr>
                   <tr><td>Замена АКБ в салоне</td><td>1 700 ₽</td></tr>
                   <tr><td>Замена свечи зажигания (рядный ДВС)</td><td>200 ₽</td></tr>
-                  <tr><td>Замена катушки зажигания (индивидуальной)</td><td>200 ₽</td></tr>
                   <tr><td>Замена лампы XENON / LED</td><td>1 000 ₽</td></tr>
                 </tbody>
               </table>
@@ -253,7 +268,7 @@
 
           <div class="accordion__item">
             <button class="accordion__btn" type="button" aria-expanded="false">
-              <span>Система охлаждения</span>
+              <span>Охлаждение и топливо</span>
               <span class="accordion__icon" aria-hidden="true"></span>
             </button>
             <div class="accordion__panel">
@@ -261,111 +276,78 @@
                 <tbody>
                   <tr><td>Антифриз, слить/залить, замена</td><td>1 000 ₽</td></tr>
                   <tr><td>Аппаратная замена антифриза с промывкой</td><td>2 500 ₽</td></tr>
-                  <tr><td>Замена насоса охлаждения ДВС</td><td>2 000 ₽</td></tr>
-                  <tr><td>Замена термостата</td><td>1 400 ₽</td></tr>
                   <tr><td>Замена радиатора охлаждения двигателя</td><td>2 400 ₽</td></tr>
-                  <tr><td>Замена радиатора отопителя салона</td><td>8 500 ₽</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false">
-              <span>Топливная система</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel">
-              <table class="price-table">
-                <tbody>
                   <tr><td>Замена выносного топливного фильтра</td><td>800 ₽</td></tr>
-                  <tr><td>Замена топливного фильтра / сетки в баке</td><td>2 000 ₽</td></tr>
-                  <tr><td>Замена топливного насоса выносного</td><td>1 200 ₽</td></tr>
                   <tr><td>Замена топливного насоса в баке</td><td>2 000 ₽</td></tr>
-                  <tr><td>Снятие/установка топливного бака</td><td>5 000 ₽</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
-
-          <div class="accordion__item">
-            <button class="accordion__btn" type="button" aria-expanded="false">
-              <span>Арматурные работы</span>
-              <span class="accordion__icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion__panel">
-              <table class="price-table">
-                <tbody>
-                  <tr><td>Бампер передний / задний снятие/установка</td><td>2 600 ₽</td></tr>
-                  <tr><td>Фара передняя снятие/установка</td><td>400 ₽</td></tr>
-                  <tr><td>Дверь снятие/установка</td><td>2 900 ₽</td></tr>
-                  <tr><td>Капот снятие/установка</td><td>2 200 ₽</td></tr>
-                  <tr><td>Механизм стеклоподъёмника</td><td>2 700 ₽</td></tr>
-                  <tr><td>Замок двери снятие/установка</td><td>2 400 ₽</td></tr>
-                  <tr><td>Установка фаркопа</td><td>4 000 ₽</td></tr>
-                  <tr><td>Защита картера, первичная установка</td><td>1 000 ₽</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
         </div>
 
-        <p class="prices__note">* Приведённые цены могут отличаться в зависимости от марки и модификации автомобиля или дополнительных работ.</p>
+        <p class="prices__note">* Цена работы. Запчасти — отдельно, по факту под ваш авто. Смету фиксируем до старта.</p>
       </div>
-      <div class="track-strip" aria-hidden="true"></div>
     </section>
 
-    <section class="about" id="about">
-      <div class="about__track" aria-hidden="true"></div>
-      <div class="container about__inner">
-        <div class="about__text">
-          <h2 class="section-title">О сервисных центрах</h2>
-          <p class="about__lead">КОЛЕСО — главная деталь, соединяющая ваш автомобиль с дорогой.</p>
-          <p>Сеть шинных и сервисных центров КОЛЕСО.ру с 1998 года обеспечивает клиентов профессиональным обслуживанием автомобилей: постгарантийное обслуживание, регламентное ТО всех марок, база ТО по пробегам для авто старше 3 лет.</p>
-          <ul class="about__list">
-            <li>Консультация сервисного инженера</li>
-            <li>Квалифицированные слесари</li>
-            <li>Подбор запчастей из ассортимента 25 000+</li>
-            <li>Комфортная зона отдыха</li>
-            <li>Видео-мониторинг сервисной зоны</li>
-            <li>Гарантия на все виды работ</li>
-          </ul>
+    <section class="shop" id="shop">
+      <div class="container shop__inner">
+        <div class="shop__photo">
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+            alt="Алексей, мастер цеха БОКС"
+            width="900"
+            height="1100"
+            loading="lazy"
+          />
         </div>
-        <div class="about__stats">
-          <div class="stat">
-            <span class="stat__value">1998</span>
-            <span class="stat__label">год основания</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">25 000+</span>
-            <span class="stat__label">наименований запчастей</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value">8</span>
-            <span class="stat__label">центров в СПб</span>
-          </div>
+        <div class="shop__text">
+          <p class="section-label">Наш цех</p>
+          <h2 class="section-title">Один адрес.<br />Три подъёмника.</h2>
+          <p>Не сеть и не «партнёрский пункт». Мы работаем в одном боксе у м. Лесная: сами смотрим машину, сами чиним, сами отвечаем за результат.</p>
+          <p class="shop__master"><strong>Алексей</strong> — старший мастер. Если что-то непонятно по смете — звоните ему напрямую.</p>
+          <ul class="shop__facts">
+            <li>Пн–Сб 9:00–20:00 · Вс 10:00–17:00</li>
+            <li>Кантемировская ул., 37 · м. Лесная, 8 минут пешком</li>
+            <li>Парковка у ворот бокса</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="contacts" id="contacts">
-      <div class="container contacts__inner">
-        <h2 class="section-title">Контакты</h2>
-        <div class="contacts__grid">
-          <div class="contact-block">
-            <span class="contact-block__label">Телефон</span>
-            <a href="tel:+78124497729">8 (812) 449-77-29</a>
-            <a href="tel:+78001006878" class="contact-block__secondary">8 (800) 100-68-78 — бесплатный</a>
+      <div class="container">
+        <h2 class="section-title">Приезжайте</h2>
+        <div class="contacts__layout">
+          <div class="contacts__info">
+            <div class="contact-row">
+              <span class="contact-row__label">Адрес</span>
+              <p>Санкт-Петербург, Кантемировская ул., 37<br /><span class="muted">м. Лесная · Выборгский район</span></p>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row__label">Часы</span>
+              <p>Пн–Сб 9:00–20:00<br />Вс 10:00–17:00</p>
+            </div>
+            <div class="contact-row">
+              <span class="contact-row__label">Связь</span>
+              <p>
+                <a href="tel:+78123094122">8 (812) 309-41-22</a><br />
+                <a href="https://wa.me/78123094122" target="_blank" rel="noopener">WhatsApp</a>
+                ·
+                <a href="https://t.me/emaling_dev" target="_blank" rel="noopener">Telegram</a>
+              </p>
+            </div>
+            <div class="contacts__actions">
+              <a href="https://wa.me/78123094122" class="btn btn--primary" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+              <a href="tel:+78123094122" class="btn btn--ghost">Позвонить</a>
+            </div>
           </div>
-          <div class="contact-block">
-            <span class="contact-block__label">Город</span>
-            <p>Санкт-Петербург</p>
-            <p class="contact-block__secondary">Сеть сервисных центров КОЛЕСО.ру</p>
-          </div>
-          <div class="contact-block">
-            <span class="contact-block__label">Запись</span>
-            <a href="tel:+78124497729" class="btn btn--primary">Записаться на сервис</a>
+          <div class="contacts__map">
+            <iframe
+              title="Карта: БОКС, Кантемировская 37"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=30.330%2C59.978%2C30.355%2C59.990&amp;layer=mapnik&amp;marker=59.9845%2C30.3425"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -373,16 +355,15 @@
   </main>
 
   <footer class="footer">
-    <div class="track-strip track-strip--footer" aria-hidden="true"></div>
     <div class="container footer__inner">
-      <a href="#" class="logo">КОЛЕСО</a>
+      <a href="#" class="logo">БОКС</a>
       <nav class="footer__nav">
         <a href="#services">Услуги</a>
         <a href="#prices">Цены</a>
-        <a href="#about">О нас</a>
+        <a href="#shop">Цех</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <p class="footer__copy">© 1998–2026 КОЛЕСО.ру · Демо-лендинг</p>
+      <p class="footer__copy">Кантемировская 37 · м. Лесная · демо-лендинг</p>
     </div>
   </footer>
 

@@ -16,7 +16,7 @@
 | Форзац (книжный) | https://emaling85.github.io/emaling-demos/books/ |
 | Слог (репетитор) | https://emaling85.github.io/emaling-demos/tutor/ |
 | Чернила (тату) | https://emaling85.github.io/emaling-demos/tattoo/ |
-| КОЛЕСО (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
+| БОКС (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
 
 ## Структура
 
@@ -29,7 +29,7 @@
 | `books/` | книжный «Форзац» |
 | `tutor/` | репетитор «Слог» |
 | `tattoo/` | тату «Чернила» |
-| `auto/` | автосервис «КОЛЕСО» |
+| `auto/` | автосервис «БОКС» |
 
 ## Админки (демо)
 
