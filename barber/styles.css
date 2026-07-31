@@ -200,6 +200,33 @@ ul, ol { list-style: none; }
   font-size: 0.75rem;
 }
 
+.nav__cta-mobile {
+  display: none;
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* Sticky «Записаться» on mobile */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 90;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #111;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
 .nav-toggle {
   display: none;
   width: 40px;
@@ -897,6 +924,46 @@ ul, ol { list-style: none; }
 
 .gallery-item--tall { grid-row: span 2; aspect-ratio: auto; min-height: 100%; }
 
+/* ── Lightbox ────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.92);
+  cursor: zoom-out;
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox__img {
+  max-width: min(100%, 1100px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: default;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text);
+  z-index: 1;
+  transition: color var(--ease);
+}
+
+.lightbox__close:hover { color: var(--accent); }
+
 /* ── Contacts page ───────────────────────────────────── */
 .contacts-layout {
   display: grid;
@@ -1153,6 +1220,15 @@ ul, ol { list-style: none; }
   }
 
   .header__cta { display: none; }
+
+  .nav__cta-mobile { display: block; }
+
+  .sticky-cta {
+    display: flex;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  body { padding-bottom: 80px; }
 
   .hero__actions,
   .btn-row { flex-direction: column; }

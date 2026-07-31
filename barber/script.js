@@ -1,6 +1,23 @@
 (() => {
   "use strict";
 
+  /* ── Shared footer (править только footer.html) ─────── */
+  const footerHost = document.getElementById("site-footer");
+  if (footerHost) {
+    fetch("footer.html")
+      .then((r) => {
+        if (!r.ok) throw new Error("footer fetch failed");
+        return r.text();
+      })
+      .then((html) => {
+        footerHost.outerHTML = html;
+      })
+      .catch(() => {
+        footerHost.innerHTML =
+          '<p class="footer__copy" style="padding:24px;text-align:center">Откройте сайт через локальный сервер или GitHub Pages — футер подгружается из footer.html</p>';
+      });
+  }
+
   /* ── Burger menu ───────────────────────────────────── */
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
@@ -79,6 +96,58 @@
           item.classList.toggle("is-hidden", !show);
         });
       });
+    });
+  }
+
+  /* ── Gallery lightbox ──────────────────────────────── */
+  const lbItems = document.querySelectorAll(".gallery-item img");
+  if (lbItems.length) {
+    const lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.setAttribute("role", "dialog");
+    lb.setAttribute("aria-modal", "true");
+    lb.setAttribute("aria-label", "Просмотр фото");
+    lb.hidden = true;
+    lb.innerHTML =
+      '<button type="button" class="lightbox__close" aria-label="Закрыть">×</button>' +
+      '<img class="lightbox__img" alt="" />';
+    document.body.appendChild(lb);
+
+    const lbImg = lb.querySelector(".lightbox__img");
+    const lbClose = lb.querySelector(".lightbox__close");
+
+    const openLb = (img) => {
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || "";
+      lb.hidden = false;
+      document.body.style.overflow = "hidden";
+      lbClose.focus();
+    };
+
+    const closeLb = () => {
+      lb.hidden = true;
+      lbImg.src = "";
+      document.body.style.overflow = "";
+    };
+
+    lbItems.forEach((img) => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", () => openLb(img));
+      img.setAttribute("tabindex", "0");
+      img.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openLb(img);
+        }
+      });
+    });
+
+    lbClose.addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => {
+      if (e.target === lb) closeLb();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !lb.hidden) closeLb();
     });
   }
 })();
