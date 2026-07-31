@@ -41,7 +41,6 @@
     nodes.forEach(function (n) {
       io.observe(n);
     });
-    /* страховка: если что-то не попало в viewport — показать через секунду */
     setTimeout(showAll, 1200);
   } else {
     showAll();
@@ -93,41 +92,41 @@
     });
   }
 
-  /* Remove any leftover old modals (select-based) */
-  document.querySelectorAll("#book-modal, #cert-modal, .modal").forEach(function (el) {
-    if (el.querySelector("select") || el.id === "book-modal" || el.id === "cert-modal") {
-      el.remove();
-    }
+  /* —— Modals: inject once, safely —— */
+  document.querySelectorAll("#book-modal, #cert-modal").forEach(function (el) {
+    el.remove();
   });
 
-  var shell = document.createElement("div");
-  shell.innerHTML =
+  var bookHTML =
     '<div class="modal" id="book-modal" hidden>' +
     '<div class="modal-backdrop" data-book-close></div>' +
-    '<div class="modal-dialog" role="dialog" aria-modal="true">' +
-    '<button type="button" class="modal-close" data-book-close aria-label="Закрыть">×</button>' +
-    "<h2>Запись</h2>" +
+    '<div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="book-title">' +
+    '<button type="button" class="modal-close" data-book-close aria-label="Закрыть">&times;</button>' +
+    '<h2 id="book-title">Запись</h2>' +
     "<p>Выберите услугу с ценой — перезвоним и согласуем время.</p>" +
     '<form id="book-form">' +
     '<div class="form-row"><label for="book-name">Имя</label><input id="book-name" name="name" type="text" required autocomplete="name" /></div>' +
     '<div class="form-row"><label for="book-phone">Телефон</label><input id="book-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+7" /></div>' +
-    '<div class="form-row"><span class="field-label">Услуга</span><div class="option-list" role="radiogroup">' +
-    '<label class="option-card is-selected"><input type="radio" name="service" value="Татуировка · от 3 500 ₽" checked /><strong>Татуировка</strong><span class="opt-desc">Эскиз + сеанс</span><span class="opt-price">от 3 500 ₽</span></label>' +
-    '<label class="option-card"><input type="radio" name="service" value="Перекрытие · от 5 000 ₽" /><strong>Перекрытие</strong><span class="opt-desc">Закрытие старой работы</span><span class="opt-price">от 5 000 ₽</span></label>' +
-    '<label class="option-card"><input type="radio" name="service" value="Пирсинг · от 2 000 ₽" /><strong>Пирсинг</strong><span class="opt-desc">Прокол + серьга</span><span class="opt-price">от 2 000 ₽</span></label>' +
-    '<label class="option-card"><input type="radio" name="service" value="Консультация · 0 ₽" /><strong>Консультация</strong><span class="opt-desc">Идея и вилка по цене</span><span class="opt-price">0 ₽</span></label>' +
+    '<div class="form-row"><span class="field-label">Услуга</span>' +
+    '<div class="option-list" role="radiogroup">' +
+    '<label class="option-card is-selected"><input type="radio" name="service" value="Татуировка от 3500" checked /><strong>Татуировка</strong><span class="opt-desc">Эскиз + сеанс</span><span class="opt-price">от 3 500 ₽</span></label>' +
+    '<label class="option-card"><input type="radio" name="service" value="Перекрытие от 5000" /><strong>Перекрытие</strong><span class="opt-desc">Закрытие старой работы</span><span class="opt-price">от 5 000 ₽</span></label>' +
+    '<label class="option-card"><input type="radio" name="service" value="Пирсинг от 2000" /><strong>Пирсинг</strong><span class="opt-desc">Прокол + серьга</span><span class="opt-price">от 2 000 ₽</span></label>' +
+    '<label class="option-card"><input type="radio" name="service" value="Консультация" /><strong>Консультация</strong><span class="opt-desc">Идея и вилка по цене</span><span class="opt-price">0 ₽</span></label>' +
     "</div></div>" +
     '<div class="form-row"><label for="book-comment">Комментарий</label><textarea id="book-comment" name="comment" rows="2" placeholder="Стиль, зона, мастер"></textarea></div>' +
     '<button class="btn" type="submit">Отправить</button>' +
     '<p class="form-ok" id="book-ok" hidden>Заявка сохранена (демо).</p>' +
-    "</form></div></div>" +
+    "</form></div></div>";
+
+  var certHTML =
     '<div class="modal" id="cert-modal" hidden>' +
     '<div class="modal-backdrop" data-cert-close></div>' +
-    '<div class="modal-dialog modal-dialog--wide" role="dialog" aria-modal="true">' +
-    '<button type="button" class="modal-close" data-cert-close aria-label="Закрыть">×</button>' +
+    '<div class="modal-dialog modal-dialog--wide" role="dialog" aria-modal="true" aria-labelledby="cert-title">' +
+    '<button type="button" class="modal-close" data-cert-close aria-label="Закрыть">&times;</button>' +
     '<div id="cert-steps">' +
     '<div class="cert-step" data-cert-step="1">' +
-    "<h2>Купить сертификат</h2>" +
+    '<h2 id="cert-title">Купить сертификат</h2>' +
     "<p>Шаг 1 из 3 — выберите номинал</p>" +
     '<div class="option-list" role="radiogroup" id="cert-amounts">' +
     '<label class="option-card is-selected"><input type="radio" name="amount" value="5000" data-label="5 000 ₽" checked /><strong>5 000 ₽</strong><span class="opt-desc">Мини или консультация+</span><span class="opt-price">5 000 ₽</span></label>' +
@@ -141,10 +140,11 @@
     '<div class="cert-step" data-cert-step="2" hidden>' +
     "<h2>Данные</h2>" +
     "<p>Шаг 2 из 3 — кто покупает и кому</p>" +
-    '<div class="form-row"><label for="cert-name">Ваше имя</label><input id="cert-name" type="text" required /></div>' +
-    '<div class="form-row"><label for="cert-phone">Телефон</label><input id="cert-phone" type="tel" required placeholder="+7" /></div>' +
+    '<div class="form-row"><label for="cert-name">Ваше имя</label><input id="cert-name" type="text" /></div>' +
+    '<div class="form-row"><label for="cert-phone">Телефон</label><input id="cert-phone" type="tel" placeholder="+7" /></div>' +
     '<div class="form-row"><label for="cert-for">Кому подарок</label><input id="cert-for" type="text" placeholder="Имя получателя" /></div>' +
-    '<div class="form-row"><span class="field-label">Как получить</span><div class="option-list" id="cert-delivery">' +
+    '<div class="form-row"><span class="field-label">Как получить</span>' +
+    '<div class="option-list" id="cert-delivery">' +
     '<label class="option-card is-selected"><input type="radio" name="delivery" value="email" checked /><strong>На e-mail</strong><span class="opt-desc">PDF-код сразу после оплаты</span><span class="opt-price">онлайн</span></label>' +
     '<label class="option-card"><input type="radio" name="delivery" value="studio" /><strong>В студии</strong><span class="opt-desc">Бумажный конверт, Рентгена 7</span><span class="opt-price">забрать</span></label>' +
     "</div></div>" +
@@ -160,7 +160,7 @@
     '<div class="form-row"><label for="pay-exp">Срок</label><input id="pay-exp" type="text" placeholder="12/28" maxlength="5" /></div>' +
     '<div class="form-row"><label for="pay-cvc">CVC</label><input id="pay-cvc" type="password" placeholder="•••" maxlength="3" /></div>' +
     "</div>" +
-    "<p class="pay-note">Демо: деньги не списываются. Нажмите «Оплатить» — появится код сертификата.</p>" +
+    "<p class=\"pay-note\">Демо: деньги не списываются. Нажмите «Оплатить» — появится код сертификата.</p>" +
     "</div>" +
     '<div class="cert-nav"><button type="button" class="btn btn-ghost" data-cert-next="2">Назад</button><button type="button" class="btn" id="cert-pay-btn">Оплатить</button></div>' +
     "</div>" +
@@ -174,7 +174,13 @@
     "</div></div>" +
     "</div></div></div>";
 
-  while (shell.firstChild) document.body.appendChild(shell.firstChild);
+  document.body.insertAdjacentHTML("beforeend", bookHTML);
+  document.body.insertAdjacentHTML("beforeend", certHTML);
+
+  var bookModal = document.getElementById("book-modal");
+  var certModal = document.getElementById("cert-modal");
+  var bookForm = document.getElementById("book-form");
+  var bookOk = document.getElementById("book-ok");
 
   function bindCards(root) {
     if (!root) return;
@@ -195,11 +201,6 @@
     });
   }
 
-  var bookModal = document.getElementById("book-modal");
-  var certModal = document.getElementById("cert-modal");
-  var bookForm = document.getElementById("book-form");
-  var bookOk = document.getElementById("book-ok");
-
   bindCards(bookForm);
   bindCards(document.getElementById("cert-amounts"));
   bindCards(document.getElementById("cert-delivery"));
@@ -207,31 +208,34 @@
   function openDialog(el) {
     if (!el) return;
     el.hidden = false;
+    el.removeAttribute("hidden");
     document.body.style.overflow = "hidden";
   }
 
   function closeDialog(el) {
     if (!el) return;
     el.hidden = true;
-    if (bookModal.hidden && certModal.hidden) document.body.style.overflow = "";
+    el.setAttribute("hidden", "");
+    var bookClosed = !bookModal || bookModal.hidden;
+    var certClosed = !certModal || certModal.hidden;
+    if (bookClosed && certClosed) document.body.style.overflow = "";
   }
 
   function showCertStep(n) {
+    if (!certModal) return;
     certModal.querySelectorAll(".cert-step").forEach(function (step) {
       step.hidden = step.getAttribute("data-cert-step") !== String(n);
     });
   }
 
   function selectedAmount() {
+    if (!certModal) return { value: 5000, label: "5 000 ₽" };
     var checked = certModal.querySelector('#cert-amounts input[name="amount"]:checked');
     if (!checked) return { value: 5000, label: "5 000 ₽" };
     if (checked.value === "custom") {
       var raw = parseInt((document.getElementById("cert-custom") || {}).value || "0", 10);
       if (!raw || raw < 3000) raw = 3000;
-      return {
-        value: raw,
-        label: raw.toLocaleString("ru-RU") + " ₽"
-      };
+      return { value: raw, label: raw.toLocaleString("ru-RU") + " ₽" };
     }
     return {
       value: parseInt(checked.value, 10),
@@ -240,7 +244,7 @@
   }
 
   var amounts = document.getElementById("cert-amounts");
-  if (amounts) {
+  if (amounts && certModal) {
     amounts.addEventListener("change", function () {
       var custom = certModal.querySelector('#cert-amounts input[value="custom"]');
       var row = document.getElementById("cert-custom-row");
@@ -249,7 +253,7 @@
   }
 
   var delivery = document.getElementById("cert-delivery");
-  if (delivery) {
+  if (delivery && certModal) {
     delivery.addEventListener("change", function () {
       var email = certModal.querySelector('#cert-delivery input[value="email"]');
       var row = document.getElementById("cert-email-row");
@@ -257,44 +261,41 @@
     });
   }
 
-  document.querySelectorAll("[data-book-open]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
+  /* Event delegation — работает на всех страницах */
+  document.addEventListener("click", function (e) {
+    var bookBtn = e.target.closest("[data-book-open]");
+    if (bookBtn) {
       e.preventDefault();
       if (bookOk) bookOk.hidden = true;
       openDialog(bookModal);
-    });
-  });
+      return;
+    }
 
-  document.querySelectorAll("[data-cert-open]").forEach(function (el) {
-    el.addEventListener("click", function (e) {
+    var certBtn = e.target.closest("[data-cert-open]");
+    if (certBtn) {
       e.preventDefault();
       showCertStep(1);
       openDialog(certModal);
-    });
-  });
+      return;
+    }
 
-  document.querySelectorAll("[data-book-close]").forEach(function (el) {
-    el.addEventListener("click", function () {
+    if (e.target.closest("[data-book-close]")) {
+      e.preventDefault();
       closeDialog(bookModal);
-    });
-  });
+      return;
+    }
 
-  document.querySelectorAll("[data-cert-close]").forEach(function (el) {
-    el.addEventListener("click", function () {
+    if (e.target.closest("[data-cert-close]")) {
+      e.preventDefault();
       closeDialog(certModal);
       showCertStep(1);
-    });
-  });
+      return;
+    }
 
-  document.addEventListener("keydown", function (e) {
-    if (e.key !== "Escape") return;
-    closeDialog(bookModal);
-    closeDialog(certModal);
-  });
-
-  certModal.querySelectorAll("[data-cert-next]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var next = btn.getAttribute("data-cert-next");
+    var nextBtn = e.target.closest("[data-cert-next]");
+    if (nextBtn && certModal) {
+      e.preventDefault();
+      var next = nextBtn.getAttribute("data-cert-next");
       if (next === "2") {
         var amt = selectedAmount();
         if (amt.value < 3000) {
@@ -321,18 +322,20 @@
         if (sum) sum.textContent = selectedAmount().label;
       }
       showCertStep(next);
-    });
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    closeDialog(bookModal);
+    closeDialog(certModal);
   });
 
   var payBtn = document.getElementById("cert-pay-btn");
   if (payBtn) {
     payBtn.addEventListener("click", function () {
       var amt = selectedAmount();
-      var code =
-        "CH-" +
-        amt.value +
-        "-" +
-        Math.floor(1000 + Math.random() * 9000);
+      var code = "CH-" + amt.value + "-" + Math.floor(1000 + Math.random() * 9000);
       var order = {
         type: "certificate_purchase",
         amount: amt.value,
@@ -340,10 +343,10 @@
         name: (document.getElementById("cert-name") || {}).value || "",
         phone: (document.getElementById("cert-phone") || {}).value || "",
         forWhom: (document.getElementById("cert-for") || {}).value || "",
-        delivery: (
-          (certModal.querySelector('#cert-delivery input:checked') || {}).value ||
-          "email"
-        ),
+        delivery:
+          ((certModal &&
+            certModal.querySelector('#cert-delivery input:checked')) ||
+            {}).value || "email",
         email: (document.getElementById("cert-email") || {}).value || "",
         code: code,
         createdAt: new Date().toISOString()
