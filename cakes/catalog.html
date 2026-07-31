@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог тортов — КРЕМ · СПб</title>
+  <meta name="description" content="Каталог тортов КРЕМ: классика, детские, свадебные, бенто и капкейки. Цены от — ориентир, финал после веса и декора." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="catalog">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">КРЕ<span>М</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" data-nav="home">Главная</a>
+        <a href="catalog.html" data-nav="catalog">Каталог</a>
+        <a href="order.html" data-nav="order">Как заказать</a>
+        <a href="about.html" data-nav="about">Обо мне</a>
+        <a href="contacts.html" data-nav="contacts">Контакты</a>
+        <a class="btn btn--primary nav__cta-mobile" href="https://t.me/krem_cakes?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82.%20%D0%94%D0%B0%D1%82%D0%B0%3A%20...%20%D0%9F%D0%BE%D0%B2%D0%BE%D0%B4%3A%20...%20%D0%93%D0%BE%D1%81%D1%82%D0%B5%D0%B9%3A%20..." target="_blank" rel="noopener">Заказать торт</a>
+      </nav>
+      <a class="btn btn--primary header__cta" href="https://t.me/krem_cakes?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82.%20%D0%94%D0%B0%D1%82%D0%B0%3A%20...%20%D0%9F%D0%BE%D0%B2%D0%BE%D0%B4%3A%20...%20%D0%93%D0%BE%D1%81%D1%82%D0%B5%D0%B9%3A%20..." target="_blank" rel="noopener">Заказать торт</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">Каталог</p>
+        <h1 class="section__title">Торты, бенто и капкейки</h1>
+        <p class="section__lead">Цены — ориентир «от». Финальная сумма после веса, начинки и декора. Нажмите карточку или напишите название в Telegram.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0" id="classic">
+      <div class="container">
+        <div class="filters" role="group" aria-label="Фильтр каталога">
+          <button type="button" class="filter-btn is-active" data-filter="all">Все</button>
+          <button type="button" class="filter-btn" data-filter="classic">Классика</button>
+          <button type="button" class="filter-btn" data-filter="kids">Детские</button>
+          <button type="button" class="filter-btn" data-filter="wedding">Свадебные</button>
+          <button type="button" class="filter-btn" data-filter="bento">Бенто</button>
+          <button type="button" class="filter-btn" data-filter="cupcakes">Капкейки</button>
+        </div>
+
+        <div class="cakes-grid">
+          <article class="cake-card reveal" data-cat="classic" id="cake-honey">
+            <div class="cake-card__media">
+              <img src="images/cake-01.jpg" alt="Медовый торт со сливками" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Медовик «Домашний»</h2>
+              <p class="cake-card__filling">Коржи на мёде, сметанный крем, орех</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 4&nbsp;200&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-1" data-cat="classic" id="cake-berry">
+            <div class="cake-card__media">
+              <img src="images/cake-02.jpg" alt="Торт с ягодами и кремом" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Ягодный бисквит</h2>
+              <p class="cake-card__filling">Ванильный бисквит, конфи из ягод, крем-чиз</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 4&nbsp;900&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-2" data-cat="classic" id="cake-choc">
+            <div class="cake-card__media">
+              <img src="images/cake-03.jpg" alt="Шоколадный торт с глазурью" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Шоколад «Глубина»</h2>
+              <p class="cake-card__filling">Влажный какао-бисквит, ганаш, карамель</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 4&nbsp;800&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal" data-cat="classic" id="cake-red">
+            <div class="cake-card__media">
+              <img src="images/cake-04.jpg" alt="Кусок торта красный бархат" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Красный бархат</h2>
+              <p class="cake-card__filling">Какао, крем-чиз, лёгкая кислинка</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 4&nbsp;600&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-1" data-cat="cupcakes" id="cupcakes">
+            <div class="cake-card__media">
+              <img src="images/cake-05.jpg" alt="Капкейки с кремом и посыпкой" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Капкейки «Набор»</h2>
+              <p class="cake-card__filling">Ваниль / шоколад · коробка от 6 шт.</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 6 шт.</span>
+                <span class="cake-card__price">от 1&nbsp;800&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-2" data-cat="classic" id="cake-lemon">
+            <div class="cake-card__media">
+              <img src="images/cake-06.jpg" alt="Лимонный торт с меренгой" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Лимонный с меренгой</h2>
+              <p class="cake-card__filling">Кёрд, бисквит, лёгкая меренга</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 5&nbsp;100&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal" data-cat="classic kids" id="kids">
+            <div class="cake-card__media">
+              <img src="images/cake-kids.jpg" alt="Детский торт с цветным декором" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Детский «Радость»</h2>
+              <p class="cake-card__filling">Ваниль + ягоды · декор по тематике</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 5&nbsp;200&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-1" data-cat="bento" id="bento">
+            <div class="cake-card__media">
+              <img src="images/cake-07.jpg" alt="Небольшой бенто-торт с ягодами" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Бенто «Просто так»</h2>
+              <p class="cake-card__filling">Мини-торт 350–500 г · надпись по желанию</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">~400 г</span>
+                <span class="cake-card__price">от 1&nbsp;900&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-2" data-cat="classic" id="cake-snickers">
+            <div class="cake-card__media">
+              <img src="images/cake-08.jpg" alt="Шоколадно-ореховый торт" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Сникерс-настроение</h2>
+              <p class="cake-card__filling">Арахис, карамель, шоколадный крем</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 5&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal" data-cat="classic" id="cake-pistachio">
+            <div class="cake-card__media">
+              <img src="images/cake-09.jpg" alt="Фисташковый десерт с кремом" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Фисташка-малина</h2>
+              <p class="cake-card__filling">Фисташковый бисквит, малиновое конфи</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 5&nbsp;800&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-1" data-cat="wedding" id="wedding">
+            <div class="cake-card__media">
+              <img src="images/cake-13.jpg" alt="Свадебный торт с цветочным декором" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Свадебный ярус</h2>
+              <p class="cake-card__filling">2–3 яруса · спокойный декор · начинки разные</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 4 кг</span>
+                <span class="cake-card__price">от 12&nbsp;000&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cake-card reveal reveal-delay-2" data-cat="kids classic" id="cake-carrot">
+            <div class="cake-card__media">
+              <img src="images/cake-10.jpg" alt="Морковный торт с орехами" width="900" height="900" loading="lazy" />
+            </div>
+            <div class="cake-card__body">
+              <h2 class="cake-card__name">Морковный с орехом</h2>
+              <p class="cake-card__filling">Специи, грецкий орех, крем-чиз</p>
+              <div class="cake-card__meta">
+                <span class="cake-card__weight">от 2 кг</span>
+                <span class="cake-card__price">от 4&nbsp;400&nbsp;₽</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="catalog-note reveal">Цены ориентировочные. Финальная сумма — после согласования веса, начинки и декора. Надпись на торте и простой декор обычно входят; сложный — отдельно.</p>
+
+        <div class="details" id="details">
+          <p class="section__eyebrow reveal">Подробнее</p>
+          <h2 class="section__title reveal">Три позиции развёрнуто</h2>
+
+          <article class="detail reveal" id="detail-honey">
+            <div class="detail__media">
+              <img src="images/cake-11.jpg" alt="Разрез медового торта крупным планом" width="900" height="700" loading="lazy" />
+            </div>
+            <div>
+              <h3>Медовик «Домашний»</h3>
+              <p>Классика, которую берут «на свой день рождения». Коржи тонкие, крем не слишком сладкий — чтобы можно было съесть вторую порцию.</p>
+              <dl>
+                <dt>Состав</dt>
+                <dd>Мука, мёд, яйца, сливочное масло, сметана, сахар, грецкий орех. Возможны следы глютена и лактозы.</dd>
+                <dt>Хранение</dt>
+                <dd>В холодильнике до 72 часов. Доставать за 30–40 минут до подачи.</dd>
+                <dt>Без глютена / лактозы</dt>
+                <dd>Честно: полноценной замены не обещаю. Уточняйте — скажу, что реально сделать без риска для вкуса.</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="detail reveal" id="detail-choc">
+            <div class="detail__media">
+              <img src="images/cake-12.jpg" alt="Шоколадный торт на подставке" width="900" height="700" loading="lazy" />
+            </div>
+            <div>
+              <h3>Шоколад «Глубина»</h3>
+              <p>Для тех, кому «шоколадный» значит горьковатый ганаш, а не только какао в бисквите. Соль и карамель — по желанию.</p>
+              <dl>
+                <dt>Состав</dt>
+                <dd>Какао, тёмный шоколад, сливки, яйца, мука, сахар, соль. Карамель — отдельно по запросу.</dd>
+                <dt>Хранение</dt>
+                <dd>До 48 часов в холоде. На жаре ганаш может поплыть — учитывайте при доставке летом.</dd>
+                <dt>Без глютена / лактозы</dt>
+                <dd>Уточняйте. Безлактозный крем пробовала — вкус другой, предупреждаю заранее.</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="detail reveal" id="detail-wedding">
+            <div class="detail__media">
+              <img src="images/cake-detail-1.jpg" alt="Кусок свадебного торта с кремом" width="900" height="700" loading="lazy" />
+            </div>
+            <div>
+              <h3>Свадебный ярус</h3>
+              <p>Два или три яруса, разные начинки внутри. Декор — живые/сахарные цветы или спокойный крем. Обсуждаем эскиз до предоплаты.</p>
+              <dl>
+                <dt>Сроки</dt>
+                <dd>От 10–14 дней. Примерка декора по фото за 2–3 дня до свадьбы.</dd>
+                <dt>Хранение / логистика</dt>
+                <dd>Перевозка только стоя, в термокоробе. Самовывоз свадебных — по договорённости утром в день события.</dd>
+                <dt>Аллергены</dt>
+                <dd>Орехи, глютен, лактоза, яйца — стандарт. Специальные диеты: уточняйте, не всё возможно в ярусе.</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="detail reveal" id="detail-bento">
+            <div class="detail__media">
+              <img src="images/berries.jpg" alt="Ягоды и крем для декора бенто" width="1000" height="800" loading="lazy" />
+            </div>
+            <div>
+              <h3>Бенто и капкейки</h3>
+              <p>Маленький формат — когда торт на всю компанию не нужен. Надпись, простой рисунок, коробка в подарок.</p>
+              <dl>
+                <dt>Сроки</dt>
+                <dd>Бенто — от 3 дней при свободном слоте. Капкейки — от 4 дней.</dd>
+                <dt>Хранение</dt>
+                <dd>Бенто лучше съесть в день получения. Капкейки — до 36 часов в холоде.</dd>
+                <dt>Без глютена / лактозы</dt>
+                <dd>Уточняйте под конкретный заказ — честно скажу, получится или нет.</dd>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2>Выбрали торт? Напишите название и дату</h2>
+          <p>В ответе пришлю варианты веса и ориентир по цене.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary btn--lg" href="https://t.me/krem_cakes?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82.%20%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%3A%20...%20%D0%94%D0%B0%D1%82%D0%B0%3A%20...%20%D0%93%D0%BE%D1%81%D1%82%D0%B5%D0%B9%3A%20..." target="_blank" rel="noopener">Заказать в Telegram</a>
+          <a class="btn btn--ghost btn--lg" href="order.html">Как заказать</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo">КРЕ<span>М</span></a>
+          <p>Санкт-Петербург</p>
+          <p>Приём заказов: пн–сб 10:00–20:00</p>
+          <div class="footer__social">
+            <a href="https://t.me/krem_cakes" target="_blank" rel="noopener">TG</a>
+            <a href="https://wa.me/79210000002" target="_blank" rel="noopener">WA</a>
+            <a href="tel:+79210000002">+7 (921) 000-00-02</a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Меню в подвале">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="order.html">Как заказать</a>
+          <a href="about.html">Обо мне</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+        <div>
+          <p>Самовывоз у м. Василеостровская</p>
+          <p>Доставка по СПб</p>
+          <p>Торты от 2 кг · капкейки · бенто</p>
+        </div>
+      </div>
+      <p class="footer__bottom">демо-сайт · данные вымышленные</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

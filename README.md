@@ -19,6 +19,7 @@
 | БОКС (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
 | ЛАК (маникюр) | https://emaling85.github.io/emaling-demos/nails/ |
 | УГОЛ (барбершоп) | https://emaling85.github.io/emaling-demos/barber/ |
+| КРЕМ (кондитер) | https://emaling85.github.io/emaling-demos/cakes/ |
 
 ## Структура
 
@@ -34,6 +35,7 @@
 | `auto/` | автосервис «БОКС» |
 | `nails/` | мастер маникюра «ЛАК» |
 | `barber/` | барбершоп «УГОЛ» |
+| `cakes/` | кондитер «КРЕМ» |
 
 ## Админки (демо)
 
