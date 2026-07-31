@@ -17,6 +17,7 @@
 | Слог (репетитор) | https://emaling85.github.io/emaling-demos/tutor/ |
 | Чернила (тату) | https://emaling85.github.io/emaling-demos/tattoo/ |
 | БОКС (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
+| ЛАК (маникюр) | https://emaling85.github.io/emaling-demos/nails/ |
 
 ## Структура
 
@@ -30,6 +31,7 @@
 | `tutor/` | репетитор «Слог» |
 | `tattoo/` | тату «Чернила» |
 | `auto/` | автосервис «БОКС» |
+| `nails/` | мастер маникюра «ЛАК» |
 
 ## Админки (демо)
 
