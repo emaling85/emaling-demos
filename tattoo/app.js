@@ -75,22 +75,22 @@
     });
   }
 
-  var tabs = document.querySelector("[data-tabs]");
-  if (tabs) {
-    var buttons = tabs.querySelectorAll(".tab");
-    var panels = document.querySelectorAll("[data-tab-panel]");
-    buttons.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var id = btn.getAttribute("data-tab");
-        buttons.forEach(function (b) {
-          b.classList.toggle("is-active", b === btn);
-        });
-        panels.forEach(function (p) {
-          p.hidden = p.getAttribute("data-tab-panel") !== id;
-        });
-      });
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-tabs] .tab");
+    if (!btn) return;
+    var id = btn.getAttribute("data-tab");
+    btn.closest("[data-tabs]").querySelectorAll(".tab").forEach(function (b) {
+      b.classList.toggle("is-active", b === btn);
     });
-  }
+    document.querySelectorAll("[data-tab-panel]").forEach(function (p) {
+      p.hidden = p.getAttribute("data-tab-panel") !== id;
+      if (!p.hidden) {
+        p.querySelectorAll(".reveal").forEach(function (r) {
+          r.classList.add("is-in");
+        });
+      }
+    });
+  });
 
   /* —— Modals: inject once, safely —— */
   document.querySelectorAll("#book-modal, #cert-modal").forEach(function (el) {
