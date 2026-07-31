@@ -588,22 +588,6 @@ strong { color: var(--accent); font-weight: 600; }
 
 .prices__note a:hover { opacity: 0.85; }
 
-.contact-row p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5;
-  max-width: 420px;
-}
-
-.contact-row a {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
 /* ── Shop / Master ──────────────────────────────────── */
 .shop {
   padding: 88px 0;
@@ -695,7 +679,15 @@ strong { color: var(--accent); font-weight: 600; }
   margin-bottom: 10px;
 }
 
-.contact-row p,
+.contact-row p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+  max-width: 440px;
+}
+
 .contact-row a {
   font-family: var(--font-display);
   font-size: 1.15rem;
