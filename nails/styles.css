@@ -331,10 +331,19 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .reviews__card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.6rem;
+}
+
+.reviews__stars {
+  color: var(--accent);
+  font-size: 1.05rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.7rem;
 }
 
 .reviews__card p {
@@ -346,6 +355,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .reviews__card cite {
+  margin-top: auto;
   font-style: normal;
   font-weight: 600;
   font-size: 0.92rem;
