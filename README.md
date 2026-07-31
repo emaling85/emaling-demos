@@ -15,6 +15,8 @@
 | Сажа (кофейня) | https://emaling85.github.io/emaling-demos/coffee/ |
 | Форзац (книжный) | https://emaling85.github.io/emaling-demos/books/ |
 | Слог (репетитор) | https://emaling85.github.io/emaling-demos/tutor/ |
+| Чернила (тату) | https://emaling85.github.io/emaling-demos/tattoo/ |
+| КОЛЕСО (автосервис) | https://emaling85.github.io/emaling-demos/auto/ |
 
 ## Структура
 
@@ -26,6 +28,8 @@
 | `coffee/` | кофейня «Сажа» |
 | `books/` | книжный «Форзац» |
 | `tutor/` | репетитор «Слог» |
+| `tattoo/` | тату «Чернила» |
+| `auto/` | автосервис «КОЛЕСО» |
 
 ## Админки (демо)
 

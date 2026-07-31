@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>КОЛЕСО — Автосервис в Санкт-Петербурге</title>
+  <meta name="description" content="Техническое обслуживание и ремонт автомобилей. Сеть сервисных центров с 1998 года. Гарантия на все виды работ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">КОЛЕСО</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="tel:+78124497729" class="header__phone">8 (812) 449-77-29</a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__track" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__city">Санкт-Петербург · с 1998</p>
+        <p class="hero__brand">КОЛЕСО</p>
+        <h1 class="hero__title">
+          Автосервис<br />
+          <span class="hero__accent">и ремонт</span>
+        </h1>
+        <p class="hero__lead">Техническое обслуживание автомобилей. Квалифицированные слесари, подбор запчастей, гарантия на все виды работ.</p>
+        <div class="hero__actions">
+          <a href="tel:+78124497729" class="btn btn--primary">Позвонить</a>
+          <a href="#prices" class="btn btn--ghost">Смотреть цены</a>
+        </div>
+      </div>
+      <div class="hero__divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="tread-hero" width="48" height="48" patternUnits="userSpaceOnUse">
+              <rect x="2" y="4" width="10" height="40" rx="2" fill="currentColor"/>
+              <rect x="18" y="8" width="8" height="32" rx="2" fill="currentColor"/>
+              <rect x="32" y="4" width="10" height="40" rx="2" fill="currentColor"/>
+            </pattern>
+          </defs>
+          <rect width="1200" height="48" fill="url(#tread-hero)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <h2 class="section-label">Наши преимущества</h2>
+        <div class="advantages__grid">
+          <article class="advantage">
+            <p><strong>Постгарантийное</strong> обслуживание и регламентное ТО всех марок</p>
+          </article>
+          <article class="advantage">
+            <p><strong>Квалифицированные</strong> слесари и консультация сервисного инженера</p>
+          </article>
+          <article class="advantage">
+            <p>Ассортимент запчастей — более <strong>25 000</strong> наименований</p>
+          </article>
+          <article class="advantage">
+            <p><strong>Гарантия</strong> на все виды работ и видео-мониторинг зоны</p>
+          </article>
+        </div>
+      </div>
+      <div class="track-strip track-strip--sm" aria-hidden="true"></div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services__tracks" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section-title">Услуги автосервиса</h2>
+        <p class="section-sub">Центры КОЛЕСО.ру оказывают полный спектр технического обслуживания и ремонта</p>
+
+        <div class="services__grid">
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">01</span>
+            <span class="service-item__name">Регламентное ТО</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">02</span>
+            <span class="service-item__name">Жидкости и фильтры</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">03</span>
+            <span class="service-item__name">Диагностика двигателя</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">04</span>
+            <span class="service-item__name">Тормозная система</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">05</span>
+            <span class="service-item__name">Ходовая часть</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">06</span>
+            <span class="service-item__name">Рулевое управление</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">07</span>
+            <span class="service-item__name">Развал-схождение</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">08</span>
+            <span class="service-item__name">Трансмиссия</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">09</span>
+            <span class="service-item__name">Электрооборудование</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">10</span>
+            <span class="service-item__name">Система охлаждения</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">11</span>
+            <span class="service-item__name">Кондиционер / климат</span>
+          </a>
+          <a href="#prices" class="service-item" data-reveal>
+            <span class="service-item__num">12</span>
+            <span class="service-item__name">Выхлопная система</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="container">
+        <h2 class="section-title">Стоимость услуг</h2>
+        <p class="section-sub">Цены зависят от марки и модификации автомобиля. Точную стоимость уточнят специалисты.</p>
+
+        <div class="accordion" data-accordion>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Силовой агрегат</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Замена масла и масляного фильтра</td><td>900 ₽</td></tr>
+                  <tr><td>Замена воздушного фильтра двигателя</td><td>300 ₽</td></tr>
+                  <tr><td>Защита двигателя снятие/установка</td><td>300 ₽</td></tr>
+                  <tr><td>Дроссельная заслонка снятие/установка, очистка</td><td>1 500 ₽</td></tr>
+                  <tr><td>Замена ремня ГРМ (с роликами, натяжителем и помпой)</td><td>6 000 ₽</td></tr>
+                  <tr><td>Замена цепи ГРМ (с успокоителями, натяжителем и помпой)</td><td>11 000 ₽</td></tr>
+                  <tr><td>Снятие/установка турбокомпрессора</td><td>3 900 ₽</td></tr>
+                  <tr><td>Поддон двигателя снятие/установка</td><td>3 000 ₽</td></tr>
+                  <tr><td>Клапанная крышка (рядный ДВС)</td><td>1 500 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Тормозная система</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Замена тормозной жидкости</td><td>1 000 ₽</td></tr>
+                  <tr><td>Замена передних тормозных колодок</td><td>1 000 ₽</td></tr>
+                  <tr><td>Замена задних дисковых тормозных колодок</td><td>1 000 ₽</td></tr>
+                  <tr><td>Замена передних тормозных дисков и колодок</td><td>3 000 ₽</td></tr>
+                  <tr><td>Замена задних тормозных дисков и колодок</td><td>3 000 ₽</td></tr>
+                  <tr><td>Замена тормозных барабанов и колодок</td><td>3 500 ₽</td></tr>
+                  <tr><td>Ремонт/переборка тормозного суппорта</td><td>1 500 ₽</td></tr>
+                  <tr><td>Замена троса стояночного тормоза</td><td>1 900 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Ходовая и рулевое</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Регулировка углов установки колёс (одна ось)</td><td>1 800 ₽</td></tr>
+                  <tr><td>Регулировка углов установки колёс (две оси)</td><td>2 500 ₽</td></tr>
+                  <tr><td>Регулировка углов установки колёс (внедорожник)</td><td>2 800 ₽</td></tr>
+                  <tr><td>Замена жидкости ГУР / ЭГУР</td><td>1 200 ₽</td></tr>
+                  <tr><td>Рейка рулевая снятие/установка</td><td>2 700 ₽</td></tr>
+                  <tr><td>Замена наконечника рулевого управления</td><td>700 ₽</td></tr>
+                  <tr><td>Замена стойки стабилизатора</td><td>600 ₽</td></tr>
+                  <tr><td>Снятие/установка рычага переднего</td><td>1 500 ₽</td></tr>
+                  <tr><td>Замена верхней опоры амортизатора</td><td>2 800 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Трансмиссия</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Замена масла в МКПП</td><td>800 ₽</td></tr>
+                  <tr><td>Замена масла частичная в АКПП</td><td>1 300 ₽</td></tr>
+                  <tr><td>Замена масла полная в АКПП с аппаратом</td><td>5 000 ₽</td></tr>
+                  <tr><td>Замена масляного фильтра АКПП в поддоне</td><td>2 400 ₽</td></tr>
+                  <tr><td>Замена масла в раздаточной КПП</td><td>800 ₽</td></tr>
+                  <tr><td>Замена масла в переднем / заднем редукторе</td><td>800 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Электрооборудование</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Замена генератора</td><td>2 200 ₽</td></tr>
+                  <tr><td>Замена стартера</td><td>2 400 ₽</td></tr>
+                  <tr><td>Замена АКБ под капотом или в багажнике</td><td>600 ₽</td></tr>
+                  <tr><td>Замена АКБ в салоне</td><td>1 700 ₽</td></tr>
+                  <tr><td>Замена свечи зажигания (рядный ДВС)</td><td>200 ₽</td></tr>
+                  <tr><td>Замена катушки зажигания (индивидуальной)</td><td>200 ₽</td></tr>
+                  <tr><td>Замена лампы XENON / LED</td><td>1 000 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Система охлаждения</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Антифриз, слить/залить, замена</td><td>1 000 ₽</td></tr>
+                  <tr><td>Аппаратная замена антифриза с промывкой</td><td>2 500 ₽</td></tr>
+                  <tr><td>Замена насоса охлаждения ДВС</td><td>2 000 ₽</td></tr>
+                  <tr><td>Замена термостата</td><td>1 400 ₽</td></tr>
+                  <tr><td>Замена радиатора охлаждения двигателя</td><td>2 400 ₽</td></tr>
+                  <tr><td>Замена радиатора отопителя салона</td><td>8 500 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Топливная система</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Замена выносного топливного фильтра</td><td>800 ₽</td></tr>
+                  <tr><td>Замена топливного фильтра / сетки в баке</td><td>2 000 ₽</td></tr>
+                  <tr><td>Замена топливного насоса выносного</td><td>1 200 ₽</td></tr>
+                  <tr><td>Замена топливного насоса в баке</td><td>2 000 ₽</td></tr>
+                  <tr><td>Снятие/установка топливного бака</td><td>5 000 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__btn" type="button" aria-expanded="false">
+              <span>Арматурные работы</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel">
+              <table class="price-table">
+                <tbody>
+                  <tr><td>Бампер передний / задний снятие/установка</td><td>2 600 ₽</td></tr>
+                  <tr><td>Фара передняя снятие/установка</td><td>400 ₽</td></tr>
+                  <tr><td>Дверь снятие/установка</td><td>2 900 ₽</td></tr>
+                  <tr><td>Капот снятие/установка</td><td>2 200 ₽</td></tr>
+                  <tr><td>Механизм стеклоподъёмника</td><td>2 700 ₽</td></tr>
+                  <tr><td>Замок двери снятие/установка</td><td>2 400 ₽</td></tr>
+                  <tr><td>Установка фаркопа</td><td>4 000 ₽</td></tr>
+                  <tr><td>Защита картера, первичная установка</td><td>1 000 ₽</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="prices__note">* Приведённые цены могут отличаться в зависимости от марки и модификации автомобиля или дополнительных работ.</p>
+      </div>
+      <div class="track-strip" aria-hidden="true"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__track" aria-hidden="true"></div>
+      <div class="container about__inner">
+        <div class="about__text">
+          <h2 class="section-title">О сервисных центрах</h2>
+          <p class="about__lead">КОЛЕСО — главная деталь, соединяющая ваш автомобиль с дорогой.</p>
+          <p>Сеть шинных и сервисных центров КОЛЕСО.ру с 1998 года обеспечивает клиентов профессиональным обслуживанием автомобилей: постгарантийное обслуживание, регламентное ТО всех марок, база ТО по пробегам для авто старше 3 лет.</p>
+          <ul class="about__list">
+            <li>Консультация сервисного инженера</li>
+            <li>Квалифицированные слесари</li>
+            <li>Подбор запчастей из ассортимента 25 000+</li>
+            <li>Комфортная зона отдыха</li>
+            <li>Видео-мониторинг сервисной зоны</li>
+            <li>Гарантия на все виды работ</li>
+          </ul>
+        </div>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__value">1998</span>
+            <span class="stat__label">год основания</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">25 000+</span>
+            <span class="stat__label">наименований запчастей</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">8</span>
+            <span class="stat__label">центров в СПб</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container contacts__inner">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts__grid">
+          <div class="contact-block">
+            <span class="contact-block__label">Телефон</span>
+            <a href="tel:+78124497729">8 (812) 449-77-29</a>
+            <a href="tel:+78001006878" class="contact-block__secondary">8 (800) 100-68-78 — бесплатный</a>
+          </div>
+          <div class="contact-block">
+            <span class="contact-block__label">Город</span>
+            <p>Санкт-Петербург</p>
+            <p class="contact-block__secondary">Сеть сервисных центров КОЛЕСО.ру</p>
+          </div>
+          <div class="contact-block">
+            <span class="contact-block__label">Запись</span>
+            <a href="tel:+78124497729" class="btn btn--primary">Записаться на сервис</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="track-strip track-strip--footer" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <a href="#" class="logo">КОЛЕСО</a>
+      <nav class="footer__nav">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <p class="footer__copy">© 1998–2026 КОЛЕСО.ру · Демо-лендинг</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
