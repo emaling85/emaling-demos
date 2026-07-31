@@ -1173,7 +1173,7 @@ button {
 .rev-grid {
   display: grid;
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
@@ -1190,7 +1190,9 @@ button {
 
 .rev-card {
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 0.7rem;
+  height: 100%;
   border: 1px solid var(--line);
   background: var(--bg-soft);
   padding: 1.35rem 1.35rem 1.15rem;
