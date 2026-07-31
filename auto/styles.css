@@ -504,17 +504,12 @@ strong { color: var(--accent); font-weight: 600; }
 }
 
 .accordion__panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s ease;
-}
-
-.accordion__panel > * {
+  display: none;
   overflow: hidden;
 }
 
 .accordion__item.is-open .accordion__panel {
-  grid-template-rows: 1fr;
+  display: block;
 }
 
 .price-table {
