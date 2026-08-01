@@ -1111,9 +1111,21 @@ ul, ol { list-style: none; }
   .header__cta { display: none; }
   .nav-toggle { display: flex; }
 
+  .logo,
+  .nav-toggle {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* absolute вместо fixed: backdrop-filter на .header делает её
+     containing block для fixed-потомков, и панель схлопывается */
   .nav {
-    position: fixed;
-    inset: var(--header-h) 0 0;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    height: calc(100vh - var(--header-h));
+    height: calc(100dvh - var(--header-h));
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -1121,7 +1133,7 @@ ul, ol { list-style: none; }
     padding: 1.25rem 1.25rem 2rem;
     background: var(--bg);
     border-top: 1px solid var(--line);
-    transform: translateX(100%);
+    transform: translateY(calc(-100% - var(--header-h)));
     transition: transform 0.3s ease;
     overflow-y: auto;
   }
