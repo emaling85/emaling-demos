@@ -79,7 +79,7 @@
         const radios = form?.querySelectorAll('input[name="drink"]');
         if (radios?.length) {
           radios.forEach((radio) => {
-            radio.checked = drink ? radio.value === drink : radio.value === "Cappuccino";
+            radio.checked = drink ? radio.value === drink : radio.value === "Капучино";
           });
         }
         if (drink && label) {
@@ -131,7 +131,7 @@
       return;
     }
     const drink =
-      orderForm.querySelector('input[name="drink"]:checked')?.value || "Coffee";
+      orderForm.querySelector('input[name="drink"]:checked')?.value || "кофе";
     const success = document.getElementById("order-success");
     orderForm.hidden = true;
     if (success) {
