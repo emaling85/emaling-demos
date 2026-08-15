@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bean Scene — Coffee Landing</title>
   <meta name="description" content="Bean Scene coffee shop. Discover the best flavours, order your blend, and start the morning right." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bean Scene — Coffee Landing" />
-  <meta property="og:description" content="Bean Scene coffee shop. Discover the best flavours and order your blend." />
-  <meta property="og:url" content="https://emaling85.github.io/emaling-demos/bean-scene/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -40,8 +36,10 @@
 
   <main>
     <section class="hero" aria-label="Hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__media" aria-hidden="true">
+        <img src="images/hero-photo.png" alt="" width="1432" height="1280" />
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
       <div class="container hero__content">
         <p class="hero__eyebrow">We've got your morning covered with</p>
         <h1 class="hero__title">Coffee</h1>
@@ -51,7 +49,7 @@
     </section>
 
     <section class="discover section" id="about">
-      <div class="container discover__grid">
+      <div class="discover__grid">
         <div class="discover__copy reveal">
           <h2 class="section-title section-title--left">Discover the best coffee</h2>
           <p class="section-text">Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.</p>
@@ -64,7 +62,7 @@
     </section>
 
     <section class="menu section" id="menu">
-      <img class="deco deco--tl" src="images/splash-1.png" alt="" aria-hidden="true" />
+      <img class="deco deco--tl" src="images/splash.svg" alt="" aria-hidden="true" />
       <div class="container">
         <h2 class="section-title reveal">Enjoy a new blend of coffee style</h2>
         <p class="section-sub reveal">Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
@@ -107,7 +105,7 @@
           </article>
         </div>
       </div>
-      <img class="deco deco--br" src="images/splash-2.png" alt="" aria-hidden="true" />
+      <img class="deco deco--br" src="images/splash.svg" alt="" aria-hidden="true" />
       <p class="menu__tagline reveal">We make all of our coffee with the best ingredients to make sure that you get the best coffee.</p>
     </section>
 
@@ -160,10 +158,10 @@
     </section>
 
     <section class="feedback section" id="feedback">
-      <img class="deco deco--tl" src="images/splash-3.png" alt="" aria-hidden="true" />
+      <img class="deco deco--tl" src="images/splash.svg" alt="" aria-hidden="true" />
       <div class="container">
         <h2 class="section-title reveal">Our coffee perfection feedback</h2>
-        <p class="section-sub reveal">Our customers has amazing things to say about us</p>
+        <p class="section-sub reveal">Our customers have amazing things to say about us</p>
         <div class="feedback__wrap reveal">
           <button type="button" class="feedback__arrow feedback__arrow--prev" aria-label="Previous review">&#10094;</button>
           <div class="feedback__slider" data-slider>
@@ -198,7 +196,7 @@
           <button type="button" class="feedback__arrow feedback__arrow--next" aria-label="Next review">&#10095;</button>
         </div>
       </div>
-      <img class="deco deco--br" src="images/splash-4.png" alt="" aria-hidden="true" />
+      <img class="deco deco--br deco--flip" src="images/splash.svg" alt="" aria-hidden="true" />
     </section>
 
     <section class="subscribe" id="subscribe">
@@ -223,10 +221,18 @@
         <a href="#home" class="logo logo--footer">Bean Scene</a>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         <div class="footer__social">
-          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">yt</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">x</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm5 4.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm5.2-.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 9.5A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12.2s0-3.2-.4-4.7a2.9 2.9 0 0 0-2-2C17.8 5 12 5 12 5s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 9 2 12.2 2 12.2s0 3.2.4 4.7a2.9 2.9 0 0 0 2 2C6.2 19.4 12 19.4 12 19.4s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2c.4-1.5.4-4.7.4-4.7zM10 15.2V9.2l5.2 3z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.3 3h2.8l-6.1 7 7.2 11h-5.6l-4.4-6.6L6 21H3.2l6.5-7.5L3 3h5.8l4 6zm-1 16h1.5L7.8 4.9H6.1z"/></svg>
+          </a>
         </div>
       </div>
       <div>
@@ -296,14 +302,13 @@
       <h2 id="order-title">Order Now</h2>
       <p class="modal__drink" id="order-drink-label">Choose your favourite coffee</p>
       <form class="modal__form" id="order-form">
-        <label>Drink
-          <select name="drink" id="order-drink" required>
-            <option value="Cappuccino">Cappuccino — $8.50</option>
-            <option value="Chai Latte">Chai Latte — $8.50</option>
-            <option value="Macchiato">Macchiato — $8.50</option>
-            <option value="Espresso">Espresso — $8.50</option>
-          </select>
-        </label>
+        <fieldset class="drink-picker">
+          <legend>Drink</legend>
+          <label class="drink-option"><input type="radio" name="drink" value="Cappuccino" required /> <span>Cappuccino <em>$8.50</em></span></label>
+          <label class="drink-option"><input type="radio" name="drink" value="Chai Latte" /> <span>Chai Latte <em>$8.50</em></span></label>
+          <label class="drink-option"><input type="radio" name="drink" value="Macchiato" /> <span>Macchiato <em>$8.50</em></span></label>
+          <label class="drink-option"><input type="radio" name="drink" value="Espresso" /> <span>Espresso <em>$8.50</em></span></label>
+        </fieldset>
         <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
         <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
         <button type="submit" class="btn btn--gold btn--block">Place order</button>

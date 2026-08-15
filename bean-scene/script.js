@@ -71,15 +71,19 @@
       const name = btn.getAttribute("data-open-modal");
       if (name === "order") {
         const drink = btn.getAttribute("data-drink");
-        const select = document.getElementById("order-drink");
         const label = document.getElementById("order-drink-label");
         const form = document.getElementById("order-form");
         const success = document.getElementById("order-success");
         if (form) form.hidden = false;
         if (success) success.hidden = true;
-        if (drink && select) {
-          select.value = drink;
-          if (label) label.textContent = `Ordering: ${drink}`;
+        const radios = form?.querySelectorAll('input[name="drink"]');
+        if (radios?.length) {
+          radios.forEach((radio) => {
+            radio.checked = drink ? radio.value === drink : radio.value === "Cappuccino";
+          });
+        }
+        if (drink && label) {
+          label.textContent = `Ordering: ${drink}`;
         } else if (label) {
           label.textContent = "Choose your favourite coffee";
         }
@@ -126,7 +130,8 @@
       orderForm.reportValidity();
       return;
     }
-    const drink = document.getElementById("order-drink")?.value || "Coffee";
+    const drink =
+      orderForm.querySelector('input[name="drink"]:checked')?.value || "Coffee";
     const success = document.getElementById("order-success");
     orderForm.hidden = true;
     if (success) {
