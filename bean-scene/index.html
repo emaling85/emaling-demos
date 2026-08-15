@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bean Scene — Coffee Landing</title>
+  <meta name="description" content="Bean Scene coffee shop. Discover the best flavours, order your blend, and start the morning right." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bean Scene — Coffee Landing" />
+  <meta property="og:description" content="Bean Scene coffee shop. Discover the best flavours and order your blend." />
+  <meta property="og:url" content="https://emaling85.github.io/emaling-demos/bean-scene/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="container header__inner">
+      <a href="#home" class="logo">Bean Scene</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <div class="nav__auth">
+          <button type="button" class="link-btn" data-open-modal="signin">Sign In</button>
+          <button type="button" class="btn btn--gold" data-open-modal="signup">Sign Up</button>
+        </div>
+      </nav>
+      <div class="header__actions">
+        <button type="button" class="link-btn" data-open-modal="signin">Sign In</button>
+        <button type="button" class="btn btn--gold" data-open-modal="signup">Sign Up</button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">We've got your morning covered with</p>
+        <h1 class="hero__title">Coffee</h1>
+        <p class="hero__lead">It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.</p>
+        <button type="button" class="btn btn--gold" data-open-modal="order">Order Now</button>
+      </div>
+    </section>
+
+    <section class="discover section" id="about">
+      <div class="container discover__grid">
+        <div class="discover__copy reveal">
+          <h2 class="section-title section-title--left">Discover the best coffee</h2>
+          <p class="section-text">Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.</p>
+          <a class="btn btn--gold" href="#features">Learn More</a>
+        </div>
+        <figure class="discover__media reveal">
+          <img src="images/discover.png" alt="Roasted coffee beans arranged as a cup" width="575" height="475" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="menu section" id="menu">
+      <img class="deco deco--tl" src="images/splash-1.png" alt="" aria-hidden="true" />
+      <div class="container">
+        <h2 class="section-title reveal">Enjoy a new blend of coffee style</h2>
+        <p class="section-sub reveal">Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
+        <div class="menu__grid">
+          <article class="menu-card reveal" data-drink="Cappuccino" data-price="$8.50">
+            <img src="images/drink-cappuccino.png" alt="Cappuccino" width="310" height="260" loading="lazy" />
+            <h3>Cappuccino</h3>
+            <p class="menu-card__meta">Coffee 50% | Milk 50%</p>
+            <div class="menu-card__row">
+              <span class="menu-card__price">$8.50</span>
+              <button type="button" class="btn btn--gold btn--sm" data-open-modal="order" data-drink="Cappuccino" data-price="$8.50">Order Now</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-drink="Chai Latte" data-price="$8.50">
+            <img src="images/drink-chai.png" alt="Chai Latte" width="310" height="260" loading="lazy" />
+            <h3>Chai Latte</h3>
+            <p class="menu-card__meta">Coffee 50% | Milk 50%</p>
+            <div class="menu-card__row">
+              <span class="menu-card__price">$8.50</span>
+              <button type="button" class="btn btn--gold btn--sm" data-open-modal="order" data-drink="Chai Latte" data-price="$8.50">Order Now</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-drink="Macchiato" data-price="$8.50">
+            <img src="images/drink-macchiato.png" alt="Macchiato" width="310" height="260" loading="lazy" />
+            <h3>Macchiato</h3>
+            <p class="menu-card__meta">Coffee 50% | Milk 50%</p>
+            <div class="menu-card__row">
+              <span class="menu-card__price">$8.50</span>
+              <button type="button" class="btn btn--gold btn--sm" data-open-modal="order" data-drink="Macchiato" data-price="$8.50">Order Now</button>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-drink="Espresso" data-price="$8.50">
+            <img src="images/drink-espresso.png" alt="Espresso" width="310" height="260" loading="lazy" />
+            <h3>Espresso</h3>
+            <p class="menu-card__meta">Coffee 50% | Milk 50%</p>
+            <div class="menu-card__row">
+              <span class="menu-card__price">$8.50</span>
+              <button type="button" class="btn btn--gold btn--sm" data-open-modal="order" data-drink="Espresso" data-price="$8.50">Order Now</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <img class="deco deco--br" src="images/splash-2.png" alt="" aria-hidden="true" />
+      <p class="menu__tagline reveal">We make all of our coffee with the best ingredients to make sure that you get the best coffee.</p>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container">
+        <h2 class="section-title reveal">Why are we different?</h2>
+        <p class="section-sub reveal">We don't just make your coffee, we make your day!</p>
+        <div class="features__grid">
+          <article class="feature-card reveal">
+            <img class="feature-card__icon" src="images/icon-beans.svg" alt="" width="64" height="64" />
+            <h3>Supreme Beans</h3>
+            <p>Beans that provides great taste</p>
+          </article>
+          <article class="feature-card reveal">
+            <img class="feature-card__icon" src="images/icon-quality.svg" alt="" width="64" height="64" />
+            <h3>High Quality</h3>
+            <p>We provide the highest quality</p>
+          </article>
+          <article class="feature-card reveal">
+            <img class="feature-card__icon" src="images/icon-extraordinary.svg" alt="" width="64" height="64" />
+            <h3>Extraordinary</h3>
+            <p>Coffee like you have never tasted</p>
+          </article>
+          <article class="feature-card reveal">
+            <img class="feature-card__icon" src="images/icon-price.svg" alt="" width="64" height="64" />
+            <h3>Affordable Price</h3>
+            <p>Our coffee prices are easy to afford</p>
+          </article>
+        </div>
+        <div class="features__cta reveal">
+          <p class="features__hint">Great ideas start with great coffee, Lets help you achieve that</p>
+          <p class="features__start">Get started today.</p>
+          <a class="btn btn--gold" href="#subscribe">Join Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo" aria-label="Promotion">
+      <div class="promo__bg" aria-hidden="true"></div>
+      <div class="container promo__inner">
+        <div class="promo__copy reveal">
+          <h2>Get a chance to have an Amazing morning</h2>
+          <p>We are giving you are one time opportunity to experience a better life with coffee.</p>
+          <button type="button" class="btn btn--gold" data-open-modal="order">Order Now</button>
+        </div>
+        <figure class="promo__media reveal">
+          <img src="images/cup.png" alt="Takeaway coffee cup with Coffee sleeve" width="420" height="480" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="feedback section" id="feedback">
+      <img class="deco deco--tl" src="images/splash-3.png" alt="" aria-hidden="true" />
+      <div class="container">
+        <h2 class="section-title reveal">Our coffee perfection feedback</h2>
+        <p class="section-sub reveal">Our customers has amazing things to say about us</p>
+        <div class="feedback__wrap reveal">
+          <button type="button" class="feedback__arrow feedback__arrow--prev" aria-label="Previous review">&#10094;</button>
+          <div class="feedback__slider" data-slider>
+            <blockquote class="feedback__slide is-active">
+              <span class="feedback__quote" aria-hidden="true">&ldquo;</span>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.....</p>
+              <footer>
+                <cite>Jonny Thomas</cite>
+                <span>Project Manager</span>
+              </footer>
+              <img class="feedback__avatar" src="images/avatar.png" alt="Jonny Thomas" width="72" height="72" />
+            </blockquote>
+            <blockquote class="feedback__slide">
+              <span class="feedback__quote" aria-hidden="true">&ldquo;</span>
+              <p>Bean Scene turned my morning routine around. The cappuccino is rich, balanced, and always arrives hot. I recommend it to my whole team.</p>
+              <footer>
+                <cite>Sarah Miller</cite>
+                <span>Product Designer</span>
+              </footer>
+              <img class="feedback__avatar" src="images/avatar-2.png" alt="Sarah Miller" width="72" height="72" />
+            </blockquote>
+            <blockquote class="feedback__slide">
+              <span class="feedback__quote" aria-hidden="true">&ldquo;</span>
+              <p>From the first espresso I knew this place was different. Fresh beans, friendly service, and flavours that stay with you all day.</p>
+              <footer>
+                <cite>Alex Rivera</cite>
+                <span>Entrepreneur</span>
+              </footer>
+              <img class="feedback__avatar" src="images/avatar-3.png" alt="Alex Rivera" width="72" height="72" />
+            </blockquote>
+          </div>
+          <button type="button" class="feedback__arrow feedback__arrow--next" aria-label="Next review">&#10095;</button>
+        </div>
+      </div>
+      <img class="deco deco--br" src="images/splash-4.png" alt="" aria-hidden="true" />
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <div class="subscribe__bg" aria-hidden="true"></div>
+      <div class="container subscribe__inner">
+        <h2 class="reveal">Subscribe to get the Latest News</h2>
+        <p class="reveal">Don't miss out on our latest news, updates, tips and special offers</p>
+        <form class="subscribe__form reveal" id="subscribe-form" novalidate>
+          <label class="visually-hidden" for="subscribe-email">Email</label>
+          <input id="subscribe-email" name="email" type="email" placeholder="Enter your email" required autocomplete="email" />
+          <button class="btn btn--gold" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe__msg" id="subscribe-msg" hidden role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__bg" aria-hidden="true"></div>
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo logo--footer">Bean Scene</a>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="footer__social">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">yt</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">x</a>
+        </div>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">News &amp; Blogs</a></li>
+          <li><a href="#feedback">Help &amp; Supports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">How we work</a></li>
+          <li><a href="#features">Terms of service</a></li>
+          <li><a href="#subscribe">Pricing</a></li>
+          <li><a href="#feedback">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <ul class="footer__contacts">
+          <li>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</li>
+          <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+          <li><a href="mailto:hello@beanscene.com">hello@beanscene.com</a></li>
+          <li><a href="https://www.beanscene.com" target="_blank" rel="noopener">www.beanscene.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal" id="modal-signin" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="signin-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <h2 id="signin-title">Sign In</h2>
+      <form class="modal__form" data-auth-form="signin">
+        <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+        <label>Password<input type="password" name="password" required autocomplete="current-password" minlength="6" /></label>
+        <button type="submit" class="btn btn--gold btn--block">Sign In</button>
+      </form>
+      <p class="modal__success" hidden>Welcome back! You are signed in.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-signup" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <h2 id="signup-title">Sign Up</h2>
+      <form class="modal__form" data-auth-form="signup">
+        <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+        <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+        <label>Password<input type="password" name="password" required autocomplete="new-password" minlength="6" /></label>
+        <button type="submit" class="btn btn--gold btn--block">Create account</button>
+      </form>
+      <p class="modal__success" hidden>Account created — welcome to Bean Scene!</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-order" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="order-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Close">&times;</button>
+      <h2 id="order-title">Order Now</h2>
+      <p class="modal__drink" id="order-drink-label">Choose your favourite coffee</p>
+      <form class="modal__form" id="order-form">
+        <label>Drink
+          <select name="drink" id="order-drink" required>
+            <option value="Cappuccino">Cappuccino — $8.50</option>
+            <option value="Chai Latte">Chai Latte — $8.50</option>
+            <option value="Macchiato">Macchiato — $8.50</option>
+            <option value="Espresso">Espresso — $8.50</option>
+          </select>
+        </label>
+        <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
+        <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
+        <button type="submit" class="btn btn--gold btn--block">Place order</button>
+      </form>
+      <p class="modal__success" hidden id="order-success">Thanks! Your order is on the way.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
