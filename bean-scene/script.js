@@ -83,9 +83,9 @@
           });
         }
         if (drink && label) {
-          label.textContent = `Ordering: ${drink}`;
+          label.textContent = `Заказ: ${drink}`;
         } else if (label) {
-          label.textContent = "Choose your favourite coffee";
+          label.textContent = "Выберите любимый кофе";
         }
       } else {
         const modal = modals[name];
@@ -136,7 +136,7 @@
     orderForm.hidden = true;
     if (success) {
       success.hidden = false;
-      success.textContent = `Thanks! Your ${drink} order is on the way.`;
+      success.textContent = `Спасибо! Ваш заказ «${drink}» уже в пути.`;
     }
     orderForm.reset();
   });
@@ -153,7 +153,7 @@
     }
     if (subMsg) {
       subMsg.hidden = false;
-      subMsg.textContent = "Thanks for subscribing!";
+      subMsg.textContent = "Спасибо за подписку!";
     }
     subForm.reset();
   });
