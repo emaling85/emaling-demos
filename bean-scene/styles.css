@@ -515,7 +515,7 @@ select {
   color: #7e5a2f;
 }
 
-/* Promo — Figma 2:167 */
+/* Promo — Figma 2:167 (clean layers, no EN text) */
 .promo {
   position: relative;
   color: var(--white);
@@ -525,31 +525,32 @@ select {
   background: #603809;
 }
 
-.promo__banner {
+.promo__bg {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  max-width: none;
   z-index: 0;
+  background:
+    linear-gradient(rgba(96, 56, 9, 0.8), rgba(96, 56, 9, 0.8)),
+    url("images/promo-bg.jpg") center / cover no-repeat,
+    #603809;
+}
+
+.promo__visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(48%, 657px);
+  z-index: 1;
   pointer-events: none;
 }
 
-/* Soft left veil: hides EN text, no hard seam */
-.promo__veil {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(96, 56, 9, 0.92) 0%,
-    rgba(96, 56, 9, 0.78) 28%,
-    rgba(96, 56, 9, 0.35) 48%,
-    rgba(96, 56, 9, 0) 62%
-  );
+.promo__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  max-width: none;
 }
 
 .promo__inner {
@@ -722,9 +723,9 @@ select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)),
-    url("images/footer-bg.jpg") center / cover no-repeat,
-    #442808;
+    linear-gradient(rgba(96, 56, 9, 0.8), rgba(96, 56, 9, 0.8)),
+    url("images/promo-bg.jpg") center / cover no-repeat,
+    #603809;
 }
 
 .subscribe__wing {
@@ -803,8 +804,8 @@ select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(47, 33, 5, 0.94), rgba(47, 33, 5, 0.94)),
-    url("images/footer-bg.jpg") center / cover no-repeat,
+    linear-gradient(rgba(47, 33, 5, 0.92), rgba(47, 33, 5, 0.92)),
+    url("images/promo-bg.jpg") center / cover no-repeat,
     #2f2105;
 }
 
@@ -1117,17 +1118,9 @@ body.modal-open {
     margin-left: 0.5rem;
   }
 
-  .promo__banner {
-    object-position: center right;
-  }
-
-  .promo__veil {
-    background: linear-gradient(
-      180deg,
-      rgba(96, 56, 9, 0.88) 0%,
-      rgba(96, 56, 9, 0.55) 55%,
-      rgba(96, 56, 9, 0.2) 100%
-    );
+  .promo__visual {
+    width: min(55%, 420px);
+    opacity: 0.95;
   }
 
   .discover__grid {
