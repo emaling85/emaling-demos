@@ -804,11 +804,11 @@ select {
   font-weight: 500;
 }
 
-/* Footer — Figma look: solid #2f2105, natural beans along bottom */
+/* Footer — user Figma fotter_image as-is */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.88);
-  padding: 4.5rem 0 7rem;
+  padding: 4.5rem 0 5.5rem;
   overflow: hidden;
   background: #2f2105;
 }
@@ -826,13 +826,14 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: min(520px, 85%);
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
-  opacity: 1;
+  opacity: 0.8;
+  mix-blend-mode: overlay;
 }
 
 .footer__grid {
