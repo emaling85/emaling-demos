@@ -9,7 +9,7 @@
   --cream: #fff9f1;
   --cream-card: #fff9f1;
   --white: #ffffff;
-  --footer: #2f2105;
+  --footer: #603809;
   --container: 1180px;
   --radius-btn: 999px;
   --font-script: "Clicker Script", cursive;
@@ -804,19 +804,19 @@ select {
   font-weight: 500;
 }
 
-/* Footer — user Figma fotter_image as-is */
+/* Footer — #603809 + fotter_image */
 .footer {
   position: relative;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   padding: 4.5rem 0 5.5rem;
   overflow: hidden;
-  background: #2f2105;
+  background: #603809;
 }
 
 .footer__bg {
   position: absolute;
   inset: 0;
-  background: #2f2105;
+  background: #603809;
   z-index: 0;
 }
 
@@ -826,14 +826,14 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: min(520px, 85%);
+  height: min(480px, 80%);
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.8;
-  mix-blend-mode: overlay;
+  opacity: 0.9;
+  mix-blend-mode: soft-light;
 }
 
 .footer__grid {
