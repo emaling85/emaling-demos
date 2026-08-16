@@ -727,7 +727,8 @@ select {
 
 .feedback__arrow {
   position: absolute;
-  top: 50%;
+  /* Center on card, not on wrap that includes avatar padding */
+  top: calc((100% - 7.5rem) / 2);
   transform: translateY(-50%);
   z-index: 3;
   flex-shrink: 0;
