@@ -810,25 +810,13 @@ select {
   color: rgba(255, 255, 255, 0.92);
   padding: 4.5rem 0 6rem;
   overflow: hidden;
-  background: #603809;
-}
-
-.footer__bg {
-  display: none;
-}
-
-.footer__beans {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  max-width: none;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-  mix-blend-mode: multiply;
+  /* Exact Figma fotter_image: brown fill × photo (grey → brown, beans stay photo) */
+  background-color: #603809;
+  background-image: url("images/footer-beans.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 .footer__grid {
