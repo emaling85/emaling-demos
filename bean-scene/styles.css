@@ -734,6 +734,7 @@ select {
 
 .subscribe__wing--right {
   right: -8%;
+  /* Mirror left cup so splash aims inward (toward center) */
   transform: scaleX(-1);
 }
 
