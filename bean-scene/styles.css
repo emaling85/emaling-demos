@@ -1160,18 +1160,32 @@ body.modal-open {
   }
 
   .discover__grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
     padding-inline: 20px;
+    justify-items: center;
   }
 
   .discover__copy {
     order: 1;
-    max-width: none;
+    max-width: 36rem;
+    width: 100%;
     text-align: center;
+  }
+
+  .discover__copy .btn {
+    margin-inline: auto;
   }
 
   .discover__media {
     order: 0;
     justify-content: center;
+    width: 100%;
+  }
+
+  .discover__media img {
+    width: min(100%, 420px);
+    margin-inline: auto;
   }
 
   .hero__media {
@@ -1222,6 +1236,20 @@ body.modal-open {
   .features__grid,
   .footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .discover.section {
+    padding-block: 3.25rem;
+  }
+
+  .discover__media img {
+    width: min(100%, 300px);
+  }
+
+  .discover__copy .section-text {
+    font-size: 0.92rem;
+    max-width: 34ch;
+    margin-inline: auto;
   }
 
   .subscribe__form {
