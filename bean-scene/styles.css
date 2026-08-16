@@ -701,10 +701,10 @@ select {
 .subscribe {
   position: relative;
   color: var(--white);
-  padding: 3.75rem 0 4.5rem;
+  padding: 3.75rem 0 5.5rem;
   text-align: center;
   overflow: hidden;
-  min-height: 374px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   background: #603809;
@@ -724,19 +724,21 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -28%;
-  width: min(400px, 34vw);
-  max-width: 444px;
+  /* Fully inside section — was bottom:-28% / left:-4% which clipped saucers */
+  bottom: 12px;
+  width: min(360px, 28vw);
+  max-width: 400px;
+  height: auto;
   pointer-events: none;
   z-index: 3;
 }
 
 .subscribe__wing--left {
-  left: -4%;
+  left: 12px;
 }
 
 .subscribe__wing--right {
-  right: -4%;
+  right: 12px;
   /* Mirror left cup so splash aims inward (toward center) */
   transform: scaleX(-1);
 }
