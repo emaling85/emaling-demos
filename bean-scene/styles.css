@@ -25,7 +25,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -597,8 +597,11 @@ select {
 
 /* Feedback */
 .feedback {
-  overflow: visible;
-  padding-bottom: 6rem;
+  overflow-x: clip;
+  overflow-y: visible;
+  padding-top: 6.5rem;
+  padding-bottom: 10rem;
+  min-height: 640px;
 }
 
 .feedback .section-title {
@@ -618,7 +621,8 @@ select {
   gap: 0;
   max-width: 940px;
   margin: 0 auto 2rem;
-  padding-bottom: 4.5rem;
+  /* Room for 112px avatar hanging below the card (bottom: -56px) */
+  padding-bottom: 7.5rem;
 }
 
 .feedback__slider {
@@ -661,8 +665,12 @@ select {
 }
 
 /* Figma feedback splashes: top-right + bottom-left */
+.feedback .deco {
+  width: min(560px, 58vw);
+}
+
 .feedback .deco--tl {
-  top: 2.5rem;
+  top: -1rem;
   left: auto;
   right: 0;
   transform: scaleX(-1);
@@ -671,7 +679,7 @@ select {
 .feedback .deco--br {
   right: auto;
   left: 0;
-  bottom: -0.5rem;
+  bottom: -2.5rem;
 }
 
 .feedback__slide p {
@@ -719,7 +727,8 @@ select {
 
 .feedback__arrow {
   position: absolute;
-  top: 42%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 3;
   flex-shrink: 0;
   width: 52px;
@@ -747,13 +756,14 @@ select {
 
 .feedback__arrow:hover {
   background: var(--gold-hover);
-  transform: scale(1.05);
+  transform: translateY(-50%) scale(1.05);
 }
 
 /* Subscribe + footer share one brown stage so cups can hang without crop */
 .site-end {
   position: relative;
   overflow-x: clip;
+  overflow-y: visible;
   background: #603809;
 }
 
@@ -761,10 +771,10 @@ select {
 .subscribe {
   position: relative;
   color: var(--white);
-  padding: 3.75rem 0 7rem;
+  padding: 4rem 0 3rem;
   text-align: center;
   overflow: visible;
-  min-height: 440px;
+  min-height: 460px;
   display: flex;
   align-items: center;
   background: transparent;
@@ -774,7 +784,11 @@ select {
 
 .subscribe__bg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Extend past section so hard seam does not cut through saucers */
+  bottom: -150px;
   z-index: 0;
   background:
     linear-gradient(rgba(96, 56, 9, 0.82), rgba(96, 56, 9, 0.82)),
@@ -784,21 +798,23 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -8%;
-  width: min(440px, 30vw);
-  max-width: 480px;
+  bottom: -120px;
+  width: min(500px, 36vw);
+  max-width: 540px;
+  height: auto;
+  max-height: none;
   pointer-events: none;
   z-index: 5;
-  /* PNG has black plate — lighten drops black on brown bg */
-  mix-blend-mode: lighten;
+  /* No blend — lighten/screen caused white haze on the right cup */
+  mix-blend-mode: normal;
 }
 
 .subscribe__wing--left {
-  left: 0;
+  left: -2%;
 }
 
 .subscribe__wing--right {
-  right: 0;
+  right: -2%;
   /* Mirror left cup so splash aims inward (toward center) */
   transform: scaleX(-1);
 }
@@ -876,10 +892,13 @@ select {
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.92);
-  padding: 4rem 0 0;
-  overflow: hidden;
+  padding: 5rem 0 0;
+  overflow-x: clip;
+  overflow-y: visible;
   background: #603809;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
 }
 
 .footer__beans {
@@ -887,8 +906,11 @@ select {
   display: block;
   width: 100%;
   height: auto;
-  margin: -6rem 0 0;
+  margin: -2.5rem 0 0;
   max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: bottom center;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: multiply;
@@ -900,7 +922,7 @@ select {
   display: grid;
   grid-template-columns: 1.45fr 0.85fr 0.85fr 1.15fr;
   gap: 2rem 2.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .footer__brand p {
@@ -1270,9 +1292,12 @@ body.modal-open {
 
   .feedback__wrap {
     gap: 0.4rem;
+    padding-bottom: 7rem;
   }
 
   .feedback__arrow {
+    top: 50%;
+    transform: translateY(-50%);
     width: 44px;
     height: 44px;
     border-radius: 12px;
@@ -1294,6 +1319,14 @@ body.modal-open {
   .subscribe__form .btn {
     width: 100%;
     border-radius: 0 0 4px 4px;
+  }
+
+  .feedback {
+    padding-bottom: 9rem;
+  }
+
+  .feedback__wrap {
+    padding-bottom: 6.5rem;
   }
 
   .feedback__slide {
