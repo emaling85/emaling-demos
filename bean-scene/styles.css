@@ -515,7 +515,7 @@ select {
   color: #7e5a2f;
 }
 
-/* Promo — Figma 2:167 (clean layers, no EN text) */
+/* Promo — Figma 2:167 seamless banner, RU copy only */
 .promo {
   position: relative;
   color: var(--white);
@@ -525,32 +525,16 @@ select {
   background: #603809;
 }
 
-.promo__bg {
+.promo__banner {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  background:
-    linear-gradient(rgba(96, 56, 9, 0.8), rgba(96, 56, 9, 0.8)),
-    url("images/promo-bg.jpg") center / cover no-repeat,
-    #603809;
-}
-
-.promo__visual {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(48%, 657px);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.promo__visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: center;
   max-width: none;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .promo__inner {
@@ -1118,9 +1102,8 @@ body.modal-open {
     margin-left: 0.5rem;
   }
 
-  .promo__visual {
-    width: min(55%, 420px);
-    opacity: 0.95;
+  .promo__banner {
+    object-position: center right;
   }
 
   .discover__grid {
