@@ -804,14 +804,13 @@ select {
   font-weight: 500;
 }
 
-/* Footer — Figma: solid #2f2105, beans only along bottom */
+/* Footer — Figma look: solid #2f2105, natural beans along bottom */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.88);
-  padding: 4.5rem 0 6.5rem;
+  padding: 4.5rem 0 7rem;
   overflow: hidden;
   background: #2f2105;
-  isolation: isolate;
 }
 
 .footer__bg {
@@ -827,16 +826,13 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 200px;
+  height: 260px;
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
-  /* soft fade into brown — no white edge */
-  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 100%);
-  mask-image: linear-gradient(to top, #000 55%, transparent 100%);
 }
 
 .footer__grid {
