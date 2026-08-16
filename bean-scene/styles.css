@@ -151,7 +151,7 @@ select {
 
 .logo--footer {
   color: var(--white);
-  font-size: 2.4rem;
+  font-size: 3.2rem;
 }
 
 .nav {
@@ -698,7 +698,7 @@ select {
 .subscribe {
   position: relative;
   color: var(--white);
-  padding: 4.5rem 0 5rem;
+  padding: 3.75rem 0 4.5rem;
   text-align: center;
   overflow: hidden;
   min-height: 374px;
@@ -717,19 +717,20 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -6%;
-  width: min(300px, 26vw);
+  bottom: -4%;
+  width: min(360px, 32vw);
+  max-width: 444px;
   pointer-events: none;
   z-index: 0;
-  opacity: 1;
 }
 
 .subscribe__wing--left {
-  left: -2%;
+  left: -6%;
 }
 
 .subscribe__wing--right {
-  right: -2%;
+  right: -6%;
+  transform: scaleX(-1);
 }
 
 .subscribe__inner {
@@ -739,42 +740,60 @@ select {
 }
 
 .subscribe h2 {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.75rem;
   font-family: var(--font-serif);
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-size: clamp(1.85rem, 3.5vw, 3.375rem);
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .subscribe p {
-  margin: 0 0 1.75rem;
-  color: rgba(255, 255, 255, 0.92);
+  margin: 0 auto 1.75rem;
+  max-width: 48rem;
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
+/* Figma form: cream + radius 4px, h=66, w=642 */
 .subscribe__form {
   display: flex;
-  max-width: 560px;
+  align-items: stretch;
+  max-width: 642px;
   margin: 0 auto;
-  background: var(--white);
-  border-radius: var(--radius-btn);
+  background: #fff9f1;
+  border: 1px solid rgba(249, 192, 106, 0.42);
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: none;
+  min-height: 66px;
 }
 
 .subscribe__form input {
   flex: 1;
   border: 0;
   outline: none;
-  padding: 0.95rem 1.35rem;
+  padding: 1rem 1.5rem;
   color: var(--text-dark);
+  background: transparent;
   min-width: 0;
   font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+
+.subscribe__form input::placeholder {
+  color: rgba(0, 0, 0, 0.34);
 }
 
 .subscribe__form .btn {
-  border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
-  padding-inline: 1.75rem;
+  flex-shrink: 0;
+  width: 137px;
+  min-height: 66px;
+  border-radius: 4px;
+  padding-inline: 0.5rem;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 12px rgba(249, 192, 106, 0.22);
 }
 
 .subscribe__msg {
@@ -783,11 +802,11 @@ select {
   font-weight: 500;
 }
 
-/* Footer — Figma: solid #2f2105 + beans only at bottom */
+/* Footer — Figma: #2f2105 + fotter_image beans */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.88);
-  padding: 4.5rem 0 5.5rem;
+  padding: 4rem 0 7rem;
   overflow: hidden;
   background: #2f2105;
 }
@@ -804,13 +823,14 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: min(220px, 38%);
+  height: min(280px, 45%);
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.95;
+  opacity: 0.85;
+  mix-blend-mode: overlay;
 }
 
 .footer__grid {
@@ -822,32 +842,32 @@ select {
 }
 
 .footer__brand p {
-  margin: 1rem 0 1.35rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  max-width: 42ch;
-  color: rgba(255, 255, 255, 0.78);
+  margin: 1.35rem 0 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  max-width: 380px;
+  color: rgba(255, 255, 255, 0.92);
   font-family: var(--font-serif);
 }
 
 .footer h3 {
-  margin: 0.4rem 0 1.15rem;
+  margin: 0.55rem 0 1.35rem;
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--white);
 }
 
 .footer ul li + li {
-  margin-top: 0.65rem;
+  margin-top: 0.85rem;
 }
 
 .footer ul a,
 .footer__contacts li {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer a:hover {
@@ -1204,11 +1224,12 @@ body.modal-open {
 
   .subscribe__form {
     flex-direction: column;
-    border-radius: 16px;
+    border-radius: 4px;
   }
 
   .subscribe__form .btn {
-    border-radius: 0 0 16px 16px;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
   }
 
   .feedback__slide {
