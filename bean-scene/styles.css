@@ -717,19 +717,19 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -4%;
-  width: min(360px, 32vw);
+  bottom: -18%;
+  width: min(400px, 34vw);
   max-width: 444px;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 
 .subscribe__wing--left {
-  left: -6%;
+  left: -8%;
 }
 
 .subscribe__wing--right {
-  right: -6%;
+  right: -8%;
   transform: scaleX(-1);
 }
 
@@ -806,7 +806,7 @@ select {
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.88);
-  padding: 4rem 0 7rem;
+  padding: 4rem 0 8.5rem;
   overflow: hidden;
   background: #2f2105;
 }
@@ -823,14 +823,14 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: min(280px, 45%);
+  height: auto;
+  max-height: 320px;
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.85;
-  mix-blend-mode: overlay;
+  opacity: 1;
 }
 
 .footer__grid {
