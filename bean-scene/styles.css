@@ -25,7 +25,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -332,7 +332,7 @@ select {
 
 .deco {
   position: absolute;
-  width: min(480px, 48vw);
+  width: min(320px, 36vw);
   pointer-events: none;
   z-index: 0;
   opacity: 0.95;
@@ -340,11 +340,11 @@ select {
 
 .deco--tl {
   top: 1rem;
-  left: 0;
+  left: -1rem;
 }
 
 .deco--br {
-  right: 0;
+  right: -1rem;
   bottom: 0;
   /* Figma: coffee_blast rotate 180 on the right */
   transform: none;
@@ -353,14 +353,12 @@ select {
 /* Discover */
 .discover {
   background: var(--white);
-  overflow: visible;
-  /* Extra bottom room so menu splash deco can read at the join */
-  padding-bottom: 9rem;
+  overflow: hidden;
 }
 
 .discover__grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: minmax(280px, 520px) 1fr;
   gap: 2rem 3rem;
   align-items: center;
   width: min(100%, 1280px);
@@ -380,25 +378,13 @@ select {
 }
 
 .discover__media img {
-  width: min(100%, 720px);
+  width: min(100%, 560px);
   object-fit: contain;
 }
 
 /* Menu */
 .menu {
-  overflow-x: clip;
-  overflow-y: visible;
-  padding-block: 6.5rem;
-}
-
-.menu .deco--tl {
-  top: -8rem;
-  left: 0;
-}
-
-.menu .deco--br {
-  bottom: -1.5rem;
-  right: 0;
+  overflow: hidden;
 }
 
 .menu__grid {
@@ -597,42 +583,23 @@ select {
 
 /* Feedback */
 .feedback {
-  overflow-x: clip;
-  overflow-y: visible;
-  padding-top: 6.5rem;
-  /* Extra bottom so hanging avatar isn't clipped by next section */
-  padding-bottom: 10rem;
-  min-height: 640px;
-}
-
-.feedback .section-title {
-  font-size: clamp(2rem, 3.4vw, 2.75rem);
-}
-
-.feedback .section-sub {
-  font-size: 1.05rem;
-  margin-bottom: 2.75rem;
+  overflow: hidden;
 }
 
 .feedback__wrap {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   display: flex;
   align-items: center;
-  gap: 0;
-  /* Narrow card → side gutters for splashes BESIDE, not under */
-  max-width: 720px;
-  width: 100%;
+  gap: 1rem;
+  max-width: 820px;
   margin: 0 auto 2rem;
-  /* Room for 112px avatar hanging below the card (bottom: -56px) */
-  padding-bottom: 7.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .feedback__slider {
   position: relative;
-  z-index: 1;
   flex: 1;
-  min-width: 0;
   min-height: 320px;
 }
 
@@ -648,7 +615,7 @@ select {
   transform: translateX(24px);
   pointer-events: none;
   transition: opacity 0.35s ease, transform 0.35s ease;
-  text-align: center;
+  text-align: left;
 }
 
 .feedback__slide.is-active {
@@ -666,34 +633,6 @@ select {
   font-weight: 700;
   color: var(--brown);
   margin: 0 0 0.25rem;
-  text-align: left;
-}
-
-/* Figma feedback splashes: left (bottom) + right (top), BESIDE card — not under it */
-.feedback .deco {
-  z-index: 2;
-  width: min(380px, 24vw);
-  max-width: none;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.feedback .deco--tl {
-  /* Right splash — sits in right gutter beside card */
-  top: 12%;
-  left: auto;
-  right: 0;
-  bottom: auto;
-  transform: scaleX(-1);
-}
-
-.feedback .deco--br {
-  /* Left splash — sits in left gutter beside card */
-  top: auto;
-  right: auto;
-  left: 0;
-  bottom: 12%;
-  transform: none;
 }
 
 .feedback__slide p {
@@ -702,7 +641,7 @@ select {
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 2;
-  text-align: center;
+  text-align: left;
 }
 
 .feedback__slide footer {
@@ -740,70 +679,42 @@ select {
 }
 
 .feedback__arrow {
-  position: absolute;
-  /* Center on card, not on wrap that includes avatar padding */
-  top: calc((100% - 7.5rem) / 2);
-  transform: translateY(-50%);
-  z-index: 3;
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 50%;
   background: var(--gold);
   color: var(--text-dark);
   cursor: pointer;
   font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 6px 16px rgba(249, 192, 106, 0.35);
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.feedback__arrow--prev {
-  left: -8px;
-}
-
-.feedback__arrow--next {
-  right: -8px;
-}
-
 .feedback__arrow:hover {
   background: var(--gold-hover);
-  transform: translateY(-50%) scale(1.05);
-}
-
-/* Subscribe + footer share one brown stage so cups can hang without crop */
-.site-end {
-  position: relative;
-  overflow-x: clip;
-  overflow-y: visible;
-  background: #603809;
+  transform: scale(1.05);
 }
 
 /* Subscribe — Figma: beans + #603809 80%, cups on sides */
 .subscribe {
   position: relative;
   color: var(--white);
-  padding: 4rem 0 3rem;
+  padding: 3.75rem 0 4.5rem;
   text-align: center;
-  overflow: visible;
-  min-height: 460px;
+  overflow: hidden;
+  min-height: 374px;
   display: flex;
   align-items: center;
-  background: transparent;
+  background: #603809;
   margin-bottom: 0;
   z-index: 2;
 }
 
 .subscribe__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* Extend past section so hard seam does not cut through saucers */
-  bottom: -160px;
+  inset: 0;
   z-index: 0;
   background:
     linear-gradient(rgba(96, 56, 9, 0.82), rgba(96, 56, 9, 0.82)),
@@ -813,29 +724,19 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -90px;
-  width: min(420px, 28vw);
-  max-width: 420px;
-  height: auto;
-  max-height: none;
+  bottom: -28%;
+  width: min(400px, 34vw);
+  max-width: 444px;
   pointer-events: none;
-  z-index: 5;
-  /* Normal only — no blend into brown beans; stronger shadow so cup pops */
-  mix-blend-mode: normal;
-  filter:
-    drop-shadow(0 10px 22px rgba(0, 0, 0, 0.65))
-    drop-shadow(0 2px 0 rgba(255, 255, 255, 0.25))
-    brightness(1.08)
-    contrast(1.06);
+  z-index: 3;
 }
 
 .subscribe__wing--left {
-  /* Inset so overflow-x: clip does not crop the cup */
-  left: max(0px, 2%);
+  left: -4%;
 }
 
 .subscribe__wing--right {
-  right: max(0px, 2%);
+  right: -4%;
   /* Mirror left cup so splash aims inward (toward center) */
   transform: scaleX(-1);
 }
@@ -913,13 +814,10 @@ select {
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.92);
-  padding: 5rem 0 0;
-  overflow-x: clip;
-  overflow-y: visible;
+  padding: 5.5rem 0 0;
+  overflow: hidden;
   background: #603809;
   z-index: 1;
-  width: 100%;
-  max-width: 100%;
 }
 
 .footer__beans {
@@ -927,11 +825,8 @@ select {
   display: block;
   width: 100%;
   height: auto;
-  margin: -2.5rem 0 0;
+  margin: -6rem 0 0;
   max-width: 100%;
-  max-height: none;
-  object-fit: contain;
-  object-position: bottom center;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: multiply;
@@ -943,7 +838,7 @@ select {
   display: grid;
   grid-template-columns: 1.45fr 0.85fr 0.85fr 1.15fr;
   gap: 2rem 2.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .footer__brand p {
@@ -1263,7 +1158,6 @@ body.modal-open {
   }
 
   .discover__grid {
-    grid-template-columns: 1fr;
     padding-inline: 20px;
   }
 
@@ -1291,7 +1185,7 @@ body.modal-open {
   }
 
   .subscribe__wing {
-    opacity: 1;
+    opacity: 0.45;
   }
 
   .section-title--left {
@@ -1313,21 +1207,11 @@ body.modal-open {
 
   .feedback__wrap {
     gap: 0.4rem;
-    max-width: 720px;
-    padding-bottom: 7.5rem;
   }
 
   .feedback__arrow {
-    /* Keep centered on card (exclude avatar padding) */
-    top: calc((100% - 7.5rem) / 2);
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-  }
-
-  .feedback .deco {
-    width: min(380px, 24vw);
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -1348,26 +1232,12 @@ body.modal-open {
     border-radius: 0 0 4px 4px;
   }
 
-  .feedback {
-    padding-bottom: 9rem;
-  }
-
-  .feedback__wrap {
-    max-width: 100%;
-    padding-bottom: 7rem;
-  }
-
-  .feedback__arrow {
-    top: calc((100% - 7rem) / 2);
-  }
-
   .feedback__slide {
     padding: 1.75rem 1.25rem 3.25rem;
   }
 
-  .feedback .deco {
-    width: min(200px, 28vw);
-    opacity: 0.85;
+  .deco {
+    opacity: 0.55;
   }
 }
 
