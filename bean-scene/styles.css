@@ -257,6 +257,8 @@ select {
   max-width: 560px;
   padding: 7.5rem 0 5rem;
   margin-right: auto;
+  margin-left: 0;
+  text-align: left;
 }
 
 .hero__eyebrow {
@@ -329,21 +331,19 @@ select {
   width: min(320px, 36vw);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .deco--tl {
   top: 1rem;
-  left: 0;
+  left: -1rem;
 }
 
 .deco--br {
-  right: 0;
-  bottom: 0.5rem;
-}
-
-.deco--flip {
-  transform: scaleX(-1) rotate(12deg);
+  right: -1rem;
+  bottom: 0;
+  /* Figma: coffee_blast rotate 180 on the right */
+  transform: none;
 }
 
 /* Discover */
@@ -392,19 +392,31 @@ select {
 }
 
 .menu-card {
+  display: flex;
+  flex-direction: column;
   background: var(--cream-card);
-  border: 1px solid rgba(249, 192, 106, 0.35);
+  border: 1px solid rgba(249, 192, 106, 0.42);
   border-radius: 12px;
-  padding: 0.85rem 0.85rem 1.15rem;
+  overflow: hidden;
   text-align: center;
+  min-height: 364px;
 }
 
 .menu-card img {
   width: 100%;
-  aspect-ratio: 1.15 / 1;
+  height: 222px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.85rem;
+  border-radius: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.menu-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 0.85rem 0.75rem 1.15rem;
 }
 
 .menu-card h3 {
@@ -415,23 +427,26 @@ select {
 }
 
 .menu-card__meta {
-  margin: 0 0 0.9rem;
-  font-size: 0.78rem;
-  color: var(--text);
-}
-
-.menu-card__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0 0.2rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
 }
 
 .menu-card__price {
+  display: block;
+  margin: 0 0 0.65rem;
   font-family: var(--font-serif);
   font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1;
   color: var(--brown);
+}
+
+.menu-card .btn--sm {
+  width: 134px;
+  min-height: 48px;
+  padding: 0.55rem 1rem;
+  margin-top: auto;
 }
 
 .menu__tagline {
@@ -499,31 +514,39 @@ select {
   color: #7e5a2f;
 }
 
-/* Promo */
+/* Promo — Figma 2:167 */
 .promo {
   position: relative;
   color: var(--white);
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 0;
+  min-height: 574px;
 }
 
 .promo__bg {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(68, 40, 8, 0.92) 0%, rgba(68, 40, 8, 0.55) 55%, rgba(68, 40, 8, 0.2) 100%),
+    linear-gradient(rgba(96, 56, 9, 0.8), rgba(96, 56, 9, 0.8)),
     url("images/promo-bg.jpg") center / cover no-repeat,
-    #442808;
+    #603809;
 }
 
 .promo__inner {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1.05fr);
+  gap: 1.5rem;
   align-items: center;
-  min-height: 480px;
+  min-height: 574px;
+  padding-block: 3.5rem;
+}
+
+.promo__copy {
+  text-align: left;
+  max-width: 28rem;
+  justify-self: start;
 }
 
 .promo__copy h2 {
@@ -532,43 +555,38 @@ select {
   font-size: clamp(1.8rem, 3.4vw, 2.6rem);
   font-weight: 700;
   max-width: 14ch;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .promo__copy p {
   margin: 0 0 1.5rem;
   max-width: 36ch;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .promo__media {
   position: relative;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 420px;
-  overflow: visible;
+  height: 100%;
+  min-height: 520px;
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
+  align-self: stretch;
+  overflow: hidden;
 }
 
-.promo__beans {
+.promo__collage {
   position: absolute;
-  right: -8%;
-  top: 10%;
-  width: min(360px, 70%);
-  opacity: 0.95;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
   pointer-events: none;
-  z-index: 0;
-}
-
-.promo__cup {
-  position: relative;
-  z-index: 1;
-  width: min(300px, 70%);
-  height: auto;
-  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.45));
-  background: transparent;
 }
 
 /* Feedback */
@@ -598,12 +616,14 @@ select {
   inset: 0;
   margin: 0;
   background: var(--cream);
-  border-radius: 16px;
-  padding: 2.5rem 2.5rem 3.5rem;
+  border: 1px solid rgba(249, 192, 106, 0.42);
+  border-radius: 0;
+  padding: 2.5rem 2.5rem 4.5rem;
   opacity: 0;
   transform: translateX(24px);
   pointer-events: none;
   transition: opacity 0.35s ease, transform 0.35s ease;
+  text-align: left;
 }
 
 .feedback__slide.is-active {
@@ -616,22 +636,28 @@ select {
 .feedback__quote {
   display: block;
   font-family: var(--font-serif);
-  font-size: 4rem;
-  line-height: 0.8;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.75;
+  font-weight: 700;
   color: var(--brown);
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.25rem;
 }
 
 .feedback__slide p {
   margin: 0 0 1.5rem;
   color: var(--text);
-  font-size: 0.95rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 2;
+  text-align: left;
 }
 
 .feedback__slide footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.15rem;
+  text-align: center;
 }
 
 .feedback__slide cite {
@@ -650,14 +676,14 @@ select {
 .feedback__avatar {
   position: absolute;
   left: 50%;
-  bottom: -36px;
+  bottom: -56px;
   transform: translateX(-50%);
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  border-radius: 16px;
   object-fit: cover;
-  border: 4px solid var(--white);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border: 0;
+  box-shadow: 0 6px 12px rgba(249, 192, 106, 0.22);
 }
 
 .feedback__arrow {
@@ -712,7 +738,6 @@ select {
 
 .subscribe__wing--right {
   right: -4%;
-  transform: scaleX(-1);
 }
 
 .subscribe__inner {
@@ -1067,9 +1092,21 @@ body.modal-open {
     padding-left: 0;
   }
 
-  .discover__grid,
   .promo__inner {
     grid-template-columns: 1fr;
+    min-height: 0;
+    padding-block: 3rem;
+  }
+
+  .promo__media {
+    min-height: 360px;
+    max-width: none;
+    justify-self: stretch;
+    order: -1;
+  }
+
+  .promo__copy {
+    max-width: none;
   }
 
   .discover__grid {
