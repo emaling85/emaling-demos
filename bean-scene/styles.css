@@ -1291,7 +1291,7 @@ body.modal-open {
   }
 
   .subscribe__wing {
-    opacity: 0.45;
+    opacity: 1;
   }
 
   .section-title--left {
@@ -1327,7 +1327,7 @@ body.modal-open {
   }
 
   .feedback .deco {
-    width: min(420px, 48vw);
+    width: min(380px, 24vw);
   }
 }
 
@@ -1366,8 +1366,8 @@ body.modal-open {
   }
 
   .feedback .deco {
-    width: min(280px, 55vw);
-    opacity: 0.7;
+    width: min(200px, 28vw);
+    opacity: 0.85;
   }
 }
 
