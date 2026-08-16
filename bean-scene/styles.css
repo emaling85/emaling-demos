@@ -12,7 +12,7 @@
   --footer: #2f2105;
   --container: 1180px;
   --radius-btn: 999px;
-  --font-script: "Great Vibes", cursive;
+  --font-script: "Clicker Script", cursive;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Poppins", system-ui, sans-serif;
 }
@@ -83,19 +83,20 @@ select {
   gap: 0.4rem;
   border: 0;
   cursor: pointer;
+  min-height: 48px;
   padding: 0.72rem 1.6rem;
-  border-radius: var(--radius-btn);
+  border-radius: 24px;
   font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1rem;
   line-height: 1.2;
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn--gold {
   background: var(--gold);
-  color: var(--text-dark);
-  box-shadow: 0 6px 16px rgba(249, 192, 106, 0.35);
+  color: #1e1e1e;
+  box-shadow: 0 6px 12px rgba(249, 192, 106, 0.22);
 }
 
 .btn--gold:hover {
@@ -142,12 +143,10 @@ select {
 
 .logo {
   font-family: var(--font-script);
-  font-size: 2.35rem;
-  color: rgba(255, 246, 235, 0.95);
+  font-size: 2.2rem;
+  color: var(--white);
   line-height: 1;
   white-space: nowrap;
-  letter-spacing: 0.03em;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .logo--footer {
@@ -212,21 +211,20 @@ select {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Hero */
+/* Hero — Figma: full-bleed photo + left gradient */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 720px;
+  min-height: 768px;
   display: flex;
   align-items: center;
   color: var(--white);
   overflow: hidden;
-  background: #1a1008;
+  background: #1e1e1e;
 }
 
 .hero__media {
   position: absolute;
-  inset: 0 0 0 38%;
+  inset: 0;
   z-index: 0;
 }
 
@@ -234,7 +232,7 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center right;
 }
 
 .hero__shade {
@@ -243,11 +241,8 @@ select {
   z-index: 1;
   background: linear-gradient(
     90deg,
-    #1a1008 0%,
-    #1a1008 34%,
-    rgba(26, 16, 8, 0.72) 48%,
-    rgba(26, 16, 8, 0.2) 68%,
-    transparent 100%
+    rgb(30, 30, 30) 7%,
+    rgba(0, 0, 0, 0) 87%
   );
   pointer-events: none;
 }
@@ -259,38 +254,38 @@ select {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 520px;
-  padding: 8rem 0 5rem;
+  max-width: 560px;
+  padding: 7.5rem 0 5rem;
   margin-right: auto;
 }
 
 .hero__eyebrow {
-  margin: 0 0 0.35rem;
-  font-size: 1.05rem;
-  font-weight: 400;
+  margin: 0 0 0.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
 }
 
 .hero__title {
   margin: 0;
   font-family: var(--font-script);
-  font-size: clamp(5.2rem, 11vw, 8.5rem);
+  font-size: clamp(6rem, 14vw, 11rem);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  color: rgba(255, 246, 235, 0.92);
-  text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.35),
-    0 8px 28px rgba(0, 0, 0, 0.28);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .hero__lead {
-  margin: 1.1rem 0 1.75rem;
+  margin: 0.5rem 0 1.75rem;
   max-width: 34ch;
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* Sections shared */
@@ -331,10 +326,10 @@ select {
 
 .deco {
   position: absolute;
-  width: min(240px, 30vw);
+  width: min(320px, 36vw);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.55;
+  opacity: 0.9;
 }
 
 .deco--tl {
@@ -466,9 +461,10 @@ select {
 }
 
 .feature-card__icon {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   margin: 0 auto 1rem;
+  object-fit: contain;
 }
 
 .feature-card h3 {
@@ -515,9 +511,9 @@ select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(47, 33, 5, 0.92) 0%, rgba(47, 33, 5, 0.7) 50%, rgba(47, 33, 5, 0.45) 100%),
+    linear-gradient(90deg, rgba(68, 40, 8, 0.92) 0%, rgba(68, 40, 8, 0.55) 55%, rgba(68, 40, 8, 0.2) 100%),
     url("images/promo-bg.jpg") center / cover no-repeat,
-    #2f2105;
+    #442808;
 }
 
 .promo__inner {
@@ -527,6 +523,7 @@ select {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+  min-height: 480px;
 }
 
 .promo__copy h2 {
@@ -546,22 +543,32 @@ select {
 }
 
 .promo__media {
+  position: relative;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
+  min-height: 420px;
   overflow: visible;
 }
 
-.promo__media img {
-  width: min(460px, 105%);
-  max-width: none;
+.promo__beans {
+  position: absolute;
+  right: -8%;
+  top: 10%;
+  width: min(360px, 70%);
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.promo__cup {
+  position: relative;
+  z-index: 1;
+  width: min(300px, 70%);
   height: auto;
-  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.45));
   background: transparent;
-  -webkit-mask-image: radial-gradient(ellipse 68% 72% at 52% 48%, #000 42%, transparent 78%);
-  mask-image: radial-gradient(ellipse 68% 72% at 52% 48%, #000 42%, transparent 78%);
 }
 
 /* Feedback */
@@ -685,9 +692,27 @@ select {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(47, 33, 5, 0.88), rgba(47, 33, 5, 0.88)),
-    url("images/newsletter-bg.jpg") center / cover no-repeat,
-    #2f2105;
+    linear-gradient(rgba(68, 40, 8, 0.88), rgba(68, 40, 8, 0.88)),
+    url("images/footer-bg.jpg") center / cover no-repeat,
+    #442808;
+}
+
+.subscribe__wing {
+  position: absolute;
+  bottom: -10%;
+  width: min(280px, 28vw);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+}
+
+.subscribe__wing--left {
+  left: -4%;
+}
+
+.subscribe__wing--right {
+  right: -4%;
+  transform: scaleX(-1);
 }
 
 .subscribe__inner {
@@ -1064,11 +1089,18 @@ body.modal-open {
 
   .hero__media {
     inset: 0;
-    opacity: 0.45;
   }
 
   .hero__shade {
-    background: linear-gradient(180deg, rgba(26, 16, 8, 0.55) 0%, rgba(26, 16, 8, 0.82) 100%);
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.35) 0%, rgba(30, 30, 30, 0.75) 100%);
+  }
+
+  .hero {
+    min-height: 640px;
+  }
+
+  .subscribe__wing {
+    opacity: 0.45;
   }
 
   .section-title--left {
