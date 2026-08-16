@@ -804,36 +804,31 @@ select {
   font-weight: 500;
 }
 
-/* Footer — #603809 + fotter_image */
+/* Footer — original fotter_image, multiply onto #603809 */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.92);
-  padding: 4.5rem 0 5.5rem;
+  padding: 4.5rem 0 6rem;
   overflow: hidden;
   background: #603809;
 }
 
 .footer__bg {
-  position: absolute;
-  inset: 0;
-  background: #603809;
-  z-index: 0;
+  display: none;
 }
 
 .footer__beans {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   width: 100%;
-  height: min(480px, 80%);
+  height: 100%;
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.9;
-  mix-blend-mode: soft-light;
+  opacity: 1;
+  mix-blend-mode: multiply;
 }
 
 .footer__grid {
