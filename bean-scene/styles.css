@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,8 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 img {
@@ -700,7 +703,7 @@ select {
   color: var(--white);
   padding: 3.75rem 0 4.5rem;
   text-align: center;
-  overflow: visible;
+  overflow: hidden;
   min-height: 374px;
   display: flex;
   align-items: center;
@@ -729,11 +732,11 @@ select {
 }
 
 .subscribe__wing--left {
-  left: -8%;
+  left: -4%;
 }
 
 .subscribe__wing--right {
-  right: -8%;
+  right: -4%;
   /* Mirror left cup so splash aims inward (toward center) */
   transform: scaleX(-1);
 }
@@ -823,7 +826,7 @@ select {
   width: 100%;
   height: auto;
   margin: -6rem 0 0;
-  max-width: none;
+  max-width: 100%;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: multiply;
