@@ -386,8 +386,19 @@ select {
 
 /* Menu */
 .menu {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   padding-block: 6.5rem;
+}
+
+.menu .deco--tl {
+  top: -8rem;
+  left: 0;
+}
+
+.menu .deco--br {
+  bottom: -1.5rem;
+  right: 0;
 }
 
 .menu__grid {
@@ -750,10 +761,10 @@ select {
 .subscribe {
   position: relative;
   color: var(--white);
-  padding: 3.75rem 0 5.5rem;
+  padding: 3.75rem 0 7rem;
   text-align: center;
   overflow: visible;
-  min-height: 420px;
+  min-height: 440px;
   display: flex;
   align-items: center;
   background: transparent;
@@ -773,9 +784,9 @@ select {
 
 .subscribe__wing {
   position: absolute;
-  bottom: -18%;
-  width: min(460px, 32vw);
-  max-width: 500px;
+  bottom: -8%;
+  width: min(440px, 30vw);
+  max-width: 480px;
   pointer-events: none;
   z-index: 5;
   /* PNG has black plate — lighten drops black on brown bg */
