@@ -700,30 +700,32 @@ select {
   color: var(--white);
   padding: 3.75rem 0 4.5rem;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   min-height: 374px;
   display: flex;
   align-items: center;
   background: #603809;
   margin-bottom: 0;
+  z-index: 2;
 }
 
 .subscribe__bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
-    linear-gradient(rgba(96, 56, 9, 0.8), rgba(96, 56, 9, 0.8)),
+    linear-gradient(rgba(96, 56, 9, 0.82), rgba(96, 56, 9, 0.82)),
     url("images/subscribe-bg.jpg") center / cover no-repeat,
     #603809;
 }
 
 .subscribe__wing {
   position: absolute;
-  bottom: -18%;
+  bottom: -28%;
   width: min(400px, 34vw);
   max-width: 444px;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 .subscribe__wing--left {
@@ -804,19 +806,30 @@ select {
   font-weight: 500;
 }
 
-/* Footer — original fotter_image, multiply onto #603809 */
+/* Footer — same #603809 as subscribe; beans only at bottom (Figma) */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.92);
-  padding: 4.5rem 0 6rem;
+  padding: 5.5rem 0 11rem;
+  min-height: 580px;
   overflow: hidden;
-  /* Exact Figma fotter_image: brown fill × photo (grey → brown, beans stay photo) */
-  background-color: #603809;
-  background-image: url("images/footer-beans.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  background-blend-mode: multiply;
+  background: #603809;
+  z-index: 1;
+}
+
+.footer__beans {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 62%;
+  object-fit: cover;
+  object-position: center bottom;
+  max-width: none;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
 }
 
 .footer__grid {
