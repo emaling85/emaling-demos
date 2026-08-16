@@ -704,6 +704,8 @@ select {
   min-height: 374px;
   display: flex;
   align-items: center;
+  background: #603809;
+  margin-bottom: 0;
 }
 
 .subscribe__bg {
@@ -802,19 +804,21 @@ select {
   font-weight: 500;
 }
 
-/* Footer — Figma: #2f2105 + fotter_image beans */
+/* Footer — Figma: solid #2f2105, beans only along bottom */
 .footer {
   position: relative;
   color: rgba(255, 255, 255, 0.88);
-  padding: 4rem 0 8.5rem;
+  padding: 4.5rem 0 6.5rem;
   overflow: hidden;
   background: #2f2105;
+  isolation: isolate;
 }
 
 .footer__bg {
   position: absolute;
   inset: 0;
   background: #2f2105;
+  z-index: 0;
 }
 
 .footer__beans {
@@ -823,14 +827,16 @@ select {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: auto;
-  max-height: 320px;
+  height: 200px;
   object-fit: cover;
   object-position: center bottom;
   max-width: none;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
+  /* soft fade into brown — no white edge */
+  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 55%, transparent 100%);
 }
 
 .footer__grid {
